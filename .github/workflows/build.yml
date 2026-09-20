@@ -11,16 +11,17 @@ on:
         required: true
         default: "3.12"
       entry_point:
-        description: "入口脚本 (留空则默认 services/main.py)"
+        description: "入口脚本 (留空则默认 run.py，或自动检测)"
         required: false
-        default: "services/main.py"
+        default: "run.py"
       builder:
         description: "打包工具"
         required: true
         type: choice
         options:
-          - Nuitka
           - PyInstaller
+          - Nuitka
+        default: PyInstaller
       console:
         description: "是否保留控制台窗口 (Windows)"
         required: true
@@ -32,21 +33,21 @@ on:
 
 jobs:
   build:
-    name: Build with ${{ github.event.inputs.builder || 'Nuitka' }} on ${{ matrix.os }}
+    name: Build with ${{ github.event.inputs.builder || 'PyInstaller' }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         include:
           - os: windows-latest
-            artifact_name: medcoding-kb-windows.exe
+            artifact_name: medcode-flow-windows.exe
             nuitka_extra_noconsole: --windows-console-mode=disable
             pyinstaller_sep: ";"
           - os: ubuntu-22.04
-            artifact_name: medcoding-kb-linux
+            artifact_name: medcode-flow-linux
             nuitka_extra_noconsole: ""
             pyinstaller_sep: ":"
           - os: macos-latest
-            artifact_name: medcoding-kb-macos.app
+            artifact_name: medcode-flow-macos.app
             nuitka_extra_noconsole: ""
             pyinstaller_sep: ":"
       fail-fast: false
@@ -60,11 +61,11 @@ jobs:
         shell: bash
         run: |
           BUILDER="${{ github.event.inputs.builder }}"
-          if [ -z "$BUILDER" ]; then BUILDER="Nuitka"; fi
+          if [ -z "$BUILDER" ]; then BUILDER="PyInstaller"; fi
           PYVER="${{ github.event.inputs.python_version }}"
           if [ -z "$PYVER" ]; then PYVER="3.12"; fi
           ENTRY="${{ github.event.inputs.entry_point }}"
-          if [ -z "$ENTRY" ]; then ENTRY="services/main.py"; fi
+          if [ -z "$ENTRY" ]; then ENTRY="run.py"; fi
           CONSOLE="${{ github.event.inputs.console }}"
           if [ -z "$CONSOLE" ]; then CONSOLE="yes"; fi
           echo "builder=$BUILDER" >> "$GITHUB_OUTPUT"
@@ -87,10 +88,7 @@ jobs:
             pip install pyinstaller
           fi
           if [ -f requirements.txt ]; then
-            # CI 打包以服务入口为主；torch/FlagEmbedding 体积过大，默认跳过重型 ML 依赖
-            # 如需完整嵌入能力进包，可改为: pip install -r requirements.txt
-            grep -vE '^(FlagEmbedding|torch|transformers)' requirements.txt > /tmp/req-build.txt || true
-            pip install -r /tmp/req-build.txt
+            pip install -r requirements.txt
           else
             echo "No requirements.txt found, skipping."
           fi
@@ -113,20 +111,19 @@ jobs:
           else:
               print("Entry not found, auto-detecting...")
               for candidate in [
-                  "services/main.py",
+                  "run.py",
                   "main.py",
                   "app.py",
-                  "run.py",
-                  "__main__.py",
                   "cli.py",
                   "start.py",
+                  "__main__.py",
               ]:
                   if Path(candidate).exists():
                       entry = candidate
                       break
               if not entry:
                   for py_file in Path(".").rglob("*.py"):
-                      if ".venv" in py_file.parts or "site-packages" in py_file.parts:
+                      if any(p in py_file.parts for p in (".venv", "site-packages", ".git")):
                           continue
                       try:
                           tree = ast.parse(py_file.read_text(encoding="utf-8"))
@@ -165,20 +162,20 @@ jobs:
           if [[ "${{ matrix.os }}" == macos-* ]]; then
             python -m nuitka --standalone --macos-create-app-bundle \
               --assume-yes-for-downloads \
-              --include-package=services \
-              --include-package-data=services \
-              --include-data-dir=configs=configs \
-              --include-data-dir=scripts=scripts \
+              --include-package=app \
+              --include-package-data=app \
+              --include-data-dir=app=app \
+              --include-data-dir=docs=docs \
               $EXTRA \
               "$ENTRY"
           else
             python -m nuitka --standalone --onefile \
               --output-filename=${{ matrix.artifact_name }} \
               --assume-yes-for-downloads \
-              --include-package=services \
-              --include-package-data=services \
-              --include-data-dir=configs=configs \
-              --include-data-dir=scripts=scripts \
+              --include-package=app \
+              --include-package-data=app \
+              --include-data-dir=app=app \
+              --include-data-dir=docs=docs \
               --follow-imports \
               $EXTRA \
               "$ENTRY"
@@ -244,9 +241,17 @@ jobs:
           heavy = {
               "fastapi": "fastapi",
               "uvicorn": "uvicorn",
-              "pymilvus": "pymilvus",
-              "yaml": "PyYAML",
+              "starlette": "starlette",
               "pydantic": "pydantic",
+              "langchain": "langchain",
+              "langchain_core": "langchain-core",
+              "langchain_openai": "langchain-openai",
+              "langchain_community": "langchain-community",
+              "langgraph": "langgraph",
+              "httpx": "httpx",
+              "jinja2": "Jinja2",
+              "yaml": "PyYAML",
+              "redis": "redis",
           }
           collect_args = []
           hidden_args = [
@@ -260,9 +265,19 @@ jobs:
               "--hidden-import uvicorn.protocols.websockets.auto",
               "--hidden-import uvicorn.lifespan",
               "--hidden-import uvicorn.lifespan.on",
-              "--hidden-import embed_model",
-              "--hidden-import services",
-              "--hidden-import services.main",
+              "--hidden-import app",
+              "--hidden-import app.main",
+              "--hidden-import app.api",
+              "--hidden-import app.api.v1",
+              "--hidden-import app.api.v1.workflows",
+              "--hidden-import app.api.v1.health",
+              "--hidden-import app.core",
+              "--hidden-import app.runtime",
+              "--hidden-import app.shared",
+              "--hidden-import app.workflows",
+              "--hidden-import app.workflows.medical_record_extract",
+              "--hidden-import app.workflows.other_diagnosis",
+              "--hidden-import app.workflows.secondary_diagnosis",
           ]
           for imp in imports:
               key = imp.lower().replace("-", "_")
@@ -291,11 +306,10 @@ jobs:
           SEP="${{ matrix.pyinstaller_sep }}"
           pyinstaller --onefile \
             --name "${{ matrix.artifact_name }}" \
-            --paths scripts \
             --paths . \
-            --add-data "configs${SEP}configs" \
-            --add-data "scripts${SEP}scripts" \
-            --add-data "services${SEP}services" \
+            --add-data "app${SEP}app" \
+            --add-data "docs${SEP}docs" \
+            --add-data ".env.example${SEP}." \
             ${{ steps.pyi_analysis.outputs.hidden_args }} \
             ${{ steps.pyi_analysis.outputs.collect_args }} \
             $CONSOLE_FLAG \
