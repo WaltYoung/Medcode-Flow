@@ -1,0 +1,1728 @@
+app:
+  description: '修改了病灶位置综合识别
+
+    '
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  icon_type: emoji
+  mode: workflow
+  name: 【生产-V8】01 病历信息提取
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/tongyi:0.2.20@83977f8cbc6ccd4a47c3f8a72c454bc42102b20d5b575a2b124d3ebfe92bb226
+    version: null
+kind: app
+version: 0.6.0
+workflow:
+  conversation_variables: []
+  environment_variables:
+  - description: ''
+    id: 61b2b4f2-fb6e-453a-aa21-26ef7bb2a8bc
+    name: precise_location
+    selector:
+    - env
+    - precise_location
+    value: ''''''
+    value_type: string
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        attachment_image_file_size_limit: 2
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        file_upload_limit: 20
+        image_file_batch_limit: 10
+        image_file_size_limit: 10
+        single_chunk_attachment_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 1767151121351-source-1767763555474-target
+      selected: false
+      source: '1767151121351'
+      sourceHandle: source
+      target: '1767763555474'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: end
+      id: 1765289669955-source-1765284377321-target
+      selected: false
+      source: '1765289669955'
+      sourceHandle: source
+      target: '1765284377321'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767756052205-source-1765286764568-target
+      selected: false
+      source: '1767756052205'
+      sourceHandle: source
+      target: '1765286764568'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1765286764568-source-1765289669955-target
+      selected: false
+      source: '1765286764568'
+      sourceHandle: source
+      target: '1765289669955'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767763555474-source-1769656231101-target
+      selected: false
+      source: '1767763555474'
+      sourceHandle: source
+      target: '1769656231101'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: tool
+      id: 1765250555909-source-1770187383179-target
+      selected: false
+      source: '1765250555909'
+      sourceHandle: source
+      target: '1770187383179'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: code
+      id: 1770187383179-source-1767151121351-target
+      selected: false
+      source: '1770187383179'
+      sourceHandle: source
+      target: '1767151121351'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1766130305624-source-1767756096991-target
+      selected: false
+      source: '1766130305624'
+      sourceHandle: source
+      target: '1767756096991'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767763555474-source-1772534690810-target
+      selected: false
+      source: '1767763555474'
+      sourceHandle: source
+      target: '1772534690810'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1769656231101-source-1766130305624-target
+      selected: false
+      source: '1769656231101'
+      sourceHandle: source
+      target: '1766130305624'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1772534690810-source-1766130305624-target
+      selected: false
+      source: '1772534690810'
+      sourceHandle: source
+      target: '1766130305624'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1774938512098-source-1766130305624-target
+      source: '1774938512098'
+      sourceHandle: source
+      target: '1766130305624'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: if-else
+      id: 1767763555474-source-1774938829417-target
+      source: '1767763555474'
+      sourceHandle: source
+      target: '1774938829417'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1774938829417-true-1774938512098-target
+      source: '1774938829417'
+      sourceHandle: 'true'
+      target: '1774938512098'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1775726857853-source-1767756052205-target
+      selected: false
+      source: '1775726857853'
+      sourceHandle: source
+      target: '1767756052205'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1774938829417-false-1766130305624-target
+      source: '1774938829417'
+      sourceHandle: 'false'
+      target: '1766130305624'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767756096991-source-1776242637256-target
+      source: '1767756096991'
+      sourceHandle: source
+      target: '1776242637256'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1776242637256-source-1775726857853-target
+      source: '1776242637256'
+      sourceHandle: source
+      target: '1775726857853'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: 开始
+        type: start
+        variables:
+        - label: 原始病历文本
+          max_length: 999999999
+          options: []
+          required: true
+          type: paragraph
+          variable: raw_medical_record
+      height: 108
+      id: '1765250555909'
+      position:
+        x: -2040.0163224461
+        y: 126.62206887903298
+      positionAbsolute:
+        x: -2040.0163224461
+        y: 126.62206887903298
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1767763555474'
+          - text
+          variable: 病历概要
+        - value_selector:
+          - '1769656231101'
+          - text
+          variable: 是否存在历史确诊
+        - value_selector:
+          - '1772534690810'
+          - text
+          variable: 是否首次抗肿瘤治疗
+        - value_selector:
+          - '1774938512098'
+          - text
+          variable: 是否拟放弃原治疗计划
+        - value_selector:
+          - '1767756052205'
+          - text
+          variable: 肿瘤位置
+        - value_selector:
+          - '1765286764568'
+          - text
+          variable: 诊断清单
+        - value_selector:
+          - '1765289669955'
+          - text
+          variable: 治疗方式
+        selected: false
+        title: 结束 2
+        type: end
+      height: 244
+      id: '1765284377321'
+      position:
+        x: 3490.5448350199877
+        y: 432.8010265788309
+      positionAbsolute:
+        x: 3490.5448350199877
+        y: 432.8010265788309
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            enable_thinking: false
+            temperature: 0
+          mode: chat
+          name: qwen3-32b
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: c907b382-c995-4e5f-8d36-eb4c511dcc9c
+          role: system
+          text: "角色：你是一位顶尖的病案分析师、ICD编码顾问。\n任务：负责基于病历原文和已提取的病灶信息，进行诊断的筛选、聚合。\n\n【处理原则】\n\
+            完整性原则：提取所有符合诊断标准的疾病，不漏诊\n准确性原则：严格按照证据标准判断，不将不确定的描述作为诊断\n独立性原则：每个独立的疾病实体单独列出，不合并\n\
+            原文依据原则：每个诊断必须有病历原文支持\n无优先级原则：不区分主要/次要诊断，仅按提取顺序列出\n\n 【注意】请参考已提取的标准化肿瘤病灶信息，特别是：\n\
+            - 病灶位置\n- 病变性质（原发/转移）\n\n # 核心任务：诊断的筛选与聚合\n【处理流程】\n## 第一步：原始诊断证据提取\n（1）从以下章节提取\n\
+            1.病理报告（金标准）：逐字阅读，提取病理号、组织学诊断全文、分化程度、免疫组化关键指标。这是判断肿瘤性质（良/恶、原发/转移）和分型的最高优先级证据。\n\
+            2.影像检查报告（CT/MRI/PET-CT等）：提取关于病变位置、大小、形态、密度/信号特征、与周围组织关系、转移灶描述的原文。\n3.手术记录/操作记录：重点阅读“术中所见”部分，提取对病变的直观位置、大小、形态、侵犯范围的描述。\n\
+            4.内镜检查报告：提取内镜下观察到的精确位置（如“距门齿XXcm”、“胃窦大弯侧”）和镜下特征。\n5.病程记录：关注“诊疗经过”、“主任医师查房”等部分，提取医生对病情的分析、判断、诊断性结论以及对并发症因果关系的陈述（如“考虑为术后肠梗阻”）。\n\
+            6.主诉与现病史：理解患者入院的主要原因和疾病发展过程。\n7.体格检查/实验室检查：作为辅助证据，支持某些诊断（如腹膜炎体征支持肠梗阻诊断）。\n\
+             \n 禁止事项：跳过上述详细记录，直接使用“出院诊断”或“出院小结”中的总结性列表。\n \n（2）提取模式：\n  * 明确陈述：\"\
+            诊断为XXX\"、\"符合XXX\"、\"XXX诊断明确\"\n  * 检查结论：\"CT提示XXX\"、\"病理：XXX\"、\"镜检见XXX\"\
+            \n  * 临床判断：\"考虑XXX\"、\"不除外XXX\"\n\n\n## 第二步：诊断筛选（仅保留与本次诊疗相关的）\n   \n ###\
+            \ 纳入标准（满足任一即可）：\n**A. 因果关联**：是本次住院的直接原因或住院期间新出现的结果\n**B. 主动管理**：本次住院期间进行了针对性治疗、调整或特殊监测\n\
+            **C. 影响决策**：显著影响了治疗方案选择或手术决策\n**D. 消耗资源**：导致住院时间延长或显著增加医疗资源消耗\n    \n\
+             ### 排除标准（出现即排除）：\n**仅背景信息**：已治愈的陈旧性疾病，本次未作任何处理\n**不确定诊断**：带有\"？\"、\"\
+            待查\"、\"可疑\"等词汇\n**非特异性表述**：如\"老年状态\"、\"轻度营养不良\"\n**检查偶然发现**：未触发后续诊断程序或治疗计划变更\n\
+            \n## 第三步：诊断聚合（必须遵守）\n### 聚合规则（必须遵守）\n    1. **同一疾病实体合并**\n       - 疾病名称\
+            \ + 病理分级 + 分子分型 + 并发症 → 合并为一个诊断\n       - 示例：`乳腺癌` + `ER阳性` + `HER2阴性`\
+            \ → `激素受体阳性HER2阴性乳腺癌`\n    \n    2. **检查发现的演进合并**\n       - 影像疑似 → 病理确诊\
+            \ → 以病理诊断为准\n       - 术前诊断 → 术后病理 → 以术后病理为准\n       - 禁止将不同阶段的同一发现列为多个诊断\n\
+                \n    3. **原发与直接后果处理**\n       - 原发疾病 + 直接并发症 → 考虑合并\n       - 原发疾病\
+            \ + 远处转移 → 通常作为两个相关诊断\n\n\n#### **筛选标准（决定保留/排除）**\n**保留条件（满足任一即可）：**\n\
+            1. 必须是本次住院的**主要治疗焦点**\n2. 在住院期间**需要每日治疗或监测**\n3. 是**新发生**且已经处理的并发症\n4.\
+            \ **显著影响**治疗方案选择\n5. **导致**住院时间延长或资源消耗增加\n\n\n排除条件（满足任一项则排除）：\n1.仅为背景信息的陈旧疾病（如多年前已治愈的疾病、既往手术史），且对本次住院诊疗无任何影响。\n\
+            2.无症状的轻度偶然发现，且未导致任何治疗或监测计划改变（例如：影像报告中的轻度脂肪肝、微小钙化灶、单纯性囊肿）。\n3.对本次诊疗过程无影响，且在住院期间未进行任何针对性治疗、检查或监测的诊断，但必须保留既往史中的诊断；\n\
+            4.诊断条目本身是手术操作描述（如“腹腔镜下胆囊切除术”）或不确定的疑似诊断（如“性质待查”但不作为主要问题处理）。\n5.（针对过度细分）\
+            \ 排除将同一疾病的不同病理指标、分子分型、分级分期拆分为多个独立诊断的情况。例如，“乳腺癌”是一个诊断，“ER阳性”、“HER2阴性”是其属性。\n\
+            6.（针对手术操作） 排除纯粹描述手术步骤、技术或操作过程的条目。例如，“淋巴结清扫”、“神经保留”、“染色剂注射”等，除非该操作本身成为一个独立的并发症（如“术中神经损伤”）。\n\
+            7.不属于本次主要住院诊疗范围或与本次住院无影响的相关的、检查、诊断但必须保留既往史中的疾病史、术前明确的诊断；\n8.去除仅安排了检查或会诊、术前检查，但无进一步处理的诊断，比如；单纯的血液检查或影像学偶然发现，并未触发任何后续诊断程序（如会诊、增强扫描、穿刺）或治疗/监测计划变更，则需要去除。\n\
+            9.过滤既往手术史、过滤术前评估但未做进一步诊治的诊断；\n\n\n## 基于示例的纠错指令\n1.错误示例：在乳腺癌病例中，单独列出“乳腺BI-RADS\
+            \ 4c类结节”和“乳腺BI-RADS 5类肿块”。\n2.错误原因：违反了规则1（疾病实体唯一性）、规则2（诊断演进合并） 和肿瘤类特定规则。这些是同一疾病在确诊过程中的影像学描述，不是独立诊断。\n\
+            3.正确做法：将这些信息作为属性，合并入“左乳浸润性癌”的最终诊断中，在“临床依据”或“聚合说明”里提及。\n \n#### **针对常见疾病的特定规则**\n\
+             \n**A. 肿瘤类疾病：**\n- 必须合并：部位 + 病理类型 + 分级 + 分子分型 + 淋巴结状态\n- 禁止单独列出：BI-RADS分类、切缘状态、术后状态描述\n\
+             \n**B. 心血管疾病：**\n- 合并：疾病名称 + 严重程度分级\n- 排除：无症状的轻度瓣膜病变\n \n**C. 所有疾病通用：**\n\
+            - 如果诊断带有\"待查\"、\"可疑\"、\"？\" → 谨慎处理，通常排除\n\n\n ## 第四步：诊断分类与信息补充\n  ###\
+            \ 对于每个诊断，判断：\n    1. **疾病大类**：肿瘤类 / 非肿瘤类\n    2. **证据来源**：病理 / 影像 / 手术\
+            \ / 临床 / 内镜 / 实验室\n    3. **诊断确定性**：病理确诊 / 影像确诊 / 临床诊断 / 疑似 / 待排除 / 既往史\n\
+            \n\n    ### 特别规则：\n    #### A. 肿瘤类疾病（参考已提取的病灶信息）\n    - **必须包含**：部位 +\
+            \ 病理类型 + 性质（原发/转移）\n    - **位置信息**：直接使用前置节点提供的\"原文位置\"\n    - **禁止单独列出**：BI-RADS分类、切缘状态等非诊断信息\n\
+            \n    #### B. 非肿瘤类疾病\n    - **是否为并发症**：是/否\n    - **相关操作**：如\"胃癌根治术后\"\
+            、\"化疗后\"\n    \n    #### C. 肠梗阻专项规则\n    ```\n    路径A：是否存在近期手术及其直接因果关联？\n\
+                    ├─ 是 → 手术后肠梗阻\n        └─ 否 → 路径B：明确独立病因\n                   \
+            \ ├─ 肠粘连伴梗阻\n                    ├─ 麻痹性肠梗阻\n                    ├─ 肠扭转、肠套叠\n\
+                                └─ 未特指的肠梗阻\n \n##：输出格式要求（禁止输出json）\n 【输出要求】\n格式：不允许输出表格形式。依次罗列标题、内容即可。\n\
+            优先级和数量：按优先级排序的所有候选诊断，每个对象代表一个疾病实体（仅输出前10个）\n内容：仅输出和本次治疗有关联的诊断结果：有针对性治疗、影响治疗方案等，禁止重复输出同个诊断的不同描述名称、禁止将治疗方式纳入诊断。\n\
+            \n\n### 诊断清单\n（按优先级排序，仅输出前10个）\n疾病名称：[说明：标准化后的疾病名称，使用医学术语,示例：右肺上叶腺癌]\n\
+            疾病大类：[说明：疾病所属的大类分类,枚举值：[\"肿瘤类\", \"非肿瘤类\"]]\n证据来源列表:[说明：证据来自的病历文档类型,可选值：[\"\
+            病理\", \"影像\", \"手术\", \"临床\", \"内镜\", \"实验室\"]]\n诊断确定性:[说明：该诊断的确诊程度,枚举值：[\"\
+            病理确诊\", \"影像确诊\", \"临床诊断\", \"疑似\", \"待排除\", \"既往史\"]]\n \n肿瘤信息（仅肿瘤类）\n\
+            肿瘤特异性信息:[说明：肿瘤类疾病的详细信息]\n所属器官系统:[肿瘤所在的主要器官系统,示例：\"呼吸系统\"、\"消化系统\"、\"乳腺\"\
+            ]\n病变性质:[说明：肿瘤的病理性质,枚举值：[\"原发性恶性\", \"转移性\", \"良性\", \"原位癌\"]]\n是否原发:[说明：相对于当前器官是否为原发性肿瘤,\
+            \ 选项值：是/否]\n \n非肿瘤信息（仅非肿瘤类）：说明：非肿瘤类疾病的详细信息\n是否为并发症：[说明：该疾病是否为其他疾病或治疗的并发症]\n\
+            相关操作:[说明：与该疾病相关的医疗操作或原因,示例：\"胃癌根治术后\"、\"化疗后\"、\"外伤后\"]\n \n禁止输出额外的总结说明"
+        - id: 997853f8-be42-4605-9868-8ce7cfdb76e2
+          role: user
+          text: '病历原文：{{#1767151121351.text#}}
+
+            病灶信息：{{#1767756096991.text#}}'
+        retry_config:
+          max_retries: 3
+          retry_enabled: false
+          retry_interval: 1000
+        selected: false
+        structured_output:
+          schema:
+            additionalProperties: false
+            properties:
+              diagnostic_reasoning_process:
+                description: 诊断推理过程
+                items:
+                  type: string
+                type: array
+              diagnostic_status:
+                additionalProperties: false
+                description: 诊断状态
+                properties:
+                  diagnostic_certainty:
+                    description: 诊断确定性，枚举值：['确诊','临床诊断','疑似','待排除']
+                    type: string
+                  has_definitive_diagnosis:
+                    description: 是否有明确诊断结果
+                    type: string
+                required: []
+                type: object
+              extracted_diseases:
+                additionalProperties: false
+                description: 提取的疾病列表
+                properties:
+                  category:
+                    description: 疾病大类，枚举值：['肿瘤类','非肿瘤类']"
+                    type: string
+                  disease_name:
+                    description: 疾病名称
+                    type: string
+                  evidence_sources:
+                    description: 证据来源列表，如['病理','影像','临床']
+                    items:
+                      type: string
+                    type: array
+                  evidence_text:
+                    description: 证据选择原文
+                    type: string
+                  localization:
+                    additionalProperties: false
+                    description: 位置信息
+                    properties:
+                      distribution_type:
+                        description: 肿瘤分布类型
+                        type: string
+                      more:
+                        description: 其他更多信息
+                        type: string
+                      organ_system:
+                        description: 所属器官系统
+                        type: string
+                      original_description:
+                        description: 病历原文中的定位描述
+                        type: string
+                      standardized_description:
+                        description: 标准化后的解剖位置
+                        type: string
+                    required: []
+                    type: object
+                  priority:
+                    description: 优先级排序（1为最高）
+                    type: number
+                  relitiontext:
+                    description: 和其他诊断的关系
+                    type: string
+                required: []
+                type: object
+            required: []
+            type: object
+        structured_output_enabled: false
+        title: 1-5 提取诊断列表
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1765286764568'
+      position:
+        x: 3022.66921001837
+        y: 304.9012630688332
+      positionAbsolute:
+        x: 3022.66921001837
+        y: 304.9012630688332
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            enable_thinking: false
+            temperature: 0
+          mode: chat
+          name: qwen3-32b
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: e8d10480-1c26-4b50-8d2c-7220687c2065
+          role: system
+          text: "一、角色和任务\n你是专业的病案编码专家，任务是仅从病历原文中，提取并归类从本次住院期间（入院日期至出院日期）的病历中，提取并归类所有核心治疗方式。你必须严格区分治疗的实施阶段，禁止引用或总结既往住院、门诊或出院后的任何历史治疗方案。\n\
+            ## 明确时间线：\n- 入院日期：{{#1767151121351.ryrq#}}\n- 出院日期：{{#1767151121351.cyrq#}}\n\
+            \n# 知识库：\n## 1.中医抗肿瘤治疗药物：\n药物名称：康莱注射液、黄芪注射液、华蟾素胶囊\n\n【首要铁律与绝对禁令】：\n严禁提取任何在本次住院开始之前（即入院日期之前）或本次住院结束之后（即出院日期之后）发生或记录的治疗。 任何违反此时间边界的提取行为都是错误的。特别是：\n\
+            - 严格禁止将“现病史”中描述的患者的任何既往治疗（如“患者曾于外院行化疗4次”）当作本次住院的治疗。\n- 严格禁止将“出院记录”中的总结性、概述性治疗描述（如“术后予以抗感染、营养支持等治疗”）作为直接证据，除非能在住院期间的详细记录中找到对应执行记录。\n\
+            - 严格禁止将“既往史”、“门诊病历”中的内容作为本次治疗的依据。\n\n请首先将所有治疗方式明确分为 【手术类】与 【非手术类】 两大类，再进行详细归类。\n\
+            \n二、核心原则\n1. 数据源与阅读范围\n你必须依据以下病历章节进行分析：\n必读章节（用于提取所有本次治疗证据）：主诉、现病史、检查报告、病理报告、手术记录、操作记录、病程记录、长期/临时医嘱单、会诊记录。\n\
+            限制性阅读章节（仅用于一项特定目的）：\n【既往史】、【手术外伤史】：仅允许用于提取与本次住院疾病相关的“既往手术史”，作为背景信息。严禁将其中的任何既往治疗描述误判为本次治疗。\n\
+            \n 2. 关键限制（必须遵守）\n    ## 时间范围限制\n    **仅限本次住院期间**的治疗记录，包括：\n    - 入院后开始的所有治疗\n\
+            \    - 本次住院期间完成的操作\n    \n3. 严格禁止提取\n  禁止提取：既往住院、门诊或出院后的历史治疗方案\n  禁止提取：出院诊断中的总结性内容作为治疗依据\n\
+            \  禁止提取：仅为检查、评估目的的操作（除非有治疗性质）\n\n### 重要原则：合并与归类\n同类合并：对于同一大类的治疗（如手术、化疗、支持治疗），若在本次住院期间多次执行或使用多种药物/措施，但属于同一治疗目的和逻辑范畴，应合并为一项输出，并列出所有相关的药物或措施。禁止将同一类治疗拆分为多项。\n\
+            组合术式：对于手术，如果多个手术步骤在临床上是针对同一病灶的连续、完整治疗，且在同一麻醉下一次完成，应合并视为一个“组合术式” 输出（如：“喉部分切除术+支撑喉镜下喉病损激光烧灼术+喉功能重建术”）。\n\
+            \n## 分类、定义与判定规则\n### 第一类：手术类治疗（含所有有创操作）\n定义：所有有正式记录的侵入性操作，包括在手术室、介入导管室或治疗室内进行的、需要麻醉或有创穿刺的操作。通常伴有独立的操作记录单。禁止：提取历史手术类治疗！\n\
+            具体包括：\n1.  治疗性/根治性手术：如肺叶切除术、胃癌根治术。\n2.  姑息/缓解性手术：如胆道支架置入术、肠造口术。\n3.  介入手术：如冠状动脉支架植入术（PCI）、肝动脉化疗栓塞术（TACE）。\n\
+            4.  诊断性有创操作：骨髓穿刺术、组织活检术（如肝穿、肺穿、肾穿）、腰椎穿刺术、胸腔穿刺术等。\n5.  其他有创操作：如中心静脉置管术（CVC）、胸腔闭式引流术。\n\
+            \n组合术式判断：\n在手术提取后，需要进行关键合并检查，在筛选出的操作列表中，必须首先判断是否存在多个手术步骤可以且应该被合并为一个“组合术式”或“根治性术式”。\
+            \ 判断依据如下：\n1. 临床逻辑一体化：多个手术操作在临床上是针对同一病灶或同一疾病进程的连续、完整的治疗步骤。例如：针对恶性肿瘤的“器官切除”+“区域淋巴结清扫”；骨折的“切开复位”+“内固定”。\n\
+            2. 存在概括性编码：在ICD-9-CM-3中存在一个能更全面、更准确描述整个治疗过程的单一编码。例如：“单侧乳房改良根治术（85.43）”已包含了乳房切除和腋窝淋巴结清扫。\n\
+            3. 执行时机与目的：这些操作在同一麻醉下、同一次手术中连续完成，共同服务于一个核心治疗目标。\n\n操作：如果确认存在，则将这些步骤合并视为一个“候选术式”，并以这个合并后的整体术式进入后续比较。其技术难度、风险、资源消耗应基于合并后的整体进行评估。\n\
+            \n### 第二类：非手术类治疗\n定义：所有不属于上述“手术类”的治疗方式。\n具体包括（请按以下子类精细提取）：\n1.  化学治疗（化疗）：\n\
+            \    特别判定：若病历描述符合“在初始治疗达到有效控制后，为巩固疗效、延长生存及预防复发而进行的长期、低强度的持续性化疗”，则判定为 `维持性化学治疗`。否则，统一归类为\
+            \ `化学治疗`。\n2.  放射治疗：特指由放射治疗科执行的外照射或内照射治疗。\n3.  同位素治疗：特指由核医学科执行的放射性药物治疗（如碘-131治疗甲状腺疾病）。\n\
+            4.  靶向治疗：使用针对特定基因靶点的药物（如奥希替尼、曲妥珠单抗）。\n5.  免疫治疗：使用免疫检查点抑制剂（如PD-1/PD-L1抑制剂）、CAR-T细胞疗法等。\n\
+            6.  内分泌治疗：使用激素类药物或拮抗剂（如来曲唑、戈舍瑞林）。\n7.  支持治疗：为缓解症状、改善生活质量进行的治疗，包括：\n  \
+            \     镇痛治疗（如使用阿片类药物）\n       营养支持（肠内营养、肠外营养）\n       纠正并发症（抗感染、输血、升白细胞等）\n\
+            \n非手术类治疗同类合并原则（必须执行，禁止跳过）：\n对于非手术类治疗：若同一子类下，在本次住院期间使用了多种药物或措施，但服务于同一核心治疗目的，应合并为一项输出。例如：使用了“培美曲塞+卡铂+贝伐珠单抗”，若贝伐珠单抗在此语境下是化疗方案的一部分，则合并为一项“化学治疗”输出，并在“方案/药物”中列出全部。\n\
+            \n禁止拆分：禁止将同一类治疗（如化疗、支持治疗）因使用多种药物而拆分为多项，将同一目的，同一关联问题进 拆分为多项。\n\n支持治疗的合并与归类规则（必须遵守）：\n\
+            1.目的导向合并：所有支持治疗措施必须首先按其明确的治疗目的进行归类.\n2.措施合并输出：针对同一治疗目的，若在本次住院期间使用了多种药物或措施，必须合并为一项\"\
+            支持治疗\"输出。\n\n### 第三类：PET-CT检查\n定义：本次住院期间进行的正电子发射断层显像/X线计算机体层成像（PET-CT）检查，属于诊断性检查\n\
+            - 若为本次住院期间申请并执行的PET-CT，应作为“PET-CT检查”提取。\n\n## 结构化输出要求\n请严格按照以下格式输出，为每一项识别出的治疗方式提供直接、具体的原文证据。\n\
+            \n### 本次住院的治疗方式清单：\nA. 手术类治疗：[若无此类治疗，则注明“无”]\n1.  操作名称：【如：胸腔镜下右肺上叶切除术】\n\
+            \    类型：【根治性手术】\n    状态：【已完成】\n    关键原文证据：`【复制并粘贴直接描述该手术的原文，例如：手术记录中记载：“……行胸腔镜下右肺上叶切除术……”】`\n\
+            \    主要关联诊断：【此项治疗主要针对的诊断，如：右肺上叶腺癌】\n\nB. 非手术类治疗：[若无此类治疗，则注明“无”，但需逐一核对以下子类]\n\
+            请逐一核对以下子类，仅输出本次住院期间实际存在的治疗 。\n注意：\n- 同类治疗方式需要合并，比如用了两种化疗药物，应该归属于化学治疗，禁止同类治疗方式多次输出\n\
+            - 禁止将“建议先行抗肿瘤转化治疗”类似此类建议的文字作为治疗手段；\n- 禁止从“现病史”中提取；\n- 支持治疗类型最多输出5项；\n\n\
+            先输出该判断结果【本次住院治疗方式是否有化疗、放疗、免疫治疗、内分泌治疗】，再输出治疗明细：\n- 示例：【本次住院治疗方式有化疗、无放疗、无免疫治疗、无内分泌治疗】\n\
+            \n1.化学治疗 [若无该治疗，则不输出此治疗方式内容]\n- 定义：药物是细胞毒药物（如铂类、紫杉类、吉西他滨、培美曲塞等等）\n- 特别注意：中药注射剂（康艾、参麦、艾迪）、免疫调节剂（胸腺肽）、营养药、保肝药等绝不属于化疗，直接进入“支持治疗”判断。\n\
+            \    提取仅化学治疗的方案/药物：【如：培美曲塞 + 顺铂】\n    治疗类型：【化学治疗】\n    关键原文证据：`【复制并粘贴描述化疗方案或执行的原文，例如：病程记录：“今日起予以‘培美曲塞+顺铂’方案化疗。”】`\n\
+            \    。\n2. 靶向治疗 [若无该治疗，则不输出此治疗方式内容]\n    药物名称：【如：甲磺酸奥希替尼片】\n    关键原文证据：`【复制并粘贴使用靶向药物的医嘱或记录，例如：长期医嘱：“甲磺酸奥希替尼片\
+            \ 80mg po qd”。】`\n   \n3.免疫治疗[若无该治疗，则不输出此治疗方式内容]\n    药物名称：【如：帕博利珠单抗注射液】\n\
+            \    关键原文证据：`【复制并粘贴使用免疫药物的医嘱或记录】`\n \n4.放射治疗 [若无该治疗，则不输出此治疗方式内容]\n   \
+            \ 部位与方式：【如：左顶叶脑转移瘤立体定向放射治疗】\n    关键原文证据：`【复制并粘贴放疗科会诊意见或治疗申请单内容，例如：放疗科会诊记录：“建议对左顶叶转移灶行立体定向放疗。”】`\n\
+            \    \n5.内分泌治疗[若无该治疗，则不输出此治疗方式内容]\n    药物名称：【如：戈舍瑞林缓释植入剂】\n    关键原文证据：`【复制并粘贴使用内分泌治疗药物的医嘱或记录】`\n\
+            \   \n6.支持治疗 [若无该治疗，则不输出此治疗方式内容]（最多输出2项）\n    类别与具体措施：【如：镇痛治疗 - 盐酸羟考酮缓释片】\n\
+            \    目的：【如：控制中重度癌性疼痛】\n    关键原文证据：`【复制并粘贴相关评估或医嘱，例如：疼痛护理单记录：“患者主诉疼痛评分7分，予盐酸羟考酮缓释片10mg\
+            \ q12h止痛。”】`\n    \n7.同位素治疗 [若无该治疗，则不输出此治疗方式内容]\n    方式与核素：【如：碘-131治疗】\n\
+            \    关键原文证据：`【复制并粘贴核医学科治疗申请单或会诊意见】`\n\n8.中医抗肿瘤治疗 [若无该治疗，则不输出此治疗方式内容]\n\
+            药物名称：【如：艾迪注射液 / 华蟾素胶囊 / 抗癌消癥方剂/康艾注射液/中药塌渍治疗/中医熏药治疗】\n判定理由：【简述为何判定其为“抗肿瘤治疗”，如：说明书中具有抗肿瘤适应症\
+            \ 或 医嘱/病程明确用于抑瘤治疗】\n关键原文证据：【复制并粘贴医嘱单，例如：长期医嘱：“康莱特注射液”】\n\nC.PET-CT检查：[若无此类检查，则注明“无”]\n\
+            检查项目：【如：PET-CT】\n检查部位：【如：全身（显像及CT）】\n关键原文证据：【复制并粘贴检查报告结论或检查申请单，例如：PET-CT检查报告单：“结论：……符合右肺上叶癌表现。”或会诊记录中提及：“……已行PET-CT检查，结果提示……”】\n\
+            \n无对应的治疗方式，则不输出此治疗方式内容\n禁止输出额外的总结说明。\n相同类型或用药，禁止重复输出。"
+        - id: e67ccfeb-8d87-4d79-bf84-10a96d102095
+          role: user
+          text: '{{#1767151121351.sample_records#}}'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        structured_output:
+          schema:
+            additionalProperties: false
+            properties:
+              non_surgical_treatments:
+                additionalProperties: false
+                description: 非手术治疗分类容器
+                properties:
+                  key_evidence:
+                    description: 关键原文证据
+                    type: string
+                  primary_diagnosis:
+                    description: 主要关联诊断或临床问题
+                    type: string
+                  regimen_description:
+                    description: 具体治疗方案说明（药物、剂量、用法）
+                    type: string
+                  status:
+                    description: 治疗状态（已开始、进行中、已完成等）
+                    type: string
+                  treatment_name:
+                    additionalProperties: false
+                    description: 治疗治疗
+                    properties: {}
+                    required: []
+                    type: object
+                required: []
+                type: object
+              note:
+                description: 关于数据提取范围的说明文本
+                type: string
+              surgical_treatments:
+                additionalProperties: false
+                description: 所有手术类治疗的列表
+                properties:
+                  key_evidence:
+                    description: 关键原文证据
+                    type: string
+                  primary_diagnosis:
+                    description: 主要关联诊断
+                    type: string
+                  procedure_name:
+                    description: 操作名称
+                    type: string
+                  status:
+                    description: 状态
+                    type: string
+                required: []
+                type: object
+            required: []
+            type: object
+        structured_output_enabled: false
+        title: 1-6 提取全部治疗方式
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 117
+      id: '1765289669955'
+      position:
+        x: 3042.802819912318
+        y: 464.8843964160083
+      positionAbsolute:
+        x: 3042.802819912318
+        y: 464.8843964160083
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: 肿瘤信息提取和肿瘤性质判断
+        model:
+          completion_params:
+            enable_thinking: false
+            temperature: 0
+          mode: chat
+          name: qwen3-32b
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - edition_type: basic
+          id: b3e6fe43-ea05-4aba-9afb-aa3c73a14f44
+          role: system
+          text: "一、角色与核心任务\n您是肿瘤病历信息提取专家。您的唯一任务是：从输入的病历文书中，逐字提取并陈列所有肿瘤病灶的原始描述，为后续诊疗提供可追溯的原始数据。\n\
+            \n特别强调，必须提取PET-CT报告中识别到的所有肿瘤病灶；\n\n二、核心操作原则\n您的工作必须严格遵循 “光学复印”模式，仅复制、不创造，仅提取、不加工。\n\
+            1. 必须执行的操作：\n全量提取：提取所有提及的肿瘤病灶信息，无论性质或状态。\n逐字复制：所有输出必须绝对忠实原文，一字不差地记录，包括模糊、不精确的措辞。\n\
+            分源记录：将病理、影像、手术等不同来源的描述严格分开记录。\n判断时序：为每个病灶判断“发现时序”（入院前已知/本次入院新发现）。\n性质提取：定位并逐字复制原文中直接描述肿瘤性质的词句（如“腺癌”、“良性病变”、“恶性肿瘤”）。\n\
+            核验一致性：完成提取后，必须将每个病灶的病理与手术位置描述进行比对，报告一致性状态（一致/不一致）。\n\n2. 严令禁止的操作：\n禁止创造与混合：禁止拼接、融合不同来源的原文以创造新句子。\n\
+            禁止引入外部信息：禁止使用个人知识、外部信息进行任何补充、解释或推断。\n禁止加工原文：禁止对原文进行任何标准化、术语映射、概括、解释或“纠正”。\n\
+            禁止提取无关信息：焦点仅限于肿瘤病灶本身，禁止提取其他无关疾病或发现。\n**禁止提取术前/术后诊断**：不得提取任何明确标注为“术前诊断”或“术后诊断”的内容。\
+            \ \n\n三、输出纪律\n请以严谨、中立的态度，确保每条信息都可独立复核并追溯到原文。您的输出是原始数据的结构化陈列，而非分析报告。\n\
+            \ \n四、分步处理流程\n本阶段目标：从病历的不同部分定位并提取所有与肿瘤病灶相关的原始文本信息，确保信息完整且未经改动。\n1.扫描所有数据源\n\
+            扫描以下所有文档，定位肿瘤病灶相关描述：\n- 出院记录（重点：检验及特殊检查结果的检查结论/诊断、出院诊断、辅助检查）\n- 病理报告（重点：标本信息栏、诊断结论）\n\
+            - 术中快速病理检查报告单（重点：标本信息栏、诊断结论）\n- 术中快速标本常规病理检查报告单（重点：标本信息栏、诊断结论）\n- 手术记录（重点：手术名称、发现病理、术中所见、标本描述），必须提取“发现病理”原文内容\n\
+            - 影像学报告（CT、MRI、PET-CT、超声等）\n- 内镜检查报告（重点：标本信息栏、诊断结论）\n- 临床叙述文本（现病史、入院记录、专科检查、病程记录）\n\
+            - 特殊强制规则（适用于食管类肿瘤）：在识别出任何食管相关的病灶时，必须优先、强制地提取其距离描述。距离描述通常包含“距门齿”、“距切牙”等关键词，后面跟随数字及单位（如“cm”），例如“距门齿约27-32cm处”、“距离门齿27cm处等等”。若原文存在，此信息必须体现在最终的输出中。\n\
+            \n3. 提取原始信息片段\n 对每个病灶，从各文档中提取所有相关原文句子，按来源分类保存。\n \n4. 判断发现时序（基于原文关键词）\n\
+            \ 本次入院期间发现/诊断：原文出现\"入院前\",\"此次入院\"、“本次检查”、“新发”、“术后病理发现”、“术中探查发现\"等.\n\
+            \ 入院前已发现：原文出现\"既往史”、“X年前发现”、“外院诊断”、\"本次为复查\"等.\n 不确定：无任何时间或新/旧线索.\n \n\
+            \ 5. 肿瘤性质判断\n性质判断原则： 优先使用最权威的来源。病理报告 > PET-CT > 手术记录中的病理发现 > 其他临床诊断记录。\n\
+            性质结论包括：恶性/原位/良性/信息不足。\n\n6. 起源判断原则（仅在性质为恶性/原位时执行）\n规则： \n6-1 直接证据：\n优先寻找直接提及“原发”、“转移”、“考虑为转移性”或免疫组化提示来源（如“TTF-1+”）的原文证据,若找到，直接依据该证据判断为原发、继发（转移）.\n\
+            6-2 间接证据（免疫组化或临床病史提示）：\n免疫组化提示：免疫组化结果明确指向其他器官来源（如：肠癌来源的肿瘤出现在肝脏，且免疫组化CDX2(+)、CK20(+)、TTF1(-)）。\n\
+            明确的临床病史：现病史或既往史中明确记载其他部位有原发癌病史，且当前病灶被描述为“转移灶”、“复发病灶”。\n行动：若找到，判断为 继发（转移）。\n\
+            6-3 默认规则（当上述1和2均不成立时）：\n规则：若病理报告明确诊断为某器官的恶性肿瘤（如“（胃）腺癌”、“（肺）鳞状细胞癌”），且全文（包括病理报告、手术记录、现病史等）中没有任何提及“转移”、“继发”或提示其他原发部位的证据，则默认该肿瘤为当前部位的【原发】肿瘤。\n\
+            逻辑依据：病理诊断是金标准。病理医生在未发现转移特征时，通常默认报告为原发肿瘤。例如，诊断“（结肠）腺癌”即默认是结肠原发，无需额外说明“原发性”。\n\
+            行动：应用此规则，判断为原发。\n6-4 信息不足：\n适用情况：\na. 仅有影像或临床描述（如“肝占位，恶性可能”），无病理诊断。\n\
+            b. 病理诊断不明确（如“恶性肿瘤，类型待定”），且无任何原发/转移线索。\nc. 证据相互矛盾，无法依据上述规则判断。\n  行动：判断为信息不足。\n\
+            \ \n五、输出格式（禁止输出json）\n请按以下结构，为每个独立病灶输出其原始信息。\n注意：\n1.此环节不进行性质、起源、位置的分析，仅陈列原始证据\n\
+            2.禁止总结，直接依次列出即可。\n3.下方提供的示例仅用于说明规则，不能作为当前任务的答案，不能丢失相关结构\n4.若有手术记录则必须提取“发现病理”原文内容\n\
+            \n### 肿瘤信息\n【肿瘤信息提取：全身性肿瘤（若无则为不输出全身性肿瘤的内容）】\n【肿瘤类型】：[具体类型]\n【细胞来源】：[如：B细胞、T细胞、髓系]\n\
+            【关键证据】： [证据1原文]、证据2原文]\n---\n【肿瘤信息提取：部位特异性肿瘤】\n病灶编号：N\n【发现时序】：[入院前已发现/本次入院期间发现/不确定]\n\
+            \n=== 按来源分类的原始信息片段 ===\n*病理报告*：\n  - [文档名称/类型]：[例如：术中快速病理检查报告单]\n  - [原文片段1]：[逐字复制完整的相关句子，例如“（右肺上叶）肺组织镜下见腺癌。”]\n\
+            \  - [原文片段2]：[如有免疫组化等，继续逐字复制]\n  - [来源定位]：[例如：诊断结论栏]\n\n*手术及相关操作记录*：\n\
+            \  - [文档名称]：[例如：手术记录]\n  - [原文片段1]：[例如：“术中所见：右肺上叶近胸膜处可见一质硬结节，大小约2*1.5cm。”]\n\
+            \  - [原文片段2]：[例如：“发现病理：右肺上叶腺癌。”]\n  - [来源定位]：[例如：术中所见/发现病理]\n\n*影像学报告*：\n\
+            \  - [文档名称]：[例如：胸部CT平扫+增强报告]\n  - [原文片段1]：[例如：“右肺上叶前段见一不规则软组织密度结节，大小约2.1*1.6cm，考虑恶性肿瘤。”]\n\
+            \  - [来源定位]：[例如：影像表现]\n\n*内镜检查报告*：（如有）\n  - [文档名称]：[例如：支气管镜检查报告]\n  -\
+            \ [原文片段]：[逐字复制]\n  - [来源定位]：[例如：镜下所见]\n\n*临床叙述记录*：\n  - [文档名称]：[例如：入院记录-现病史]\n\
+            \  - [原文片段]：[例如：“患者1年前于外院确诊右肺上叶腺癌。”]\n  - [来源定位]：[例如：现病史]\n=== 本病灶原始信息提取结束\
+            \ ==="
+        - id: 840fc297-a449-4a51-8fc4-fc2f0ca8403a
+          role: user
+          text: '{{#1767151121351.text#}}'
+        retry_config:
+          max_retries: 3
+          retry_enabled: false
+          retry_interval: 1000
+        selected: false
+        title: 1-2 肿瘤信息提取
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 115
+      id: '1766130305624'
+      position:
+        x: 645.1077606129058
+        y: 102.2238109995011
+      positionAbsolute:
+        x: 645.1077606129058
+        y: 102.2238109995011
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "import json\nimport re\nfrom copy import deepcopy\n\ntarget = ['血常规',\
+          \ '大生化', '凝血四项', '血栓四项', '乙丙艾梅8项', '尿常规', '心电图检查', '血液凝血功能检查', 'CRP',\n\
+          \          'DIC全套7项', '微生物检验报告单', '血型', '血液生化检查', 'TEG常规检测', '输血前传染病检测',\
+          \ '尿液电解质',\n          '尿液电解质', '冠状动脉CTA+钙化积分', '心肌酶2项']\n\n\ndef parse2markdown_table(html_table:\
+          \ list[list]) -> str:\n    if not html_table:\n        return \"\"\n\n \
+          \   # 生成表头行\n    headers = html_table[0]\n    header_row = \"| \" + \" |\
+          \ \".join(headers) + \" |\"\n\n    # 生成分隔线行\n    separator_row = \"| \"\
+          \ + \" | \".join([\"---\" for _ in headers]) + \" |\"\n\n    # 生成数据行\n \
+          \   data_rows = []\n    for row in html_table[1:]:\n        # 确保每行数据与表头列数一致\n\
+          \        if len(row) != len(headers):\n            # 如果列数不匹配，用空字符串填充缺少的列\n\
+          \            row = row + [\"\"] * (len(headers) - len(row))\n        data_row\
+          \ = \"| \" + \" | \".join(row) + \" |\"\n        data_rows.append(data_row)\n\
+          \n    # 组合所有行\n    markdown_table = header_row + \"\\n\" + separator_row\n\
+          \    if data_rows:\n        markdown_table += \"\\n\" + \"\\n\".join(data_rows)\n\
+          \n    return markdown_table\n\n\ndef simplify_html_table(html_table: str)\
+          \ -> str:\n    pattern = r'<th\\b[^>]*>([^<]*(?:<[^/][^>]*>[^<]*)*)</th>'\n\
+          \    matches = re.findall(pattern, html_table, re.IGNORECASE)\n    table\
+          \ = []\n    row = []\n    for i, match in enumerate(matches, 1):\n     \
+          \   # print(f\"{i}: {match.strip()}\")\n        row.append(match.strip())\n\
+          \n    table.append(deepcopy(row))\n    row.clear()\n\n    pattern = r'<td\\\
+          b[^>]*>([^<]*(?:<[^/][^>]*>[^<]*)*)</td>'\n    matches = re.findall(pattern,\
+          \ html_table, re.IGNORECASE)\n    for i, match in enumerate(matches, 1):\n\
+          \        # print(f\"{i}: {match.strip()}\")\n        row.append(match.strip())\n\
+          \        if len(row) >= len(table[0]):\n            table.append(deepcopy(row))\n\
+          \            row.clear()\n\n    return parse2markdown_table(table)\n\n\n\
+          def main(text: str) -> dict:\n    document = json.loads(text)\n    # 入院日期和出院日期\n\
+          \    ryrq = ''\n    cyrq = ''\n\n    # 出院记录-治疗经过\n    zljg = ''\n\n    #\
+          \ 医嘱单+手术记录\n    sample_records = []\n    # 医嘱单：\n    yz = []\n\n    # 入院记录.\n\
+          \    ryjl = []\n    for item in document:\n        # 初始化content变量\n    \
+          \    content = item.get(\"content\", {})\n\n        # 提取入院日期和出院日期：\n   \
+          \     if item.get('title') in ['出院记录', '24小时内入出院记录']:\n            content\
+          \ = item.get(\"content\", item.get(\"structured\", {}))\n\n            #\
+          \ 适配24小时内入出院记录的结构：\n            if '出院记录' in content:\n                content\
+          \ = content.get('出院记录')\n\n            if isinstance(content, dict) and\
+          \ content:\n                ryrq = content.get('入院日期', '')\n           \
+          \     cyrq = content.get('出院日期', '')\n                zljg = content.get('治疗经过','')\n\
+          \            else:\n                content = item.get(\"structured\", {})\n\
+          \                if isinstance(content, dict) and content:\n           \
+          \         ryrq = content.get('入院日期', '')\n                    cyrq = content.get('出院日期',\
+          \ '')\n                    zljg = content.get('治疗经过','')\n\n        if item.get(\"\
+          title\") in ['临时医嘱单', '长期医嘱单']:\n            if isinstance(content, dict)\
+          \ and content:\n                medical_advice_content = content.get(\"\
+          医嘱内容\", \"\")\n                if medical_advice_content != \"\":\n    \
+          \                simplified_table = simplify_html_table(medical_advice_content)\n\
+          \                    item[\"content\"][\"医嘱内容\"] = simplified_table\n\n\
+          \        # 屏蔽入院记录和出院记录。目的是为了后面提取治疗方式使用，避免入院和出院记录的内容造成干扰；\n        if item.get('title')\
+          \ not in ['出院记录', '入院记录', '住院病案首页']:\n            content = item.get(\"\
+          content\", item.get(\"structured\", {}))\n            if item.get(\"title\"\
+          ) == '检验检查记录':\n                if isinstance(content, list) and content:\n\
+          \                    temp_content = []\n                    for record in\
+          \ content:\n                        if '报告标题' in record:\n             \
+          \               report_title = record.get(\"报告标题\", \"\")\n            \
+          \                if all(t not in report_title for t in target):\n      \
+          \                          temp_content.append(record)\n               \
+          \     content = temp_content\n            sample_records.append({\n    \
+          \            'title': item.get(\"title\"),\n                'content': content\n\
+          \            })\n\n        # 只提取入院记录的主诉、现病史、既往史、手术史\n        if item.get('title',\
+          \ '') in ['入院记录', '24小时内入出院记录']:\n            content = item.get(\"content\"\
+          , item.get(\"structured\", {}))\n\n            if not isinstance(content,\
+          \ dict):\n                continue\n\n            # 兼容提取的JSON数据格式不标准：{\"\
+          title\":\"入院记录\",\"content\":{\"入院记录\":[]}}\n            if '入院记录' in content:\n\
+          \                content = content.get('入院记录')\n            if isinstance(content,\
+          \ list):\n                content = content[0]\n            elif isinstance(content,\
+          \ dict):\n                # 如果本身就是字典，直接使用\n                content = content\n\
+          \n            # 防止出院记录提取不到入院日期\n            if not ryrq:\n             \
+          \   ryrq = content.get('入院日期', '')\n\n            if not cyrq:\n       \
+          \         cyrq = content.get('出院日期', '')\n\n            ryjl.append({\n\
+          \                \"主诉\": content.get('主诉', ''),\n                \"现病史\"\
+          : content.get('现病史', ''),\n                \"既往史\": content.get('既往史', ''),\n\
+          \                \"手术外伤史\": content.get('手术外伤史', '')\n            })\n\n\
+          \        # 只提取医嘱的内容：\n        if sample_records:\n            for item in\
+          \ sample_records:\n                if item.get(\"title\") in ['临时医嘱单', '长期医嘱单']:\n\
+          \                    yz.append({\n                        'title': item.get('title',\
+          \ ''),\n                        'content': item.get('content')\n       \
+          \             })\n\n    return {\n        'text': json.dumps(document, ensure_ascii=False),\n\
+          \        'ryrq': ryrq,\n        'cyrq': cyrq,\n        'zljg':zljg,#治疗经过\n\
+          \        'sample_records': json.dumps(sample_records, ensure_ascii=False),\n\
+          \        'ryjl': json.dumps(ryjl, ensure_ascii=False),\n        'yz': json.dumps(yz,\
+          \ ensure_ascii=False),\n    }"
+        code_language: python3
+        desc: ''
+        outputs:
+          cyrq:
+            children: null
+            type: string
+          ryjl:
+            children: null
+            type: string
+          ryrq:
+            children: null
+            type: string
+          sample_records:
+            children: null
+            type: string
+          text:
+            children: null
+            type: string
+          yz:
+            children: null
+            type: string
+          zljg:
+            children: null
+            type: string
+        selected: false
+        title: 简化病历
+        type: code
+        variables:
+        - value_selector:
+          - '1765250555909'
+          - raw_medical_record
+          variable: text
+      height: 51
+      id: '1767151121351'
+      position:
+        x: -1197.5385938627765
+        y: 126.62206887903298
+      positionAbsolute:
+        x: -1197.5385938627765
+        y: 126.62206887903298
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: 肿瘤分布类型、和标准化位置转化
+        model:
+          completion_params:
+            enable_thinking: false
+            temperature: 0
+          mode: chat
+          name: qwen3-32b
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 727acc41-c057-4ea3-8865-dc42b9794c67
+          role: system
+          text: "一、角色与核心任务\n您是肿瘤信息分析专家。您的任务是基于提取的病灶原始信息，对所有恶性病灶进行分布类型分析。\n\n范围：\n\
+            1.仅分析性质为恶性/原位的病灶；\n2.性质为良性，仅输出性质信息，终止该病灶的后续分析。\n3.多处肿瘤判定白名单（关键）： 仅以下器官支持判定为“多处肿瘤”：\n\
+            - 消化系统：舌、食管、胃、小肠、结肠、直肠。\n- 呼吸系统：肺。\n- 泌尿系统：肾、输尿管、膀胱。\n- 其他：乳腺、大脑皮层、甲状腺。\n\
+            - 注意：乙状结肠没有多处恶性肿瘤\n除上述名单外的器官（如肝脏、胰腺等）：一律不涉及“多处肿瘤”判定，仅在路径A 或 路径B(复合癌)中分析其分布。\n\
+            \n全局区分：\n1.输入中的【起源】并不是指肿瘤起源的地方，而是指：原发 / 继发（转移） 的概念\n\n\n二、病灶分布类型分析流程（仅分析所有恶性病灶）\n\
+            1. 独立病灶数量判定\n核心原则：结合所有来源（主诉、现病史、既往史、影像、内镜、手术、病理、PET-CT报告），独立病灶数 = 本次住院发现的原发灶\
+            \ + 历次病史记载的同器官异位原发灶。\n- 解剖独立性：成对器官（如甲状腺左右叶、左右乳腺、左右肺）的对侧病灶，视为独立病灶（但喉不涉及）。\n\
+            - 空间独立性：非成对器官中明确不连续的肿块（如胃窦与胃底两个独立肿块）\n- 时序独立性：既往已手术切除的恶性病灶，与本次新发的恶性病灶，累计计算\n\
+            - 连通性修正(关键)：若病灶表现为浸润、蔓延或连续受累（如“胃窦累及胃体”），视为 1 个独立病灶，进入“路径A”。\n- 纠偏逻辑：若病历描述为“XX部位复发”，需核实：\n\
+            \  - 若既往手术部位与本次发病部位解剖不连续（如：既往右甲状腺癌，本次左甲状腺新发），即使临床口语称“复发”，在分布分析中应视为第2个独立原发灶。\n\
+            \  - 若在原手术残端或原位长出，则视为单一病灶的复发。\n\n判断结果：单病灶（独立恶性病灶数量=1） 或 多病灶 (独立原发恶性病灶数量≥2，含跨越时间的同器官多发)。\n\
+            \n2. 分路径分析\n注意：**转移病灶不纳入多病灶分析**\n\n路径A：单病灶分析流程\n第一步：强制核查数据源\n从上述《二、病灶位置信息提取》的【具体解剖亚部位】及所有相关的【证据原文】中，提取所有明确的解剖部位或亚部位名称。\n\
+            \n第二步：判断是否触发“交搭跨越”分析（基于ICD-10编码规则）\n**核心定义与目标：**\n本步骤旨在判断当前病灶**是否符合ICD-10中“交搭跨越”的编码条件**。\n\
+            \n**判断流程：**\n【喉的不同解剖亚部位列表】：前连合、后连合、声带、室带、杓状会厌襞、会厌、喉室、声门下腔\n【胰的不同解剖亚部位表】：胰体、胰尾、胰颈、胰头、胰体颈(属于交搭跨越)、胰头颈(属于交搭跨越)、胰体尾(属于交搭跨越)\n\
+            \n第一步，多亚部位识别：\n**输入**：审查【具体解剖亚部位】和【核心位置原文】等。\n\n【关键前置步骤：名称拆解】\n在判断触发条件前，必须先将原文中的复合部位名称拆解为独立的解剖亚部位。\n\
+            1.强制拆解规则：对于符合“部位A+部位B”模式的复合词，无论中间有无连接符（如“声带室带”、“胰体尾”、“胃窦体交界”），必须将其拆解为【部位A】和【部位B】两个独立的解剖亚部位。\n\
+            - 正例：“左侧声带室带” → 拆解为 “声带” 和 “室带”。\n- 反例：“左侧声带” → 拆解为 “声带” 一个部位。\n\n2.左右侧归并逻辑：\n\
+            - 识别侧向描述：识别“左侧”、“右侧”、“双侧”、“左右”等方位词。\n- 同名判定原则：若拆解后的多个名称属于同一解剖亚部位（仅为左右侧不同），必须将其视为同一个亚部位，不计为多个亚部位。\n\
+            - 示例：“左侧声带+右侧声带” → 归纳为 【声带】（单一亚部位），不触发交搭。\n- 对比：“左侧声带+左侧室带” → 归纳为 【声带】+【室带】（两个不同亚部位），触发交搭。\n\
+            \n触发线索不限于（满足任一条件）：\n- 复合名称触发（经拆解后）：经上述拆解后，得到了两个或以上属于同一器官的不同解剖亚部位。（此为最强触发信号）\n\
+            \  - 正例：“声带室带”（拆解为声带、室带）、“胰体尾”（拆解为胰体、胰尾）、“胃窦体交界”（拆解为胃窦、胃体）。\n  - 反例（不触发）：“双侧声带”、“左右声带”、“声带及对侧声带”。\n\
+            \n- 无关病灶数量，主要名称由两个或多个不同亚部位拼接而成：（如：“贲门-胃体”、“贲门-胃底”、“胃体-胃窦”、“食管-贲门”，\"胰体尾\"\
+            ，\"胰头颈\"，“直肠乙状结肠”，“胰腺体尾”、\"声带室带\"。即使以“-”连接，也等同于列举了多个不同亚部位。）\n- 出现连接词：及、和、与、累及、侵犯至、波及、同时位于、位于...和...之间/处、“交界处”、“移行部”、“连接处”、“邻近”、“旁”等，连接了两个不同的解剖名词。\n\
+            - 出现连接标点：逗号（，）、顿号（、）、斜杠（/）、分隔符(-)用于分隔部位名称，连接了两个不同的解剖名词。\n- 出现任何暗示交界或邻近关系的短语：\n\
+            - 交界性复合词：名称本身包含部位交界概念，如“食管胃交界”、“贲门口”、“直肠乙状结肠交界”、“胃窦体交界”、“黄门胃底”。\n-  “近”字短语：【例如：“胃体近贲门”、“乙状结肠近直肠”、“舌根近会厌”。此类描述强烈暗示肿瘤位于一个部位但紧邻/跨越至另一个部位，应触发分析。】\n\
+            - “处”、“区”字短语：如“贲门处”、“胃窦区”，需结合上下文判断，若上下文提示此为复合区域或交界区，则触发。\n- 在报告的诊断结论或镜下描述中，出现两个或两个以上具体的解剖亚部位名称并列（例如：“声带及室带”、“喉室伴会厌”），即使没有使用“侵犯”等动态词，只要在列表表中属于不同亚部位，即判定为涉及多个亚部位\n\
+            - 分句或短语并列：在紧密关联的语句中，分别描述肿瘤在不同部位的表现（如：“肿瘤主体位于胃窦，向上侵犯胃体”）。\n- 排除性规则（优先级最高）：\n\
+            \    - 同部位原则：若文中提到的多个部位名称实质上指向同一个解剖亚部位的不同侧（如：左/右、近端/远端、前/后壁），除非明确跨越到了另一个定义的亚部位，否则不判定为交搭。\n\
+            \    - 喉部特殊说明：单纯的“左侧+右侧”声带受累，视为“声带”的范围扩展，不属于交搭编码。\n\n决策与分流：\n若筛查结果为“否”：所有描述仅指向同一个解剖部位（如：“右肺上叶”）\
+            \ → 直接判定分布类型为【单一亚部位】，分析结束。\n若筛查结果为“是”：→ 进入第三步适用系统核查与最终判定。\n\n第三步：适用系统核查与最终判定\n\
+            核心原则： 此步骤的最终目的是在“单一亚部位”和“交搭跨越”之间做出唯一选择。一旦在第二步判定为“触发交搭跨越分析：是”，那么最终的判定结果应主要取决于病灶所属的器官系统是否将“交搭跨越”作为标准编码实践，而非取决于病灶的“个数”。\n\
+            \n步骤1：核查是否为“乳腺”。如果是，强制判定为【单一亚部位】。分析结束。\n步骤2：核查是否为“宫颈与宫体”交搭。如果是，判定为【交搭跨越】。分析结束。\n\
+            步骤3：核查器官系统。\n如果属于以下常需判断的系统，则判定为【交搭跨越】：\n● 交搭跨越类型适用的器官系统（常需判断交搭跨越）：\nC00\
+            \ - C14 唇、口腔和咽：例如，肿瘤同时侵犯舌根（C01）和扁桃体（C09），或口腔与口咽交搭。\nC15 - C26 消化器官：此为最常见领域。例如：食管与胃贲门交搭（C16.0）、胃体与胃窦交搭、结肠肝曲与横结肠交搭、直肠与乙状结肠交搭\
+            \ （特别注意：如“胰体尾”、“胃窦体交界”等复合名称，直接判定为交搭跨越））。\nC30 - C39 呼吸和胸腔内器官：例如：喉（声门上与声门下）交搭、主支气管与肺交搭。\n\
+            C64 - C68 泌尿道：例如：肾盂与输尿管移行处交搭、膀胱三角区与侧壁交搭。\nC69 - C72 眼、脑和中枢神经系统其他部位：例如：脑叶之间交搭、脑与脑膜交搭。\n\
+            C76 - C80 不明确、继发和部位未特指的恶性肿瘤：此类描述本身常涉及广泛区域，易触发交搭跨越编码。\n \n如果属于一般不适用交搭跨越的系统（如C50乳腺、C43-44皮肤、C40-41骨、C73-75内分泌腺等），则仍需审查：\n\
+            若原文明确使用“累及”、“侵犯至”等动态词描述跨越，则判定为【交搭跨越】。\n若仅为静态的复合词（如“肩背部皮肤”）或无动态跨越描述，则仍判定为【单一亚部位】。\n\
+            \ ● 交搭跨越类型一般不适用或较少适用交搭跨越的系统：\nC40 - C41 骨和关节软骨：按具体骨编码，跨骨交搭罕见。\nC43 - C44\
+            \ 皮肤：按具体皮肤部位编码，跨部位交搭按规则处理，但系统内不强调此概念。\nC45 - C49 间皮组织和软组织：按组织类型和具体部位编码。\n\
+            C50 乳房：一般按象限或中心等具体部位编码，交跨越不常见（但同侧乳房内多象限受累可能涉及）。\nC51 - C58 女性生殖器官：各器官编码明确（如宫颈C53，子宫体C54）。\n\
+            例外：宫颈与宫体交搭是重要的特例，需特别关注。\nC60 - C63 男性生殖器官：编码相对独立。\nC73 - C75 甲状腺和其他内分泌腺：各腺体独立编码。\n\
+            C81 - C96 淋巴、造血和有关组织的恶性肿瘤：按细胞类型（淋巴瘤、白血病）编码，不按解剖部位交搭原则编码。\nC97 独立多个部位的恶性肿瘤：此类别即定义为多原发，不属于单一肿瘤的“交搭跨越”。\n\
+            \n\n路径B：多病灶分析流程（判断是“多处肿瘤”还是“复合癌”）\n若判定为多病灶，基于病理一致性进行分类：\n1.判定为【多处肿瘤】需同时满足：\n\
+            - 数量：原发恶性病灶 ≥ 2（含既往史记载）。\n- 部位：所有病灶原发于同一器官/系统（如：双侧甲状腺、同侧肺不同叶、结肠多段）。\n\
+            - 病理：所有病灶组织学类型相同（如：均为乳头状癌、均为腺癌）。\n- **时间非限定**：“多处”状态的判定不受肿瘤发现时间（同时或先后）的限制。只要患者终生在同一器官内被证实存在多个符合上述条件的原发癌，其最终诊断即应归类为“多处肿瘤”。\n\
+            - 特定器官：仅舌、食管、胃、小肠、结肠、直肠、肺、乳腺、肾、输尿管、膀胱、大脑皮层、甲状腺这些器官才支持多病灶；\n- 注意：乙状结肠没有多处恶性肿瘤\n\
+            - 示例：\n同时发现：一次手术中，病理报告同时提示“甲状腺左叶乳头状癌”和“甲状腺右叶乳头状癌”。\n 先后发现：患者本次因“甲状腺左叶乳头状癌”入院，但病史显示其多年前曾因“甲状腺右叶乳头状癌”行切除术，且本次病灶非既往癌症的复发或转移。\n\
+            \n2.判定为【复合癌】需同时满足：\n- 数量：原发恶性病灶 ≥ 2。\n- 病理：所有病灶组织学类型不同（如：左侧鳞癌，右侧腺癌；或同侧同时存在乳头状癌和滤泡状癌）。\n\
+            3.信息不足：若既往或本次病灶缺少病理描述，无法比对。\n\n\n三、特殊处理\n1. 目的：为选定的肿瘤诊断补充标准化的肿瘤信息。\n2.\
+            \ 操作方法：\n2-1 位置映射：依据《病灶信息》中的“原文描述”，参考提供的【器官系统解剖亚部位表】，转化为“标准化位置”。\n\n\n\
+            四、输出格式（禁止输出json）\n## 肿瘤信息\n【第一部分：全身性肿瘤（如有则输出，没有则不输出）】\n【肿瘤类型】：[具体类型]\n\
+            【细胞来源】：[如：B细胞、T细胞、髓系]\n【免疫分型细节】：[如：具体的免疫标志等等]\n【关键证据】： [证据1原文]、证据2原文]\n\
+            \n【第二部分：部位特异性肿瘤】\n病灶标识1：[生成的标识符，如“（右肺上叶）肺组织”]\n1.病灶基本信息\n【标识原文】：[直接复制原文中对病灶的称呼，如“送检右肺上叶组织”]\n\
+            【发现时序】：[入院前已发现/本次入院期间发现/不确定]\n【性质结论】：[恶性 / 原位 / 良性 / 信息不足]\n【起源结论】：[原发\
+            \ / 继发（转移） / 信息不足]\n === 按来源分类的原始信息片段 ===\n*手术及相关操作记录*：\n  - [文档名称]：[例如：手术记录]\n\
+            \  - [原文片段1]：[例如：“术中所见：右肺上叶近胸膜处可见一质硬结节，大小约2*1.5cm。”]\n  - [原文片段2]：[例如：“发现病理：右肺上叶腺癌。”]\n\
+            \  - [来源定位]：[例如：术中所见/发现病理]\n\n*病理报告*：\n  - [文档名称/类型]：[例如：术中快速病理检查报告单]\n\
+            \  - [原文片段1]：[逐字复制完整的相关句子，例如“（右肺上叶）肺组织镜下见腺癌。”]\n  - [原文片段2]：[如有免疫组化等，继续逐字复制]\n\
+            \  - [来源定位]：[例如：诊断结论栏]\n\n*影像学报告*：\n  - [文档名称]：[例如：胸部CT平扫+增强报告]\n  - [原文片段1]：[例如：“右肺上叶前段见一不规则软组织密度结节，大小约2.1*1.6cm，考虑恶性肿瘤。”]\n\
+            \  - [来源定位]：[例如：影像表现]\n  \n*现病史*：\n  - [文档名称]：[例如：现病史]\n  - [原文片段1]：[例如：“于四川华西医院行胃镜检查，提示：贲门-胃底-胃体黏膜病变”]\n\
+            \  - [来源定位]：[例如：现病史检查]\n\n2.病灶位置信息\n【侧别】：[必须从原文查找“左”、“右”、“双”等词进行判断，左侧/右侧/双侧/单侧（未指明）/无法确定]\n\
+            【器官/部位】：[必须提取病历中明确提到的器官名称，如：乳腺、肺、肝]\n【具体解剖亚部位】：[必须直接引用输入信息中已经归一化好的【具体解剖亚部位】内容]\n\
+            【标准化位置】：[特殊转化的标准化位置名称（无需转化的输出无）]\n【核心位置原文】：[裁决后用于代表该病灶位置的单一、最权威的完整句子，必须是原文]\n\
+            【精确来源】：[文档类型]-[具体章节]\n【证据原文】：[提供位置信息的完整原文句子]\n【位置一致性核验说明】：[简述输入的位置一致性说明，禁止输出\"\
+            路径\"信息]\n- 禁止二次剪裁：即使病理报告（优先级高）中描述的范围较窄，也必须遵循输入中【位置一致性核验说明】的最终判定结论，不得根据单一来源缩小范围。\n\
+            【第三部分：整体病灶分布类型分析】\n【恶性病灶总数】：[数字]\n【主要分布类型】：[单一亚部位 / 交搭跨越 / 多处肿瘤 / 复合癌\
+            \ / 信息不足]\n【分布判断依据】：\n- [步骤1：数量判定]：\n  -  判定逻辑：核对各病灶位置的解剖关系。若多个病灶（如病灶1、病灶2）位于同一器官且属于相邻/连续亚部位（如：声带与室带、胰体与胰尾、胃窦与胃体），必须视为1个独立病灶，逻辑计数为1，进入“路径A”。\n\
+            \  - 执行说明：说明本次病灶与既往史的关系。示例：“虽然病理分两份送检（声带、室带），但因二者属于喉部相邻亚部位，且均为鳞癌，依空间连续性原则合并计为1个原发病灶。”\n\
+            - [步骤2：属性比对]：\n- 交搭判定：\n   - 拆解分析：[此处列出拆解过程，如：原文“双侧声带及室带”拆解为“声带”和“室带”]\n\
+            \   - 触发理由：若**涉及同一个器官的两个及以上相邻不同亚部位**，则必须判定：`【触发交搭跨越分析】：是`。理由：“病灶起源不明确，且涉及[部位A]和[部位B]。”】\n\
+            \      - 例如：\"胰体尾\"->属于交搭、“喉部肿瘤若同时累及声带与前联合” ->属于交搭\n   - 若**仅涉及一个部位或描述模糊或不同器官**，则判定：`【触发交搭跨越分析】：否`。理由：“病灶起源不明确，但未涉及两个或以上相邻解剖亚部位。”\n\
+            - 说明部位与病理关系。例如：“两处病灶均位于甲状腺（同一器官），且病理类型一致，符合异时性多原发规则。注意：喉不是成对器官，及时其病灶为“双侧”，但“双侧”不等于“多处肿瘤”，而是单个器官内的不同亚部位，其不属于“多处肿瘤”范畴”\n\
+            - [步骤3：结论导出]：综上判定为 [分布类型：单一亚部位/交搭跨越/多处肿瘤/复合癌]"
+        - id: ed78ec75-7a6e-4397-8b39-a06b6a95daa5
+          role: user
+          text: '# 病灶信息原文：{{#1767756096991.text#}}
+
+            # 病灶位置和位置一致性校验信息：{{#1775726857853.text#}}'
+        selected: false
+        title: 1-4 肿瘤分布类型分析
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 115
+      id: '1767756052205'
+      position:
+        x: 1797.1796086194158
+        y: 76.77876957650847
+      positionAbsolute:
+        x: 1797.1796086194158
+        y: 76.77876957650847
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            enable_thinking: false
+            temperature: 0
+          mode: chat
+          name: qwen3-32b
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 702782e6-4df5-4e00-9d9f-9c54578a6ff0
+          role: system
+          text: "一、角色与核心任务\n您是肿瘤位置信息提取专家。您的任务是基于原始病历和病灶标识与分析结论，对每个恶性病灶的位置信息进行提取、一致性核验，并按照输出要求输出，为编码或结构化存储做准备。\n\
+            \n二、操作流程\n第 0 步：性质准入硬核过滤（关键） 在提取任何信息前，必须核实该病灶的性质。\n- 拦截规则：若病理、手术或诊断中对该病灶的修饰词包含\
+            \ “不能排除”、“不排除”、“待排”、“建议复查/随访”、“性质待定”、“可疑癌”、“异型增生（未明确为癌）”，“信息不足”，则判定为非准入病灶。\n\
+            - 执行指令：对于非准入病灶，禁止为其生成“病灶标识”，禁止输出其对应的“【第二部分：部位特异性肿瘤】”模块，禁止将其部位混入其他确诊病灶的亚部位描述中。\n\
+            \n第一步：独立病灶数量判定\n对通过第0步过滤的所有准入恶性病灶，进行数量判定。\n1.遍历所有数据源（病理、手术、影像、内镜、临床记录），收集所有通过性质过滤的病灶描述。\n\
+            2.根据以下规则对病灶进行聚合/拆分，确定独立的病灶数量：\n- **核心原则**：独立病灶数 = 符合解剖/空间/时序独立性的所有原发恶性病灶总和。\n\
+            - **解剖独立性**：成对器官（肺、乳腺、甲状腺、肾、卵巢、肾上腺等）的左右侧病灶，视为独立病灶。\n- **空间独立性**：同一器官内，位置不连续、有正常组织间隔的多个肿块，视为独立病灶（例如：胃底和胃窦的两个独立早期癌）。\n\
+            - **时序独立性**：病史中已切除的恶性病灶，与本次新发现的恶性病灶，需累计计算。\n- **连通性修正（关键）**：\n  - 若描述为“浸润”、“蔓延”、“累及”、“连续”，则视为\
+            \ **1个** 独立病灶。例如：“胃窦癌累及胃体” → 1个病灶。\n  - 若描述为“复发”：\n    - 在原手术残端或原位复发 →\
+            \ 视为原病灶的延续，计为 **1个** 病灶。\n    - 在对侧器官或解剖不连续的位置新发 → 视为 **第2个** 独立原发灶。\n\
+            - **纠偏逻辑**：若病历描述为“XX部位复发”，需核实解剖连续性，避免将异位新发灶错误归类为复发。\n\n3. 输出数量判定结果\n记录：**独立恶性病灶总数\
+            \ = N**（N为判定后的最终数量）\n\n第二步：病灶位置信息提取：\n根据第一步判定的数量（独立恶性病灶总数），对每个独立病灶分别执行位置信息提取。\n\
+            - 禁止整段复制！必须基于“解剖关键词锚定”，仅截取与当前恶性病灶相关的短语。\n\n数据来源\n1.首选位置来源（按权威性排序）：\n手术记录：手术记录中“发现病理”的亚部位信息\n\
+            病理报告\n\n2.次选位置来源：\n影像报告（CT/MRI/PET-CT）中关于主要病灶的描述。\n内镜检查（如肠镜、胃镜）报告中的诊断结果。\n\
+            3.最后参考来源：\n入院记录、现病史、专科检查、辅助检查中对肿瘤部位的描述。\n\n** 特别补充： 乳腺病灶位置提取细则必须提取的原文位置信息（按以下规则处理）：\n\
+            1.侧别提取优先：\n从原文中提取侧别信息：“右侧”、“左侧”、“双侧”\n标准化处理：“右侧” → “右”，“左侧” → “左”\n如果原文无明确侧别但可推断（如\"\
+            右乳\"），则提取推断的侧别\n2.完整位置描述提取：\n规则1：提取完整的\"侧别+器官+具体位置\"描述 示例：“右侧乳腺12-1点钟方向”\
+            \ → 提取：“右乳12-1点钟方向”\n规则2：如果原文描述分散，则整合为完整描述 原文片段1：“右侧乳腺”\n原文片段2：“12-1点钟方向”\n\
+            整合提取：“右乳12-1点钟方向”\n3.具体位置元素提取：\n钟点方位：完整保留原文区间描述 正确：“12-1点钟方向”（完整区间）\n\
+            错误：拆分为\"12点钟方向\"和\"1点钟方向\"\n距乳头距离：完整保留原文描述 正确：“距乳头约30mm”\n象限信息：如果原文提及则提取\
+            \ 正确：“外上象限”\n \n** 关于肿瘤病灶位置提取说明\n注意：下方提供的示例仅用于说明规则，不能作为当前任务的答案。\n\n1.\
+            \ 当患者疾病属于全身性肿瘤（白血病、淋巴瘤、骨髓瘤等）\n需要基于病理报告、影像报告、PET报告及手术记录（如骨髓穿刺及活检报告）等检查报告，对全身性肿瘤进行分析，明确其详细分型：\n\
+            \ 1-1 形态学定位：首先从病理报告中识别异常的组织结构（如结构破坏、弥漫/结节性增生）和细胞特征（如细胞大小、形态）；\n 1-2 确定细胞系列：根据流式或免疫组化结果确定细胞系列（若有），区分是B细胞、T细胞还是NK细胞来源；\n\
+            示例：\n -淋巴瘤示例：病理显示淋巴结结构破坏，被弥漫增生的异常淋巴细胞取代，免疫组化为CD20+、CD79a+、PAX5+，可确定为“弥漫大B细胞淋巴瘤”。\n\
+            \ -骨髓瘤示例：患者全身PET-CT提示多发溶骨性骨质破坏；骨髓形态学检查提示异常浆细胞比例达35%；加之免疫固定电泳证实存在IgG-κ型M蛋白，可确定为“多发性骨髓瘤”。\n\
+            \ -白血病示例：骨髓增生极度活跃，原始粒细胞占65%；流式细胞术免疫分型证实该群细胞表达CD13、CD33、CD117及MPO等髓系标志，可确定为“急性髓系白血病”。\n\
+            注意：全身性肿瘤（白血病、淋巴瘤、骨髓瘤等）没有交搭分布类型。\n \n2. 若疾病属于部位特异性肿瘤：需要对病灶进行精准位置定位\n -数据源：病理报告、手术记录-发现病理、影像学报告、手术记录、内镜检查报告、入院记录-专科检查、现病史/主诉\n\
+            \ -病理报告：提取对肿瘤位置的直观描述，禁止加工，保留原文\n -手术记录-发现病理：请重点审核“发现病理”所见，提取对肿瘤位置的直观描述，禁止加工，保留原文\n\
+            \ -手术记录：请重点审阅“术中所见”部分，提取对肿瘤位置的直观描述，并记录手术名称所涉及的器官亚结构（如：远端胃、肝左叶）\n -影像学报告：识别关于肿瘤“部位”、“定位”及“累及范围”的描述，特别注意所有方位词（如：上/中/下、内侧/外侧）和精确测量数据（如：距门齿/肛门缘XXcm）\n\
+            \ -内镜检查报告：请提取内镜下观察到的具体位置描述（如：胃窦大弯侧、食管距门齿XX cm）\n -入院记录-专科检查：请提取专科检查中对于肿瘤的描述信息，禁止加工，保留原文\n\
+            \ -现病史、主诉：请留意并记录既往检查或诊断中提及的肿瘤部位信息病灶性质定性说明：明确病变性质（原发/继发、良性/恶性/原位）。\n\n\
+            上述病灶信息提取完成后，需要按照下述要求进行整合，整合规则如下：\n将同一类型文书下的证据按病灶分别合并，将分散信息整合至单一分类下，具体规则如下：\n\
+            1.手术及相关操作记录：合并手术记录、术中快速病理检查报告单等，统称为“手术及相关检查记录”。\n2.病理报告：合并所有病理报告（常规病理、免疫组化等），统称为“病理报告”。\n\
+            3.影像学报告：合并所有影像报告（CT、MRI、PET-CT、超声等），统称为“影像学报告”。\n4.内镜检查报告：合并所有内镜报告（胃镜、肠镜、支气管镜等），统称为“内镜检查报告”。\n\
+            5.临床叙述记录：合并现病史、病程记录、出院小结中的临床描述，统称为“临床病程记录”。\n\n三、输出要求及格式化输出内容：\n## 1.禁止输出\
+            \ JSON。若无符合准入条件的恶性病灶，则输出：“未发现确诊恶性病灶信息”。\n若肿瘤性质含“不排除”，则整个模块禁止输出。\n\n##\
+            \ 2.肿瘤位置信息\n审阅所有证据，是输出全身性肿瘤还是部位特异性肿瘤？两种情况互斥，禁止同时输出。\n根据判断结果，仅且必须输出对应的完整部分。\n\
+            ---\n情况A：全身性肿瘤（如白血病、淋巴瘤、多发性骨髓瘤）\n判断依据：当且仅当关键证据（如病理、骨髓报告）指向白血病、淋巴瘤、多发性骨髓瘤等全身性、系统性疾病时。\n\
+            输出内容：\n【第一部分：全身性肿瘤（没有则不输出）】\n【肿瘤类型】：[具体类型]\n【细胞来源】：[如：B细胞、T细胞、髓系]\n【免疫分型细节】：[如：具体的免疫标志等等]\n\
+            【关键证据】： [证据1原文]、证据2原文]\n\n 情况B：部位特异性肿瘤（一个或多个实体/局灶性病灶）\n 判断依据：当证据指向一个或多个具体的器官/解剖部位存在实体或局灶性病变时。\n\
+            \ 输出内容：\n【第二部分：部位特异性肿瘤】\n病灶标识N：\n1.病灶基本信息\n【发现时序】：[入院前已发现（从主诉、现病史发现）/本次入院期间发现/不确定]\n\
+            【性质结论】：[恶性 / 原位 / 良性 / 信息不足] \n【分类】：[原发 / 继发（转移） / 信息不足]\n === 按来源分类的原始信息片段\
+            \ ===\n*病理报告*：\n  - [文档名称/类型]：[例如：术中快速病理检查报告单]\n  - [原文片段1]：[逐字复制完整的相关句子，例如“（右肺上叶）肺组织镜下见腺癌。”]\n\
+            \  - [原文片段2]：[如有免疫组化等，继续逐字复制]\n  - [来源定位]：[例如：诊断结论栏]\n\n*手术及相关操作记录*：\n\
+            \  - [文档名称]：[例如：手术记录]\n  - [原文片段1]：[例如：“术中所见：右肺上叶近胸膜处可见一质硬结节，大小约2*1.5cm。”]\n\
+            \  - [原文片段2]：[例如：“发现病理：右肺上叶腺癌。”]\n  - [来源定位]：[例如：术中所见/发现病理，**禁止提取术前/术后诊断**]\n\
+            \n*影像学报告*：\n  - [文档名称]：[例如：胸部CT平扫+增强报告]\n  - [原文片段1]：[例如：“右肺上叶前段见一不规则软组织密度结节，大小约2.1*1.6cm，考虑恶性肿瘤。”]\n\
+            \  - [来源定位]：[例如：影像表现]\n\n*内镜检查报告*：（如有）\n  - [文档名称]：[例如：支气管镜检查报告]\n  -\
+            \ [原文片段]：[逐字复制]\n  - [来源定位]：[例如：镜下所见]\n\n*临床叙述记录*：\n  - [文档名称]：[例如：入院记录-现病史]\n\
+            \  - [原文片段]：[例如：“患者1年前于外院确诊右肺上叶腺癌。”]\n  - [来源定位]：[例如：现病史]\n=== 本病灶信息提取结束\
+            \ ==="
+        - id: bc94bb74-339e-4292-bcd8-7c492bb4f1b9
+          role: user
+          text: '肿瘤信息：{{#1766130305624.text#}}
+
+            病历原文：{{#1767151121351.text#}}'
+        selected: false
+        title: 1-3 恶性病灶位置提取
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1767756096991'
+      position:
+        x: 917.5232377380796
+        y: 97.91024848029934
+      positionAbsolute:
+        x: 917.5232377380796
+        y: 97.91024848029934
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            enable_thinking: false
+            temperature: 0
+          mode: chat
+          name: qwen3-32b
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 1981cf1b-3f8d-4bd4-8c1e-06b78b22fb00
+          role: system
+          text: "# 角色  \n您是病历预处理专家，负责从原始病历中**严格依据原文明确记载的内容**提取结构化信息。 \n**禁止任何推测、推断、补充或基于常识的联想**。所有判断必须有病历原文直接支持。\n\
+            \n# 知识库：\n## 1.中医抗肿瘤治疗药物：\n药物名称：康莱注射液、黄芪注射液、华蟾素胶囊\n\n# 任务  \n从以下病历文本中提取关键信息并判定入院目的。\n\
+            ---\n## 提取与分析规则\n### 第一步：基础信息提取（仅摘录原文，不得改写、概括或推理）\n1. **[主诉]**：逐字摘录“主诉”段落内容。若无，填“无”。\
+            \  \n2. **[现病史]**：逐字摘录“现病史”段落中与当前疾病相关的描述。若无，填“无”。  \n3. **[既往史]**：逐字摘录与当前疾病相关的既往疾病、手术、放化疗、靶向、免疫治疗等史。若无，填“无”。\
+            \ \n4. **[出院诊断]**：从“出院记录”中**完整、逐条、按原文顺序**复制所有诊断名称。若无该部分，填“无”。\n> 所有字段必须有值，缺失时统一填写“无”。\n\
+            ---\n\n### 第二步：入院目的判定（核心：仅依据本次住院期间实际执行的明确医疗行为）\n\n#### 核心原则（必须严格遵守）\n\
+            - **行为本位原则**：  \n  入院目的**唯一依据**是病历中**明确记载在本次住院期间（入院日期至出院日期之间）已执行**的医疗行为。\
+            \  \n  → **禁止**依据以下内容判断：  \n    - 门诊诊断、患者主诉意图、家属要求；  \n    - “拟行”“计划”“建议”“考虑”等未来时态或意向性表述；\
+            \  \n    - **入院前在外院已完成的操作、病理或治疗**（如“1周前于当地医院行XX术”）；  \n    - 出院医嘱中的后续安排。\n\
+            \  \n- **诊断明确原则**：  \n  仅当医生在病程中**明确诊断**某一新问题（如“确诊肺栓塞”），并**同期给予具体治疗**，才视为“处理新问题”。\
+            \  \n  → 影像/检验报告中的“可疑”“不排除”“建议复查”等，若未转化为临床诊断和即刻干预，**不计入**。\n\n- **阶段切割原则**：\
+            \  \n  本次住院是一个独立评估单元。只看“做了什么”，不看“为什么来”或“下一步做什么”。\n\n---\n#### 判定流程（严格执行顺序）\n\
+            第1步：本次住院期间是否明确执行了以下任一医疗行为？\n（只要满足任意一项 → 立即判定为“治疗入院”，流程终止，无需再考虑第2步随诊检查）\n\
+            \n- **计划性抗肿瘤治疗**：如化疗、靶向、免疫、内分泌、同位素治疗、放疗、中医辅助治疗（**在本次住院期间实施**）。  \n- **是否有明确治疗行为**：住院期间使用了具有抗肿瘤或免疫调节作用的药物\
+            \ （如通关藤注射液、康艾注射液、胸腺肽、干扰素，无论其被描述为“辅助治疗”、“增强免疫力”还是“扶正固本”）、物理治疗等（如电离子透入疗法）\n\
+            -  **执行了有创诊断/监测操作**：如穿刺活检（任何部位）、内镜活检、骨髓穿刺术（无论用于诊断还是复查）、穿刺引流术等，**且该操作在本次住院期间执行，用于明确诊断**。\
+            \  \n  → 特别注意： 即使操作目的描述为“复查”，只要它是有创的（如骨髓穿刺），并在本次住院中执行，即属于治疗入院\n  → 注意：若活检/切除术**已在入院前完成且病理已出**，本次仅为评估，则**不计入**。\
+            \   \n- **处理已明确诊断的新发/急性问题**：如活动性感染（有发热+抗生素治疗）、肺栓塞（抗凝）、出血（止血）等，**并在本次住院期间给予针对性治疗**。\
+            \  \n-  **完成治疗性手术**：包括根治术、姑息术等，**且手术实际在本次住院期间完成**（非“拟行”或“计划”）。\n- 仅骨髓穿刺复查也属于治疗入院\n\
+            - 执行了PET-CT检查属于治疗入院；\n\n只要病历中存在本次住院期间执行以上行为的明确记录（如操作记录、治疗记录、用药医嘱），则：\n\
+            > 入院目的 = “治疗入院”\n\n** 第2步：仅当第1步未发生时，才进入此步，判断是否为“随诊检查”**  \n**随诊检查定义**：指在疾病已完成主要治疗后，为评估恢复情况、监测有无复发而进行的**纯检查性住院**。本次住院期间**不实施任何新的治疗干预**（包括所有形式的药物、操作、手术）\n\
+            \n##### 判断为 “随诊检查” , 必须同时满足的三大条件：\n**随诊检查定义**：指在疾病已完成主要治疗后，为评估恢复情况、监测有无复发而进行的**纯检查性住院**。本次住院期间**不实施任何新的治疗干预**（包括所有形式的药物、操作、手术）\n\
+            \n判断为“随诊检查”，必须同时满足：\n1.目的明确为复查/监测：\n- 关键词证据：主诉、现病史或入院记录中明确包含“复查”、“随访”、“定期检查”、“疗效评估”、“监测”、“术后/治疗后×年复查”等表述。\n\
+            - 上下文证据：即使无上述直接关键词，但通篇记录表明患者处于稳定期，本次住院仅为完成预设的检查计划，无任何新发症状或病情变化推动。\n2.无新治疗干预:\n\
+            - 本次住院期间的医疗活动仅限于：体格检查、影像学复查（CT/MRI/B超）、实验室检验、内镜检查（仅观察，无治疗）、病情评估讨论（仅观察，无活检或治疗）。\n\
+            - 无任何治疗：无手术治疗、操作治疗、放疗、化疗、介入治疗、物理治疗、中医抗肿瘤辅助治疗（特别注意：包括所有抗肿瘤辅助治疗的中药注射液、免疫调节剂等）等。\n\
+            \n2-1.【重点强调】以下任何一项均视为“治疗干预”，一旦存在，则直接判断为“治疗入院”：\n- 任何有创诊断操作：如穿刺活检、诊断性刮宫、支气管镜活检等。\n\
+            - 任何形式的新增或调整的药物治疗（特别注意）：\n  - 抗肿瘤治疗(含中医注射液)：如使用了中医辅助抗肿瘤（如康艾注射液、通关藤注射液、胸腺肽、干扰素）等任何具有抗肿瘤或免疫调节作用的药物。即使标明为“辅助治疗”、“增强免疫力”，也属于治疗干预。\n\
+            \  - 针对新症状的治疗：如因“左下腹疼痛”而使用止痛药、消炎药。\n3.无活动性问题触发干预：即使检查结果发现异常或“可疑”情况（如肿瘤标志物升高、影像学发现新结节），但在本次住院期间并未针对这些新发现启动任何诊断性穿刺、活检或治疗性措施。对异常情况的处理被计划在本次住院之后。\n\
+            \n若全部满足 → 入院目的 = “随诊检查”  \n若任一不满足 → 仍归为“随诊检查”（因无治疗行为），但需在判断依据中说明。\n\n\
+            > 本任务仅输出“随诊检查”或“治疗入院”，不使用“其他”。\n\n####  典型反例（帮助识别陷阱）\n- **反例1**：入院前已切除肿瘤并获病理，本次住院查心肺功能、淋巴结超声\
+            \ → **随诊检查**\n- **反例2**：白血病患者，本次住院执行了“骨髓穿刺术”以评估化疗后效果。→ 治疗入院。判断逻辑：触发了第1步（有创监测操作），流程终止。\n\
+            \n\n## 输出格式要求（必须严格遵守）（禁止输出json）\n### 病历概要\n1. 主诉：  \n[逐字摘录，若无则写“无”]\n\n\
+            2. 现病史：  \n[逐字摘录关键段落，若无则写“无”]\n\n3. 既往史：  \n[逐字摘录相关病史，若无则写“无”]\n\n4. 入院目的：\
+            \  \n目的类型: [“随诊检查” 或 “治疗入院”]  \n判断依据: [简明引用病历原文关键句，说明符合哪条规则]\n\n5. 出院诊断：\
+            \  \n[按原文逐条列出，每条以“- ”开头；若无出院诊断部分，写“无”]\n- 诊断1  \n- 诊断2  \n- ...\n"
+        - id: 0054172f-3033-46ed-aa69-e367fc77fcf9
+          role: user
+          text: 病历内容：{{#1767151121351.text#}}
+        selected: false
+        title: 1：病历输入与初始化
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1767763555474'
+      position:
+        x: -868.1240903694494
+        y: 126.62206887903298
+      positionAbsolute:
+        x: -868.1240903694494
+        y: 126.62206887903298
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            enable_thinking: false
+            temperature: 0
+          mode: chat
+          name: qwen3-32b
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 82396ba4-8fa2-46e9-959a-9766a72c6d63
+          role: system
+          text: "# 角色：\n你是一名专业的病案编码专员，你的任务仅通过阅读“主诉”、“现病史”、“既往史”及“手术外伤史”内容，判断患者是否针对当前疾病进行过确诊。\n\
+            \n# 核心概念定义：\n1. **均为历史记录**：所有提供的“主诉”、“现病史”、“既往史”、“手术外伤史”内容均为患者就诊前的病史记录。\n\
+            2. **当前时间**：{{#1770187383179.text#}}\n\n# 任务：\n基于所有提供的内容，判断患者是否曾对当前主要病灶进行过治疗或确诊。\n\
+            \n# 判断逻辑（优先级从高到低）\n## 判定为“是”的情况（满足以下任一条件即可）：\n1. 已有病理确诊：在文本任何部分记载了针对当前主要肿瘤/占位的**病理学确诊**（包括但不限于：活检、穿刺病理、手术病理、胃镜/肠镜活检病理等明确诊断）。\
+            \  \n   - **关键点**：只要病理报告得出“恶性肿瘤”、“癌”、“腺癌”等明确恶性诊断，即视为已确诊。不需要具体到亚型。\n  \
+            \ - **示例**：“病理示恶性肿瘤”、“活检确诊为肝细胞癌”、“病理报告：腺癌”均视为确诊。\n\n2. 入院目的为随诊检查：明确记载本次入院目的为“随诊”、“复查”、“定期检查”等。\n\
+            \n## 判定为“否”的情况（必须同时满足以下所有条件）：\n1. 无病理确诊记录：全文没有任何针对当前主要病灶的病理学确诊记载。\n  \
+            \ - *注意*：仅有影像学提示（如“考虑CA可能”、“疑似占位”）或肿瘤标志物升高，**不算确诊**。\n  \n# 约束要求：\n- **严格依据原文证据**：不要推测、不要补充信息，仅基于提供的文本。\n\
+            - **病理确诊即否决**：一旦发现任何病理确诊的证据，直接判定为“是”，无需考虑治疗史。\n- **关注时间线**：所有记录均为历史，当前时间是\
+            \ {{#1770187383179.text#}}，用于理解时间关系。\n\n# 输出格式（严格遵循）\n## 是否存在历史确诊: [“是”\
+            \ 或 “否”]\n**判定依据**: [根据上述标准，结合原文关键证据简明说明，引用原文内容]"
+        - id: c0a247e4-7671-42a8-b747-fc3ce3408d73
+          role: user
+          text: '{{#1767151121351.ryjl#}}'
+        selected: false
+        title: 1-1-1 是否存在历史确诊
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1769656231101'
+      position:
+        x: -388.1941633275543
+        y: -46.47794383669522
+      positionAbsolute:
+        x: -388.1941633275543
+        y: -46.47794383669522
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        desc: ''
+        is_team_authorization: true
+        output_schema: null
+        paramSchemas:
+        - auto_generate: null
+          default: '%Y-%m-%d %H:%M:%S'
+          form: form
+          human_description:
+            en_US: Time format in strftime standard.
+            ja_JP: Time format in strftime standard.
+            pt_BR: Time format in strftime standard.
+            zh_Hans: strftime 标准的时间格式。
+          label:
+            en_US: Format
+            ja_JP: Format
+            pt_BR: Format
+            zh_Hans: 格式
+          llm_description: null
+          max: null
+          min: null
+          name: format
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: UTC
+          form: form
+          human_description:
+            en_US: Timezone
+            ja_JP: Timezone
+            pt_BR: Timezone
+            zh_Hans: 时区
+          label:
+            en_US: Timezone
+            ja_JP: Timezone
+            pt_BR: Timezone
+            zh_Hans: 时区
+          llm_description: null
+          max: null
+          min: null
+          name: timezone
+          options:
+          - label:
+              en_US: UTC
+              ja_JP: UTC
+              pt_BR: UTC
+              zh_Hans: UTC
+            value: UTC
+          - label:
+              en_US: America/New_York
+              ja_JP: America/New_York
+              pt_BR: America/New_York
+              zh_Hans: 美洲/纽约
+            value: America/New_York
+          - label:
+              en_US: America/Los_Angeles
+              ja_JP: America/Los_Angeles
+              pt_BR: America/Los_Angeles
+              zh_Hans: 美洲/洛杉矶
+            value: America/Los_Angeles
+          - label:
+              en_US: America/Chicago
+              ja_JP: America/Chicago
+              pt_BR: America/Chicago
+              zh_Hans: 美洲/芝加哥
+            value: America/Chicago
+          - label:
+              en_US: America/Sao_Paulo
+              ja_JP: America/Sao_Paulo
+              pt_BR: América/São Paulo
+              zh_Hans: 美洲/圣保罗
+            value: America/Sao_Paulo
+          - label:
+              en_US: Asia/Shanghai
+              ja_JP: Asia/Shanghai
+              pt_BR: Asia/Shanghai
+              zh_Hans: 亚洲/上海
+            value: Asia/Shanghai
+          - label:
+              en_US: Asia/Ho_Chi_Minh
+              ja_JP: Asia/Ho_Chi_Minh
+              pt_BR: Ásia/Ho Chi Minh
+              zh_Hans: 亚洲/胡志明市
+            value: Asia/Ho_Chi_Minh
+          - label:
+              en_US: Asia/Tokyo
+              ja_JP: Asia/Tokyo
+              pt_BR: Asia/Tokyo
+              zh_Hans: 亚洲/东京
+            value: Asia/Tokyo
+          - label:
+              en_US: Asia/Dubai
+              ja_JP: Asia/Dubai
+              pt_BR: Asia/Dubai
+              zh_Hans: 亚洲/迪拜
+            value: Asia/Dubai
+          - label:
+              en_US: Asia/Kolkata
+              ja_JP: Asia/Kolkata
+              pt_BR: Asia/Kolkata
+              zh_Hans: 亚洲/加尔各答
+            value: Asia/Kolkata
+          - label:
+              en_US: Asia/Seoul
+              ja_JP: Asia/Seoul
+              pt_BR: Asia/Seoul
+              zh_Hans: 亚洲/首尔
+            value: Asia/Seoul
+          - label:
+              en_US: Asia/Singapore
+              ja_JP: Asia/Singapore
+              pt_BR: Asia/Singapore
+              zh_Hans: 亚洲/新加坡
+            value: Asia/Singapore
+          - label:
+              en_US: Europe/London
+              ja_JP: Europe/London
+              pt_BR: Europe/London
+              zh_Hans: 欧洲/伦敦
+            value: Europe/London
+          - label:
+              en_US: Europe/Berlin
+              ja_JP: Europe/Berlin
+              pt_BR: Europe/Berlin
+              zh_Hans: 欧洲/柏林
+            value: Europe/Berlin
+          - label:
+              en_US: Europe/Moscow
+              ja_JP: Europe/Moscow
+              pt_BR: Europe/Moscow
+              zh_Hans: 欧洲/莫斯科
+            value: Europe/Moscow
+          - label:
+              en_US: Australia/Sydney
+              ja_JP: Australia/Sydney
+              pt_BR: Australia/Sydney
+              zh_Hans: 澳大利亚/悉尼
+            value: Australia/Sydney
+          - label:
+              en_US: Pacific/Auckland
+              ja_JP: Pacific/Auckland
+              pt_BR: Pacific/Auckland
+              zh_Hans: 太平洋/奥克兰
+            value: Pacific/Auckland
+          - label:
+              en_US: Africa/Cairo
+              ja_JP: Africa/Cairo
+              pt_BR: Africa/Cairo
+              zh_Hans: 非洲/开罗
+            value: Africa/Cairo
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: select
+        params:
+          format: ''
+          timezone: ''
+        provider_id: time
+        provider_name: time
+        provider_type: builtin
+        selected: false
+        title: 获取当前时间
+        tool_configurations:
+          format:
+            type: constant
+            value: '%Y-%m-%d %H:%M:%S'
+          timezone:
+            type: constant
+            value: Asia/Shanghai
+        tool_description: 一个用于获取当前时间的工具。
+        tool_label: 获取当前时间
+        tool_name: current_time
+        tool_node_version: '2'
+        tool_parameters: {}
+        type: tool
+      height: 113
+      id: '1770187383179'
+      position:
+        x: -1549.9473833673032
+        y: 126.62206887903298
+      positionAbsolute:
+        x: -1549.9473833673032
+        y: 126.62206887903298
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            enable_thinking: false
+            temperature: 0
+          mode: chat
+          name: qwen3-32b
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 1ec7e981-62b1-4046-b973-5af747ce8fb2
+          role: system
+          text: "# 角色\n你是一名资深的病案编码专家，擅长从复杂的病历描述和医嘱信息中提取关键诊疗节点。你的核心任务是判定患者本次住院是否属于“首次抗肿瘤治疗”。\n\
+            \n# 核心概念定义\n1. **历史病史范围**：包括提供的“主诉”、“现病史”、“既往史”、“手术外伤史”。这些代表患者**入院前**的状态。\n\
+            2. **本次住院行为**：以“医嘱单”为准。这代表患者**入院后**的实际医疗行为。\n3. **抗肿瘤治疗范畴**：\n   - 核心治疗：化疗、放疗、靶向治疗、免疫治疗、内分泌治疗、放射性核素（同位素）治疗。\n\
+            \   - 中医治疗：“抗癌/抗肿瘤”中药治疗。\n   - *排除项*：止痛、营养支持、护肝、单纯调理类中药、针对肿瘤的切除术。\n4.熟知本抗肿瘤治疗定义：仅限于化疗、放疗、靶向治疗、免疫治疗、内分泌治疗、放射性核素（同位素）治疗、“抗癌/抗肿瘤”中药治疗，注意**实质性手术治疗**不属于本抗肿瘤治疗定义\n\
+            \n# 判断逻辑（优先级从高到低）\n### 第一步：检查既往史（判定“否”）\n- 若“主诉、现病史、既往史、手术外伤史”中提到患者在**本次入院前**曾接受过上述任何一种抗肿瘤治疗。\n\
+            - **结论：否**\n### 第二步：检查本次医嘱（判定“是”）\n- 若既往史记录为“无任何抗肿瘤治疗”，且“医嘱单”中**明确出现了**上述抗肿瘤治疗药物或行为。\n\
+            - **结论：是**\n### 第三步：全量排除（判定“未进行”）\n- 若既往史记录为“无任何抗肿瘤治疗”，且“医嘱单”中**也未显示**开展了任何抗肿瘤实质性治疗（可能仅在检查、观察或对症处理阶段）。\n\
+            -- 举例：患者既往史记录为“无任何抗肿瘤治疗”，在本次住院期间明确安排了“上消化道内镜下粘膜剥离术（ESD）”及“病理检查” ，无任何接受化疗、放疗、靶向治疗、免疫治疗、内分泌治疗、放射性核素治疗或“抗癌/抗肿瘤”中药治疗，所以本次住院为**未进行**抗肿瘤治疗\n\
+            \n- **结论：未进行**\n\n# 约束要求\n- **严禁推测**：只根据提供的文字证据说话。\n- **中医判定**：必须明确是针对肿瘤的治疗，否则不计入。\n\
+            - **时间参考**：当前时间 {{#1770187383179.text#}} 仅用于辅助理解病程阶段。\n\n\n# 输出格式（严格遵循）\n\
+            ## 是否首次抗肿瘤治疗：[“是” 或 “否” 或 “未进行”]\n**判定依据**：[引用原文具体描述，说明为何判定为该状态。若判定为“未进行”，请明确指出医嘱单中缺乏抗肿瘤治疗证据。]"
+        - id: f813787b-44a2-49b3-9f50-41c5d8e27fd8
+          role: user
+          text: '# 入院记录：{{#1767151121351.ryjl#}}
+
+            # 医嘱单：{{#1767151121351.yz#}}'
+        selected: false
+        title: 1-1-2 是否首次抗肿瘤治疗
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1772534690810'
+      position:
+        x: -379.03989586307637
+        y: 134.77706579477564
+      positionAbsolute:
+        x: -379.03989586307637
+        y: 134.77706579477564
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            enable_thinking: false
+            temperature: 0
+          mode: chat
+          name: qwen3-32b
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 5c5b6939-2ace-4085-8a85-f326625ce4e2
+          role: system
+          text: "# 角色\n你是一名资深的病案编码专家，你的核心任务是判定患者本次住院是否“放弃拟治疗计划”。\n\n# 任务：\n**判定逻辑：**\
+            \ 本次住院的“核心诊疗动作”是否缺失？\n- **核心动作清单**：确诊活检、手术切除、放射治疗、化学治疗。\n\n判断为 “是” 的逻辑触发点（满足其一即可）：\n\
+            1.显性拒绝：原文出现“拒绝”、“不配合”、“放弃”、“不愿”、“自行离院”等。\n2.客观受限导致终止：原文记载因身体原因（不限于未通过麻醉评估、心肺功能差）、技术原因或配合度问题（如无法耐受检查/操作）或检查结果异常等原因，导致原定核心操作（如胃肠镜、活检、手术）未能完成。\n\
+            - 即便医生建议“两周后复查”，只要“本次”没做成手术/治疗且出院了，必须判定为“是”。\n3.未完成即出院：病历记录“拟行XX”，但随后记录“因XX原因未行，要求出院”。\n\
+            4.计划推迟/离院：原文记载“拟行XX手术/治疗”，但因患者要求、家属顾虑或协商后决定**“暂不行手术”、“出院休息后返院”、“过两周再手术”、“回家考虑”**。\n\
+            - 判定逻辑： 即使患者承诺未来返院，只要本次住院的预定核心计划未完成即办理出院，本质上就是对**“本次拟治疗计划”**的放弃或中断。\n\
+            6. **实质性中断**：[治疗经过]显示仅进行了基础检查，结论为“建议XX周后复查”、“回家观察”、“等待结果回报”而直接办理出院。 -\
+            \ *注意*：这种情况属于“诊疗路径未能闭环”，视为放弃/中断本次拟治疗计划。 2. **客观受限**：因“检查结果异常”（如心肌酶高、感染、指标不符）导致医生给出“暂不治疗，离院观察”的意见。\
+            \ 7. **未果出院**：病历诊断为恶性肿瘤，但治疗经过未见任何抗肿瘤药物、手术或有创操作记录\n8.【强判定】结果未回即出院规则：若病历记录‘行XX检查/活检后结果未回’即‘办理出院’，必须判定为‘是’。\n\
+            \n**判断依据撰写要求：** - 必须包含：“本次住院仅完成检查，因[原文理由]导致核心治疗中断，未能在本次住院期间执行实质性治疗计划”\n\
+            \n### 逻辑偏向提醒：\n- 错误逻辑：患者说“休息两周再来”，说明以后还要做，所以不是放弃（绝对禁止此逻辑）。\n- 正确思考：“虽然他以后可能还会来，但本次住院的手术/治疗计划已经中断并离院，因此判定为‘是’。”\n\
+            \n若全部满足 → 输出 ：“是否放弃拟治疗计划：是” \n若不满足，则不输出。\n\n举例（帮助识别）：\n- 病历记载“患者入院后完善术前检查。经多学科会诊，认为手术指征明确。与患者及家属沟通手术方案及风险后，患者及家属因担心手术风险及术后生活质量，经反复商议，最终决定放弃手术治疗，要求出院行中医保守治疗。于今日办理出院手续”→\
+            \ 放弃拟治疗计划。判断逻辑：未触发第1步，触发了第2步（有放弃证据）。\n- 如：原定治疗计划（手术）因术中出现严重并发症而终止 →属于客观受限导致终止，放弃拟治疗计划。\n\
+            \n# 输出格式（严格遵循）\n## 是否放弃拟治疗计划：[“是” 或 “否”]\n**判断依据**：[简明引用病历原文关键句]"
+        - id: 350e9cff-d973-4c7e-afd9-6d50b63b5e20
+          role: user
+          text: '# 治疗经过：{{#1767151121351.zljg#}}'
+        selected: false
+        title: 1-1-3 是否拟放弃原治疗计划
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1774938512098'
+      position:
+        x: -57.50601806993838
+        y: 196.3517885387929
+      positionAbsolute:
+        x: -57.50601806993838
+        y: 196.3517885387929
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: not empty
+            id: 5cb06598-efa2-41f4-b5b1-369cffa250d5
+            value: ''
+            varType: string
+            variable_selector:
+            - '1767151121351'
+            - zljg
+          id: 'true'
+          logical_operator: and
+        desc: ''
+        selected: false
+        title: 原文是否有治疗经过
+        type: if-else
+      height: 123
+      id: '1774938829417'
+      position:
+        x: -403.0698479573308
+        y: 294.8170019204482
+      positionAbsolute:
+        x: -403.0698479573308
+        y: 294.8170019204482
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            enable_thinking: false
+            temperature: 0
+            top_p: 0.1
+          mode: chat
+          name: qwen3-32b
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 78436385-891a-4ea2-91b7-f5ff5d4b5fcf
+          role: system
+          text: "# 角色定义\n你是一位拥有 10 年经验的医疗数据治理专家，擅长从相互冲突的【病理报告】、【影像报告】、【手术记录】中，根据既定临床逻辑判定唯一的“标准病灶位置”。\n\
+            \n# 步骤：\n处理原则：对于多发病灶，禁止合并映射（如：独立位点A和B，禁止强行归一化为“A+B”），必须保持其独立性。\n\n\n#\
+            \ 亚部位标准化：\n【胃部映射逻辑执行说明】：模型必须按顺序从上至下匹配，一旦满足条件即停止检索后续规则。\n- “近”字补偿逻辑：凡是出现\
+            \ “近 [部位B]”、“向 [部位B] 延伸”、“累及 [部位B]” 的描述，模型必须强制将该描述拆解为两个独立的逻辑位点：{[当前部位A],\
+            \ [邻近部位B]}。\n    - 案例：“胃体大弯侧近胃窦处” → 必须提取为：{胃体} 和 {胃窦}。\n- 忽略过滤层：若输入中同时包含\
+            \ {全胃} 与 {具体亚部位（如胃窦、胃体、贲门等）}，必须直接忽略“全胃”词条，仅基于具体亚部位进行逻辑判定。\n\n【胰腺】：\n-\
+            \ 胰体+胰尾 -> 映射为：胰体胰尾\n- 胰体+胰颈 -> 映射为：胰体胰颈\n- 胰体-腹膜后 -> 映射为：胰体\n\n【宫颈】：宫颈判断仅支持以下规则，禁止根据临床语义理解\n\
+            1.外宫颈：\n- 若描述包含 “侵及宫颈壁外”、“浅表”（如子宫颈浅表浸润性鳞状细胞癌、子宫颈高级别鳞状上皮）、“侵及外”（结合上下文确认为宫颈壁外）、\
+            \ “宫颈外口”、“宫颈表面菜花样肿物” 等，则映射为：外宫颈\n- 若描述为 “宫颈锥切术”可能为外宫颈，但需要有明确的病检报告显示，才映射为：外宫颈\n\
+            \n2.宫颈内膜：\n- 若描述为 “侵及宫颈壁内”、“局限于内膜” 等，则映射为：宫颈内膜；\n- 若描述为 “宫颈管内”、“宫颈管内占位”\
+            \ 等（必须**逐字包含“管内”**关键词），则映射为：宫颈内膜；\n\n3.宫颈，未特指：\n- 若描述为 “侵及子宫颈中”、 “子宫颈内口切缘、外口切缘及间质切缘未检出癌累及”\
+            \ 等，则映射为：宫颈，未特指；- 若描述为 “宫颈管”（单独出现，或与“宫腔”连用如“宫腔宫颈管”），\"宫颈管搔刮\"，则映射为：宫颈，未特指；\n\
+            - “宫颈X点” 等方位标记，若无任何手术记录或影像报告明确指出该点位的具体解剖层次（如“外宫颈”、“宫颈内膜”），则判定为 “宫颈，未特指”3.\
+            \ 词频排他原则： > 采取“最长匹配优先”。若文本中出现“宫颈管内”，禁止将其拆解为“宫颈管”进行规则匹配。必须优先匹配包含“内”字的完整长句。\n\
+            \n【乳房/乳腺】：\n1.当【病理】仅定位至器官级别（如：乳腺、肺、肝），而【影像/内镜】给出了具体的亚部位或解剖象限时，判定为“病理描述泛化”，必须采信【影像/内镜】提供的精细亚部位作为最终输出，严禁以病理为准进行范围收减；\n\
+            2.在同一病灶的证据集合中，若同时出现“X侧/X部”（如：外侧、上部）和“钟点位”（如：9-10点），必须强制选取钟点位作为最终亚部位。\n\
+            - 钟点位 > 精准方位 > 模糊方位 > 器官层级\n3.乳腺标准化映射表：除四标准项外，其余所有位置描述（如：X点、XX象限）严禁进行标准名称转换，必须完整保留原文精细度输出。\n\
+            - 右乳乳头后方 -> 映射为：乳房中央部\n\n4.多点位共存：\n- 若原文出现多个具体钟点位（如：8点、9点），说明病灶跨越了多个区域或属于大范围受累，必须完整保留并合并输出->{X点-X点}\n\
+            \n# 病理精准位点穿透规则：\n1.指令：若【病理】位点属于【内镜/影像】描述位点的深层亚部位（如病理：声门下 vs 内镜：声带）或具体分支，必须强制采信【病理】位点并结束后面判断；\n\
+            - 案例：影像（喉咽）+ 病理（声门下）+ 内镜（声带） -> 裁决结果：声门下。\n- 逻辑：病理活检是物理接触证据，代表病灶浸润的真实深度。\n\
+            \n## 多源证据判定优先级（分路径决策）\n按以下场景强制执行，禁止以“描述更具体”为由反向采信病理，\n注意：【病理】在解剖亚部位选取不是金标准\n\
+            1. 判定路径选择（最高优先级，禁止跳过）\n【强制检查点】：模型在判定路径前，必须检索输入文本中是否存在手术\n路径 A（有手术）：\n\
+            - 判定逻辑：有手术则必须强制进入路径 A。\n- 防错指令：严禁因为手术描述不符合“胃部”或其他特定映射表而忽略该字段。只要有字符描述，就必须视为手术证据。\n\
+            路径 B（无手术）：\n\n2.路径A：有手术记录\n第一阶段：多源证据共识（离群值剔除原则 - 优先级：最高）\n- **位点判定流程**：\n\
+            \  1. 提取【手术记录】位点作为原始集合。\n  2. 检查【病理】：若病理有手术未提的位点（病理孤证），则必须将点位并入集合，严禁剔除。\n\
+            \  3. 检查【影像/内镜】：若其范围超出上述集合，**超出部分视为噪声予以剔除**。\n  4. 最终得出 {共识位点集合}。\n- 【针对乳房/乳腺的精细度回溯补偿原则】（优先级：高于原则\
+            \ 2）：\n  - 触发条件：当【手术/病理】仅给出解剖大类或模糊方位（如：乳头旁、右乳），而【临床（现病史）/影像/内镜】给出了具体的钟点位（如：10-11点）或象限精准点位时。\n\
+            \  - 执行动作：严禁以“手术为边界”为由剔除精细点位。必须将精细点位作为“补充坐标”强制并入最终集合。\n  - 裁决逻辑：若手术证实了病灶存在，则病灶的“具体坐标”应采信全篇文档中最精细的描述。\n\
+            \n第二阶段：基于【共识集合】执行范围决策（原则 2 & 3）\n输入： 仅针对第一阶段保留的【共识位点集合】进行逻辑运算\n原则 2：向下兼容（宏观优先）\n\
+            - 若【手术/影像】描述的范围 A 包含【病理】描述的范围 B（A>=B），必须维持 A 的大范围描述。\n- 示例：手术(胃窦胃体)、病理(胃窦)\
+            \ -> 最终：胃窦、胃体\n原则 3：向上扩张（识别交搭）\n仅【病理】检出了【手术/影像】未提及的新邻近部位时：\n- 情况1：病理精准位点穿透时，强制采信【病理】提及的亚部位；\n\
+            \    - 正确示例2：病理(声门下) + 手术(声带) -> 最终：声门下\n- 情况2：当病理精准位点无法穿透时，且将【病理】提及的新部位强制合并；\n\
+            \    - 正确示例1：病理(右声带+室带) + 手术(右声带) -> 最终：右声带及室带\n    - 正确示例2：病理(右声带) +\
+            \ 影像(右声带+室带) -> 最终：右声带\n\n第三阶段：冲突兜底（原则 4）\n原则4：位置冲突合并（处理相邻不一致，优先级：最低）\n\
+            - 触发前提：仅在原则 1 不成立（完全无 2:1 共识），且各部位物理相邻时触发。\n- 禁止条款：若已经触发原则 1 判定了 2:1 的共识，严禁再次启用原则\
+            \ 4。不能将已经被原则 1 判定为“噪声”的部位通过本原则重新引入。\n- 逻辑： 若不同报告提到的部位不一致但解剖相邻（如胃角 vs 胃体），禁止二选一，应视为该病变跨越了交界区域。\n\
+            - 案例： 手术（胃角/胃窦）+ 病理（胃体） -> 最终：胃窦及胃体（跨部位）\n---\n\n3.路径B：无手术记录（病理定性 + 影像补位）\n\
+            若无任何手术类文档，以【病理】定性为主，【影像】定量为辅。\n- 原则 5：病理采样锚点原则\n    - 核心逻辑：【具体解剖亚部位】必须以【病理】的定性确证为基石，以【内镜】的直视观察为范围边界。影像学的扩张性描述（如：侵犯、累及）若无内镜或病理支撑，视为“高估”并予以剔除。\n\
+            \    - **5.1 病理有效性强制校验（最高优先级拦截）**\n    在应用“病理锚点”进行影像收减之前，必须先执行以下校验：\n\
+            \    - **无效锚点定义**：若【病理】提取项为以下两类之一，**判定病理锚点失效**，权力**立即且无条件**下放至【内镜】或【影像】：\n\
+            \    1. 器官层级：即未指明具体亚部位（如胃壁、肠壁、肺组织、乳腺、乳房等等）。\n    2. 缺位：未提及。\n    3. 失能判定：若器官仅为“乳腺”、“乳房”等器时，判定为定位失能。\n\
+            \n    **5.2 权力下放后的裁决逻辑**\n    - 触发条件：当 5.1 判定病理锚点失效时\n    - 执行动作：\n  \
+            \      - 路径 A：若【内镜】有效（有具体亚部位），以【内镜】为最高裁决依据。\n        - 路径 B：若【内镜】缺位或无效，**以【影像】提取项为直接裁决依据**，**严禁**引用原则\
+            \ 5 对影像进行收减。\n\n    **5.3 影像有效时的常规收减（仅在病理有效时且不病理不是未提及时触发）**\n    情况1：病理精准位点穿透\n\
+            \    - 指令：若【病理】位点属于【内镜/影像】描述位点的深层亚部位（如病理：声门下 vs 内镜：声带）或具体分支，必须强制采信【病理】位点并结束后面判断；\n\
+            \        - 案例：影像（喉咽）+ 病理（声门下）+ 内镜（声带） -> 裁决结果：声门下。\n        - 逻辑：病理活检是物理接触证据，代表病灶浸润的真实深度。\n\
+            \n    情况2：当病理精准位点无法穿透时：\n    - 无【内镜】情况下的强制指令：\n        - 场景A：影像孤证（需收减）若【影像/临床叙述】描述的范围（如：胃体+胃底）大于【病理】确证的采样位点（如：胃体），且“胃底”未得到任何独立采样证实，必须判定影像范围虚增。以病理位点收减影像范围，仅输出：胃体。\n\
+            \        - 案例：影像（胃体胃底）+ 病理（胃体）-> 裁决结果：胃体\n    - 有【内镜】情况下的强制指令：\n     \
+            \   - 取交集： 若【影像】描述范围 > 【内镜】描述范围，以【内镜】黏膜直视所见为准。\n        - 定锚点： 若【内镜】描述范围\
+            \ > 【病理】活检位点，若内镜明确描述了基于【病理】的病灶连续性（如：跨越、累及、涉及）或使用了趋向性描述（如：近XX处、向XX延伸），必须判定该“邻近部位”也属于受累范围（如：溃疡跨越胃体与胃底），则保留内镜范围。\n\
+            \        - 剔除虚增： 若某部位仅在【影像】中出现，而【内镜】明确记录该部位“黏膜光滑/未见异常”且【病理】未采样，必须强制剔除该影像位点。\n\
+            \        - 案例2：影像（胃体）+ 病理（胃体）+ 内镜（胃底胃体）-> 裁决结果：胃底胃体\n- 原则 6：影像范围补偿（仅限相邻且高疑）\n\
+            \    - 触发条件：仅当【影像】多方位（如 CT+MRI）确认为明确肿块，可保留。\n- 原则 7：定位冲突仲裁\n    - 逻辑：若病理位点与影像位点完全不一致（如：病理写胃底，影像写胃窦），执行原则\
+            \ 7 的多源影像共识裁决\n\n\n# 强制执行原则：\n- 粘连剔除原则：临床描述中的“粘连致密”、“水肿”、“炎性反应”不代表肿瘤实质浸润。除非【病理报告】明确证实该粘连器官有“癌浸润”，否则在判定【具体解剖亚部位】时，必须剔除所有仅描述为“粘连”的器官（如：大网膜、腹壁）。\n\
+            - 禁止自我发挥： 不得根据医学常识推测病灶可能跨越的区域，仅在提供的文本中进行选择\n- **禁止输出非标术语**：最终输出的亚部位必须严格选自【各器官系统的解剖亚部位表】\n\
+            - **【关键】禁止缩减累及范围**：当原文使用“累及”、“侵犯”等词描述病灶范围时，最终输出的位置必须包含所有被累及部位，严禁只输出原发部位\n\
+            - **【关键】“一致”不等于“交集”**：当多份报告描述同一病灶时，“一致”是指它们描述的是同一病灶，**不代表可以只输出它们的共同部位**。应选择范围最完整的报告作为最终输出\n\
+            - 强制独立输出：对于识别出的每一个独立病灶，都必须输出一套完整的`[病灶编号]`信息块\n\n\n# 输出要求：\n若为多发病灶，请按 [病灶1]、[病灶2]\
+            \ 格式重复输出以下模块；若为单病灶，按原格式输出。 \n--- \n# 全身性肿瘤输出格式：仅输出以下字段内容，禁止输出其他内容\n【肿瘤类型】\n\
+            【细胞来源】\n【免疫分型细节】\n【关键证据】:[输出最能体现的一个原文片段]\n\n\n# 非全身性肿瘤输出格式：仅输出以下字段内容，禁止输出其他内容\n\
+            ### [病灶编号：1/2/...]\n【位置一致性核验说明】：\n- 判定路径：[路径A（有手术） / 路径B（无手术）]\n- 提取集合：[从输入中获取，手术：XXX；病理：XXX；影像：XXX；内镜：XXX]\n\
+            \    - 仅提取原发器官内部亚部位\n    - 注意：如出现“会厌喉面”则一并提取\n- 原则应用：[必须明确指出应用了哪一个原则，简述理由。若应用原则\
+            \ 1，须注明：触发共识熔断，包括剔除了哪些孤证或阴性切缘位点]\n- 最终选取的章节：[说明剔除的离群孤证章节 并 说明最终选取的章节]\n\
+            \    - 触发共识熔断（原则1）：若触发则说明票数和理由（注意 【病理报告】中孤证必须保留）\n    - 原则2（范围向下兼容）\n\
+            \    - 原则3（部位向上扩张）\n    - 原则4（位置冲突合并）\n- 逻辑自检：\n    - 是否触发原则 1 共识纠偏？ [是/否]\n\
+            \    - 是否根据“粘连剔除原则”清理了冗余位点？ [是/否]\n    - 是否对非标准化描述进行了错误映射？ [是/否]\n- 亚部位标准化：[输出{共识点位集合}，并基于{共识点位集合}将其按照《亚部位标准化》进行整体标准转换]\n\
+            \n【侧别】：[必须从原文查找“左”、“右”、“双”等词进行判断，如左侧/右侧/双侧/单侧（未指明）/无法确定]\n【器官/部位】：[必须提取病历中明确提到的器官名称，如：乳腺、肺、肝]\n\
+            【具体解剖亚部位】：[亚部位标准化，根据{共识点位}须按照《亚部位标准化》进行整体标准转换]\n"
+        - id: 0fca3ad6-b0b6-4958-a0ad-9e273c5dc36d
+          role: user
+          text: '# 提取的亚部位：{{#1776242637256.text#}}'
+        selected: false
+        title: 1-3-2 病灶位置一致性核对
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1775726857853'
+      position:
+        x: 1493.3434700296896
+        y: 84.73525576696906
+      positionAbsolute:
+        x: 1493.3434700296896
+        y: 84.73525576696906
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            enable_thinking: false
+            temperature: 0
+            top_p: 0.1
+          mode: chat
+          name: qwen3-32b
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: a9718fa8-499f-41b8-b788-3f0032bbfb79
+          role: system
+          text: "# 角色定义\n你是一位拥有 10 年经验的医疗数据治理专家，擅长提取输入中的亚部位信息\n\n\n# 核心禁令（全局最高优先级）：\n\
+            ## 1.宫颈部位提取着重强调：严禁提取宫颈部位中任何带有数字定位或程度的干扰项，包含：\n- 级别/度数：禁止提取“X°”、“X度”（如：宫颈I°、宫颈2度）。\n\
+            - 若原文为“（宫颈X°）[疾病名称]”，应保留“疾病名称”，但剔除“X°”。\n清洗逻辑：若原文仅有此类描述，根据规则归一化为“未特指”；输出结果中绝对禁止出现具体的数字、点位或度数符号。\n\
+            \n# [信源归属强制准则]（判定集合归属的唯一标准）：\n物理隔离原则：仅当信息位于明确标识为“XX报告”、“XX诊断”、“XX检查结果”等独立检查章节标题下时，方可计入对应的【手术】、【病理】、【影像】、【内镜】集合。\n\
+            临床吸收原则：任何出现在“现病史”、“入院记录”、“主诉”、“病程记录”、“出院记录”或“出院诊断”中的检查回顾或转述（如：病史记录“胃镜示...”、“CT示...”、“病理示...”），严禁提取至对应检查集合，必须统一归入【临床】集合。\n\
+            禁止反推：若文本中无独立的“内镜报告”章节，【内镜】一栏必须显示：未提及。此规则同等适用于手术、病理和影像。\n\n# [病理括号处理专项指令]\n\
+            在处理病理诊断中的括号描述时，需遵循以下嵌套比对原则：\n1.范围识别：识别括号内外的两个部位名词。\n2.包含关系判定：\n- 若【括号内】包含【括号外】：说明括号内是手术标本范围（大），括号外是具体肿瘤位点（小）。\n\
+            \  - 处理：剔除括号内，保留括号外。\n  - 示例：“（全胃）胃窦腺癌” → 提取：胃窦。\n3.若【括号外】包含【括号内】：说明括号外是器官（大），括号内是具体位点（小）。\n\
+            \  - 处理：保留括号内，剔除括号外。\n  - 示例：“胃组织（胃角）活检” → 提取：胃角。\n4.同级并列判定：若内外部位级别相同。\n\
+            \  - 处理：合并提取。\n  - 示例：“（胃体、胃窦）腺癌” → 提取：胃体、胃窦。\n\n\n# 亚部位提取标准化：\n## 1.【宫颈】：宫颈判断仅支持以下规则，禁止根据临床语义理解\n\
+            1-1.外宫颈：\n- 若描述包含 “侵及宫颈壁外”、“侵犯子宫颈外XX””、“浅表”（如子宫颈浅表浸润性鳞状细胞癌、子宫颈高级别鳞状上皮）、“侵及外”（结合上下文确认为宫颈壁外）、“宫颈管至宫颈外口”、\
+            \ “宫颈外口”、“宫颈表面XXX肿物” 等，则映射为：外宫颈\n- 若描述为 “宫颈锥切术”可能为外宫颈，但需要有明确的病检报告显示，才映射为：外宫颈\n\
+            \n1-2.宫颈内膜：\n- 若描述为 “侵及宫颈壁内”、“局限于内膜” 等，则映射为：宫颈内膜；\n- 若描述为 “宫颈管内”、“宫颈管内占位”\
+            \ 等（必须**逐字包含“管内”**关键词），则映射为：宫颈内膜；\n\n1-3.宫颈，未特指：\n- 若描述为 “侵及子宫颈中”、 “子宫颈内口切缘、外口切缘及间质切缘未检出癌累及”\
+            \ 等，则映射为：宫颈，未特指；- 若描述为 “宫颈管”（单独出现，或与“宫腔”连用如“宫腔宫颈管”），\"宫颈管搔刮\"，则映射为：宫颈，未特指；\n\
+            - “宫颈X点” 等方位标记，若无任何手术记录或影像报告明确指出该点位的具体解剖层次（如“外宫颈”、“宫颈内膜”），则判定为 “宫颈，未特指”3.\
+            \ 词频排他原则： > 采取“最长匹配优先”。若文本中出现“宫颈管内”，禁止将其拆解为“宫颈管”进行规则匹配。必须优先匹配包含“内”字的完整长句。\n\
+            - 约束：若描述中除了“宫颈管”，还明确出现了“外口”、“前唇”、“后唇”等特定外周位点，禁止映射为“未特指”，必须按照 2-1 执行映射\n\
+            \n## 2.乳腺提取要求：\n- 坐标系保留原则： 必须保留“内侧、外侧、上方、下方、乳后、中央区”等解剖定位词。\n- 象限合并原则：\
+            \ 若描述为“外上”、“内下”等复合方位，视为一个亚部位整体保留。\n- 肿物关联属性： 若“肿块/包块”前有明确方位修饰（如：左乳外侧肿块），必须将“明确方位修饰”作为亚部位完整提取。\n\
+            - 钟点保留原则：必须保留出现的钟点数字；\n- 先寻找方位词（如：乳头后方、乳晕区），再看器官名词（如：乳腺）。\n- 增强“多亚部位连体”保留：明确规定“及”、“及周边”连接的多个细微位点必须视为一个整体。\n\
+            \n## 3.胰腺提取要求：\n- 部位拆分：胰头颈(穿刺液)->拆分为胰头胰颈、胰体颈->拆分为胰体胰颈、\n- 胰尾原位守原原则：若报告明确指出肿物位于“胰尾”或“胰腺尾部”，且体积未达到广泛跨界跨度（如仅为\
+            \ 2*3cm、2cm 等较小体积），且未提及累及胰体时，【绝对强制】仅提取为：【胰尾】。严禁主观泛化为“胰体胰尾”。\n- 胰体尾原则：若报告指出肿物位于“胰体”或“胰体部”肿物\
+            \ AND 包含具体大小/体积数字（如：“4*3cm”、“4cm”等类似数字度量） AND 包含“边界不清”，“包绕/侵犯 脾静脉”、“向外周蔓延/浸润”中任意一个描述。【绝对强制】仅提取为：【胰体尾】。严禁主观泛化为“胰体”。\n\
+            \n\n# 步骤：\n## 第一层：无损归一化\n1.核心逻辑：原文使用连字符（-）、顿号（、）、逗号（,）、“和”、“及”“累及”、“侵犯”、“波及”等符号或词语连接两个或多个【原发器官内部亚部位】时，必须全部保留，视为不可分割的整体。\n\
+            \n2.手术记录亚部位提取要求（仅限独立手术报告章节）：\n- 准入条件：必须源自独立的“手术记录”文档，禁止从现病史中提取。\n- 提取目标：只能提取原文片段关于[“发现病理”]中描述的亚部位。\n\
+            - 严禁提取“手术步骤”、“手术切口”、“入路路径”或“麻醉过程”中出现的任何部位（如：经梨状窝进入等）\n- 识别“指引性描述”：若手术记录中出现“见病理”、“见后续报告”或仅描述“切除范围”而无明确“肿物位置”描述，应判定为\
+            \ [手术：未明确提及]\n\n3.病理报告提取要求（仅限独立病理报告章节）：\n- 准入条件：必须源自独立的“病理检查”文档，禁止从现病史中提取。\n\
+            - 仅提取病理诊断结论中疾病名称体现出的亚部位\n- 强制屏蔽（黑名单），严禁提取以下非肿瘤中心部位：\n    - 切缘部位：凡是带有“切缘”、“黏膜切缘”、“离断端”字样的部位\n\
+            \    - 阴性部位：凡是描述为“未见癌”、“未见累及”、“阴性”的部位\n    - 附属/清扫部位：凡是描述为“组淋巴结”、“软组织”、“肌肉”等非原发器官亚部位\n\
+            \   -  针对宫颈，严禁提取方位度数词：如“1点”、“12点”、“3-6点”、“宫颈1°”、“宫颈I度”等。\n  -  强制屏蔽手术范围词：若括号内出现‘全胃’、‘全子宫’、‘全食管’、‘XX切除标本’，一律视为标本范围，禁止提取为病灶亚部位\n\
+            \n\n- 示例判定：\n    - 原文：（右侧声门下）中分化鳞癌；会厌切缘未见癌 -> 仅提取：右侧声门下\n    - 原文：胃体小弯侧腺癌，胃窦切缘阴性\
+            \ -> 仅提取：胃体\n    - **触发词**：当病理诊断包含 **印戒细胞癌、皮革胃、弥漫浸润型、硬癌** 时。\n    - **连锁反应**：强制将\
+            \ **[影像]** 和 **[内镜]** 中的“壁增厚/水肿/浸润范围”识别为**非原发蔓延**，**严禁**将此类描述提取为亚部位。\n\
+            \n\n4.影像报告提取规则（仅限独立影像报告章节）\n- 准入条件：必须源自独立的“CT/MRI/超声/PET-CT”等影像报告标题下，禁止从现病史中提取。\n\
+            - **核心指令**：解析影像报告中的[影像表现/意见]，**必须**经过以下两步过滤才能输出：\n    - 第一步：词频清洗\n   \
+            \     - 在提取前，强制删除诊断结论中所有包含 **增厚、受侵、模糊、淋巴结、积液、扩张、欠佳、显示、可见** 的句子片段。\n  \
+            \      - **清洗后**，从剩余纯描述中寻找部位词。\n    - 第二步：输出清洗后的结果\n- 判定示例：\n    - 输入：影像写“胃体胃底壁增厚”。\n\
+            \    - 输出：影像：胃体胃底\n\n5. 内镜报告提取规则（仅限独立内镜报告章节）：\n- 硬性拦截：若文本位于【现病史】、【主诉】、【入院记录】或【其他医院病史摘要】段落中，必须强制忽略，严禁跨章节采样。\n\
+            - 准入条件：必须源自内镜报告标题下，禁止从现病史中提取。\n- **提取源**：仅提取“内镜报告”中**镜下诊断**或**活检定位**描述中的部位。\n\
+            - **取实原则**：提取描述**黏膜病变基底/中心**的部位。若描述为“XX侧向YY延伸”，提取**XX**作为主部位。\n\n# 输出：\n\
+            1.注意事项：禁止输出其他说明和解释，必须按照输出格式输出；\n2.自检：\n- **无效词清洗检查**：确保提取项中**不含**任何“增厚”、“侵犯”、“水肿”等修饰词。\n\
+            - 确保【手术】、【病理】、【影像】、【内镜】四个集合内不包含来自《现病史》或《入院记录》的信息。\n3.输出格式：\n---\n### [病灶编号：1/2/...]\n\
+            提取集合：\n- 是否有手术记录：[是/否]\n- 手术：[仅限独立手术报告提取，否则显示未提及]\n- 病理：[仅限独立病理报告提取，否则显示未提及]\n\
+            - 影像：[仅限独立影像报告提取，否则显示未提及，输出提取的原文]\n   - [报告类型：XX亚部位]\n- 内镜：[仅限独立内镜报告提取，否则显示未提及，输出提取的原文]\n\
+            \   - [报告类型：XX亚部位]\n- 临床：[本次住院是否已明确亚部位，若已明确，则显示未提及且其下方不输出任何原文片段]\n   -\
+            \ [XX章节类型：XX亚部位。]\n---"
+        - id: f97583be-2afc-4510-a571-2f2f758160b4
+          role: user
+          text: '{{#1767756096991.text#}}'
+        selected: true
+        title: 1-3-1 病灶提取亚部位
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1776242637256'
+      position:
+        x: 1182.2362834785959
+        y: 91.80768793626737
+      positionAbsolute:
+        x: 1182.2362834785959
+        y: 91.80768793626737
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    viewport:
+      x: -529.0358680470429
+      y: 278.6898737511061
+      zoom: 0.6362153696717714
+  rag_pipeline_variables: []

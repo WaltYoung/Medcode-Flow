@@ -1,0 +1,11 @@
+[project]
+name = "langgraph-workflows"
+version = "0.1.0"
+description = "Enterprise LangGraph workflows migrated from Dify"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["."]

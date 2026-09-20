@@ -1,0 +1,342 @@
+name: Build Python Application
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      python_version:
+        description: "Python 版本 (例如 3.12, 3.11)"
+        required: true
+        default: "3.12"
+      entry_point:
+        description: "入口脚本 (留空则默认 services/main.py)"
+        required: false
+        default: "services/main.py"
+      builder:
+        description: "打包工具"
+        required: true
+        type: choice
+        options:
+          - Nuitka
+          - PyInstaller
+      console:
+        description: "是否保留控制台窗口 (Windows)"
+        required: true
+        type: choice
+        options:
+          - "yes"
+          - "no"
+        default: "yes"
+
+jobs:
+  build:
+    name: Build with ${{ github.event.inputs.builder || 'Nuitka' }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: windows-latest
+            artifact_name: medcoding-kb-windows.exe
+            nuitka_extra_noconsole: --windows-console-mode=disable
+            pyinstaller_sep: ";"
+          - os: ubuntu-22.04
+            artifact_name: medcoding-kb-linux
+            nuitka_extra_noconsole: ""
+            pyinstaller_sep: ":"
+          - os: macos-latest
+            artifact_name: medcoding-kb-macos.app
+            nuitka_extra_noconsole: ""
+            pyinstaller_sep: ":"
+      fail-fast: false
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Resolve build inputs
+        id: opts
+        shell: bash
+        run: |
+          BUILDER="${{ github.event.inputs.builder }}"
+          if [ -z "$BUILDER" ]; then BUILDER="Nuitka"; fi
+          PYVER="${{ github.event.inputs.python_version }}"
+          if [ -z "$PYVER" ]; then PYVER="3.12"; fi
+          ENTRY="${{ github.event.inputs.entry_point }}"
+          if [ -z "$ENTRY" ]; then ENTRY="services/main.py"; fi
+          CONSOLE="${{ github.event.inputs.console }}"
+          if [ -z "$CONSOLE" ]; then CONSOLE="yes"; fi
+          echo "builder=$BUILDER" >> "$GITHUB_OUTPUT"
+          echo "python_version=$PYVER" >> "$GITHUB_OUTPUT"
+          echo "entry_point=$ENTRY" >> "$GITHUB_OUTPUT"
+          echo "console=$CONSOLE" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ steps.opts.outputs.python_version }}
+
+      - name: Install dependencies
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          if [ "${{ steps.opts.outputs.builder }}" = "Nuitka" ]; then
+            pip install nuitka ordered-set zstandard
+          else
+            pip install pyinstaller
+          fi
+          if [ -f requirements.txt ]; then
+            # CI 打包以服务入口为主；torch/FlagEmbedding 体积过大，默认跳过重型 ML 依赖
+            # 如需完整嵌入能力进包，可改为: pip install -r requirements.txt
+            grep -vE '^(FlagEmbedding|torch|transformers)' requirements.txt > /tmp/req-build.txt || true
+            pip install -r /tmp/req-build.txt
+          else
+            echo "No requirements.txt found, skipping."
+          fi
+
+      - name: Determine entry point
+        id: entry
+        shell: bash
+        run: |
+          python - << 'EOF'
+          import os
+          import sys
+          import ast
+          from pathlib import Path
+
+          user_entry = os.environ.get("USER_ENTRY", "").strip()
+          entry = None
+          if user_entry and Path(user_entry).is_file():
+              entry = user_entry.replace("\\", "/")
+              print(f"Using provided entry point: {entry}")
+          else:
+              print("Entry not found, auto-detecting...")
+              for candidate in [
+                  "services/main.py",
+                  "main.py",
+                  "app.py",
+                  "run.py",
+                  "__main__.py",
+                  "cli.py",
+                  "start.py",
+              ]:
+                  if Path(candidate).exists():
+                      entry = candidate
+                      break
+              if not entry:
+                  for py_file in Path(".").rglob("*.py"):
+                      if ".venv" in py_file.parts or "site-packages" in py_file.parts:
+                          continue
+                      try:
+                          tree = ast.parse(py_file.read_text(encoding="utf-8"))
+                          for node in ast.walk(tree):
+                              if isinstance(node, ast.If) and isinstance(node.test, ast.Compare):
+                                  if (
+                                      isinstance(node.test.left, ast.Name)
+                                      and node.test.left.id == "__name__"
+                                  ):
+                                      entry = str(py_file).replace("\\", "/")
+                                      break
+                          if entry:
+                              break
+                      except Exception:
+                          continue
+          if not entry:
+              print("No entry script found!")
+              sys.exit(1)
+          print(f"Entry: {entry}")
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write(f"entry={entry}\n")
+          EOF
+        env:
+          USER_ENTRY: ${{ steps.opts.outputs.entry_point }}
+
+      # ========== Nuitka ==========
+      - name: Build with Nuitka
+        if: steps.opts.outputs.builder == 'Nuitka'
+        shell: bash
+        run: |
+          ENTRY="${{ steps.entry.outputs.entry }}"
+          EXTRA=""
+          if [[ "${{ matrix.os }}" == windows-* ]] && [ "${{ steps.opts.outputs.console }}" = "no" ]; then
+            EXTRA="${{ matrix.nuitka_extra_noconsole }}"
+          fi
+          if [[ "${{ matrix.os }}" == macos-* ]]; then
+            python -m nuitka --standalone --macos-create-app-bundle \
+              --assume-yes-for-downloads \
+              --include-package=services \
+              --include-package-data=services \
+              --include-data-dir=configs=configs \
+              --include-data-dir=scripts=scripts \
+              $EXTRA \
+              "$ENTRY"
+          else
+            python -m nuitka --standalone --onefile \
+              --output-filename=${{ matrix.artifact_name }} \
+              --assume-yes-for-downloads \
+              --include-package=services \
+              --include-package-data=services \
+              --include-data-dir=configs=configs \
+              --include-data-dir=scripts=scripts \
+              --follow-imports \
+              $EXTRA \
+              "$ENTRY"
+          fi
+
+      - name: Rename macOS app bundle (Nuitka)
+        if: steps.opts.outputs.builder == 'Nuitka' && runner.os == 'macOS'
+        shell: bash
+        run: |
+          ENTRY_BASENAME=$(basename "${{ steps.entry.outputs.entry }}" .py)
+          ACTUAL_APP="${ENTRY_BASENAME}.app"
+          EXPECTED_APP="${{ matrix.artifact_name }}"
+          if [ -d "$ACTUAL_APP" ]; then
+            mv "$ACTUAL_APP" "$EXPECTED_APP"
+          else
+            echo "ERROR: Expected app bundle '$ACTUAL_APP' not found!"
+            ls -la
+            exit 1
+          fi
+
+      # ========== PyInstaller ==========
+      - name: Analyze imports for PyInstaller
+        if: steps.opts.outputs.builder == 'PyInstaller'
+        id: pyi_analysis
+        shell: bash
+        run: |
+          python - << 'EOF'
+          import ast
+          import os
+          import subprocess
+          import sys
+          from pathlib import Path
+
+          ENTRY = "${{ steps.entry.outputs.entry }}"
+          imports = set()
+          for py_file in Path(".").rglob("*.py"):
+              if any(p in py_file.parts for p in (".venv", "site-packages", ".git")):
+                  continue
+              try:
+                  tree = ast.parse(py_file.read_text(encoding="utf-8"))
+                  for node in ast.walk(tree):
+                      if isinstance(node, ast.Import):
+                          for alias in node.names:
+                              imports.add(alias.name.split(".")[0])
+                      elif isinstance(node, ast.ImportFrom) and node.module:
+                          imports.add(node.module.split(".")[0])
+              except Exception:
+                  continue
+
+          result = subprocess.run(
+              [sys.executable, "-m", "pip", "freeze"],
+              capture_output=True,
+              text=True,
+              check=False,
+          )
+          installed = {}
+          for line in result.stdout.splitlines():
+              if "==" in line:
+                  pkg, _ = line.split("==", 1)
+                  installed[pkg.lower().replace("-", "_")] = pkg
+                  installed[pkg.lower()] = pkg
+
+          heavy = {
+              "fastapi": "fastapi",
+              "uvicorn": "uvicorn",
+              "pymilvus": "pymilvus",
+              "yaml": "PyYAML",
+              "pydantic": "pydantic",
+          }
+          collect_args = []
+          hidden_args = [
+              "--hidden-import uvicorn.logging",
+              "--hidden-import uvicorn.loops",
+              "--hidden-import uvicorn.loops.auto",
+              "--hidden-import uvicorn.protocols",
+              "--hidden-import uvicorn.protocols.http",
+              "--hidden-import uvicorn.protocols.http.auto",
+              "--hidden-import uvicorn.protocols.websockets",
+              "--hidden-import uvicorn.protocols.websockets.auto",
+              "--hidden-import uvicorn.lifespan",
+              "--hidden-import uvicorn.lifespan.on",
+              "--hidden-import embed_model",
+              "--hidden-import services",
+              "--hidden-import services.main",
+          ]
+          for imp in imports:
+              key = imp.lower().replace("-", "_")
+              if key in heavy:
+                  collect_args.append(f"--collect-all {heavy[key]}")
+              elif key in installed:
+                  hidden_args.append(f"--hidden-import {installed[key]}")
+
+          collect_args = sorted(set(collect_args))
+          hidden_args = sorted(set(hidden_args))
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write(f"collect_args={' '.join(collect_args)}\n")
+              f.write(f"hidden_args={' '.join(hidden_args)}\n")
+          print("collect:", collect_args)
+          print("hidden count:", len(hidden_args))
+          EOF
+
+      - name: Build with PyInstaller
+        if: steps.opts.outputs.builder == 'PyInstaller'
+        shell: bash
+        run: |
+          CONSOLE_FLAG="--console"
+          if [[ "${{ matrix.os }}" == windows-* ]] && [ "${{ steps.opts.outputs.console }}" = "no" ]; then
+            CONSOLE_FLAG="--noconsole"
+          fi
+          SEP="${{ matrix.pyinstaller_sep }}"
+          pyinstaller --onefile \
+            --name "${{ matrix.artifact_name }}" \
+            --paths scripts \
+            --paths . \
+            --add-data "configs${SEP}configs" \
+            --add-data "scripts${SEP}scripts" \
+            --add-data "services${SEP}services" \
+            ${{ steps.pyi_analysis.outputs.hidden_args }} \
+            ${{ steps.pyi_analysis.outputs.collect_args }} \
+            $CONSOLE_FLAG \
+            "${{ steps.entry.outputs.entry }}"
+
+      - name: Upload artifact (Nuitka)
+        if: steps.opts.outputs.builder == 'Nuitka'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact_name }}
+          path: ${{ matrix.artifact_name }}
+          if-no-files-found: error
+
+      - name: Upload artifact (PyInstaller)
+        if: steps.opts.outputs.builder == 'PyInstaller'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact_name }}
+          path: dist/${{ matrix.artifact_name }}
+          if-no-files-found: error
+
+  release:
+    name: Create GitHub Release
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: List downloaded files
+        run: ls -R artifacts
+
+      - name: Create Release and Upload Assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: artifacts/**/*
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

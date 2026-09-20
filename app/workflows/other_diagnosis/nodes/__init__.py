@@ -1,0 +1,1 @@
+"""Other diagnosis workflow nodes."""

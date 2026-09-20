@@ -1,0 +1,451 @@
+app:
+  description: 生产
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  icon_type: emoji
+  mode: workflow
+  name: 【生产】病案编码-工具-其他诊断工作流
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/siliconflow:0.0.61@f0952b183715405503a23ccef015e5d43948591fd10b60690f24c07873eed723
+    version: null
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/tongyi:0.2.22@9cea96ffc7977f536c02999c80ff1283b1819aab9b6fa2fdf789d0c6c7d03715
+    version: null
+kind: app
+version: 0.6.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        attachment_image_file_size_limit: 2
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        file_upload_limit: 20
+        image_file_batch_limit: 10
+        image_file_size_limit: 10
+        single_chunk_attachment_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: code
+      id: 1766051495117-source-1766113836743-target
+      source: '1766051495117'
+      sourceHandle: source
+      target: '1766113836743'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: end
+      id: 1766051668688-source-1766052013874-target
+      source: '1766051668688'
+      sourceHandle: source
+      target: '1766052013874'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: iteration
+      id: 1766113836743-source-1766114765942-target
+      source: '1766113836743'
+      sourceHandle: source
+      target: '1766114765942'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: iteration
+        targetType: llm
+      id: 1766114765942-source-1766051668688-target
+      source: '1766114765942'
+      sourceHandle: source
+      target: '1766051668688'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1766114765942'
+        sourceType: iteration-start
+        targetType: knowledge-retrieval
+      id: 1766114765942start-source-1766114773858-target
+      source: 1766114765942start
+      sourceHandle: source
+      target: '1766114773858'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1766114765942'
+        sourceType: knowledge-retrieval
+        targetType: code
+      id: 1766114773858-source-1767493864478-target
+      source: '1766114773858'
+      sourceHandle: source
+      target: '1767493864478'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: 开始
+        type: start
+        variables:
+        - allowed_file_extensions: []
+          allowed_file_types:
+          - image
+          allowed_file_upload_methods:
+          - local_file
+          - remote_url
+          label: 出院诊断列表，如 ["急性心肌梗死","淋球菌性败血","慢性胃炎"]
+          max_length: 8192
+          options: []
+          required: true
+          type: paragraph
+          variable: discharge_diagnosis
+        - allowed_file_extensions: []
+          allowed_file_types:
+          - image
+          allowed_file_upload_methods:
+          - local_file
+          - remote_url
+          label: 主要诊断
+          max_length: 8192
+          options: []
+          required: true
+          type: paragraph
+          variable: main_diagnosis
+      height: 134
+      id: '1766051495117'
+      position:
+        x: 81.28876211360421
+        y: 282
+      positionAbsolute:
+        x: 81.28876211360421
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1766114765942'
+          - output
+        desc: ''
+        model:
+          completion_params:
+            enable_thinking: false
+            max_tokens: 8192
+            temperature: 0.1
+          mode: chat
+          name: qwen3-32b
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 01022769-c447-40fe-be7c-16e400d76abf
+          role: system
+          text: "# 角色：\n你是一位顶尖的病案编码专家，你的任务是根据给定的“出院诊断名称列表”和“主要诊断名称”，提取出“其他诊断” 并按照知识库转换为ICD10标准的诊断名称和编码。\n\
+            \n# ICD10知识库：以\\n进行换行\n{{#context#}}\n\n# 额定说明：\n1.出院诊断名称列表；\n2.主要诊断结果是由人工或模型预测出的；\n\
+            \n# 提取规则：\n1.从给定的“出院诊断名称列表”中，完全排除“主要诊断名称”，排除后，列表中剩余的所有诊断即为“其他诊断”名称；\n\
+            2.在用户未明确说明诊断细节时，基于其他诊断名称列表在ICD10知识库中选择对应名称的编码。\n- 例如：输入为腹痛，那么根据ICD10知识库选择“腹痛(R10.402)”，而不是选择“腹痛，其他和未特指的(R10.400)”\n\
+            - 例如：输入为脾大，那么根据ICD10知识库选择“脾大(R16.100x001)”，而不是选择“脾大，不可归类在他处者(R16.100)”\n\
+            3.请保持“其他诊断”在原列表中的原始顺序。\n4.如果“主要诊断名称”不在“出院诊断名称列表”中，或排除后列表为空，请返回空列表或明确说明。\n\
+            5.必须中引入的ICD10知识库选取编码，禁止自己捏造；\n\n# 特例：\n1.注意区分 “门静脉瘤栓” 和 “门静脉栓塞”;\n\n\n\
+            # 输出要求：\n## 1.输出格式： \n以markdown格式输出，输出格式为：\n```markdown\n# 其他诊断：\n- 严格从ICD10知识库获取的ICD10标准的诊断名称\
+            \ ，严格从从ICD10知识库获取的ICD10标准的诊断编码\n```\n## 2.示例（仅供参考）：\n输入：\n出院诊断名称列表：急性心肌梗死、高血压病3级（极高危）、慢性胃炎\n\
+            主要诊断名称：急性心肌梗死\n输出：\n# 其他诊断：\n- 高血压病3级（极高危）I10.x00x032\n- 慢性胃炎 K29.500\n\
+            ## 注意：\n- 禁止遗漏诊断；\n- 请保持“其他诊断”在原列表中的原始顺序\n- 若未找到对应的编码，依旧需要输出诊断名称，并备注未找到编码；"
+        - id: 1a9f81d6-a44f-4615-8999-83cd11e14fa1
+          role: user
+          text: '# 出院诊断列表：
+
+            {{#1766051495117.discharge_diagnosis#}}
+
+            # 主要诊断：
+
+            {{#1766051495117.main_diagnosis#}}'
+        selected: false
+        title: 提取其他诊断
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 87
+      id: '1766051668688'
+      position:
+        x: 1371.5878113766403
+        y: 282
+      positionAbsolute:
+        x: 1371.5878113766403
+        y: 282
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1766051668688'
+          - text
+          variable: other_diagnosis
+        selected: false
+        title: 结束
+        type: end
+      height: 88
+      id: '1766052013874'
+      position:
+        x: 1785.0652977247273
+        y: 282
+      positionAbsolute:
+        x: 1785.0652977247273
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "\nimport json\n\ndef main(cyzd: str) -> dict:\n\n    cyzd_list = json.loads(cyzd)\n\
+          \n    return {\n        \"cyzd_list\":cyzd_list\n    }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          cyzd_list:
+            children: null
+            type: array[string]
+        selected: false
+        title: 将出院诊断列表转换为数组
+        type: code
+        variables:
+        - value_selector:
+          - '1766051495117'
+          - discharge_diagnosis
+          variable: cyzd
+      height: 51
+      id: '1766113836743'
+      position:
+        x: 349.7275920238493
+        y: 274.16584442843435
+      positionAbsolute:
+        x: 349.7275920238493
+        y: 274.16584442843435
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        desc: ''
+        error_handle_mode: terminated
+        height: 207
+        is_parallel: false
+        iterator_selector:
+        - '1766113836743'
+        - cyzd_list
+        output_selector:
+        - '1767493864478'
+        - result
+        output_type: array[string]
+        parallel_nums: 10
+        selected: false
+        start_node_id: 1766114765942start
+        title: 挨个提取诊断
+        type: iteration
+        width: 662.6219166066287
+      height: 207
+      id: '1766114765942'
+      position:
+        x: 625.2545527808963
+        y: 261.4353416246401
+      positionAbsolute:
+        x: 625.2545527808963
+        y: 261.4353416246401
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 663
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: 1766114765942start
+      parentId: '1766114765942'
+      position:
+        x: 24
+        y: 68
+      positionAbsolute:
+        x: 649.2545527808963
+        y: 329.4353416246401
+      selectable: false
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        dataset_ids:
+        - K9FGlBqYUHXhouJUfvmKYCfRWKtos2jd1tpjufYLpWQfKdEYkZ8erZ0CAUe8myGK
+        - NhPv0xNy+ECv0CGI5QMJVtKzx6BfVQf8X6F4u2mydUo3INE3MwU4ItnR0mdDRAEZ
+        desc: ''
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1766114765942'
+        multiple_retrieval_config:
+          reranking_enable: false
+          reranking_mode: weighted_score
+          reranking_model:
+            model: BAAI/bge-reranker-v2-m3
+            provider: langgenius/siliconflow/siliconflow
+          score_threshold: null
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0.3
+            vector_setting:
+              embedding_model_name: BAAI/bge-m3
+              embedding_provider_name: langgenius/siliconflow/siliconflow
+              vector_weight: 0.7
+            weight_type: customized
+        query_attachment_selector: []
+        query_variable_selector:
+        - '1766114765942'
+        - item
+        retrieval_mode: multiple
+        selected: true
+        title: 知识检索
+        type: knowledge-retrieval
+      height: 117
+      id: '1766114773858'
+      parentId: '1766114765942'
+      position:
+        x: 98.6219166066287
+        y: 68
+      positionAbsolute:
+        x: 723.876469387525
+        y: 329.4353416246401
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 1002
+    - data:
+        code: "import json\nimport re\n\ndef main(knowledges: list[object],cyzd_name:str)\
+          \ -> dict:\n    icd10_results = []\n    for knowledge in knowledges:\n \
+          \       content = knowledge.get('content','')\n        disease_name = re.escape(cyzd_name)\n\
+          \n        # 目的是过滤无用的知识库：\n        # 查找包含\"疾病\"的完整行（包括前面的编码）\n        pattern\
+          \ = f'^[^\\\\n]*{disease_name}[^\\\\n]*$'\n        result = re.findall(pattern,\
+          \ content, re.MULTILINE)\n        if result:\n            icd10_results.append({\n\
+          \                'content':'\\n'.join(result)\n            })\n\n\n    return\
+          \ {\n        \"result\": icd10_results,\n    }\n"
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1766114765942'
+        outputs:
+          result:
+            children: null
+            type: array[object]
+        selected: false
+        title: 提取知识库内容
+        type: code
+        variables:
+        - value_selector:
+          - '1766114773858'
+          - result
+          variable: knowledges
+        - value_selector:
+          - '1766114765942'
+          - item
+          variable: cyzd_name
+      height: 51
+      id: '1767493864478'
+      parentId: '1766114765942'
+      position:
+        x: 402.6219166066287
+        y: 68
+      positionAbsolute:
+        x: 1027.876469387525
+        y: 329.4353416246401
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 1002
+    viewport:
+      x: 35.93559122282443
+      y: -81.45731194456869
+      zoom: 0.8444906824895699
+  rag_pipeline_variables: []

@@ -1,0 +1,1 @@
+病历内容：{{simplified_text}}
