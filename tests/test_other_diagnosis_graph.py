@@ -5,29 +5,22 @@ from app.workflows.other_diagnosis.graph import build_graph
 
 
 class _FakeKB:
-    def search(self, query: str, **kwargs):
+    def search_other_diagnosis(self, query: str, **kwargs):
         mapping = {
-            "急性心肌梗死": {
-                "diag_code": "I21.900",
-                "diag_name": "急性心肌梗死",
-                "evidence": "急性心肌梗死",
-                "matched_keywords": [],
-            },
-            "慢性胃炎": {
-                "diag_code": "K29.500",
-                "diag_name": "慢性胃炎",
-                "evidence": "慢性胃炎",
-                "matched_keywords": [],
-            },
-            "高血压病3级（极高危）": {
-                "diag_code": "I10.x00x032",
-                "diag_name": "高血压病3级（极高危）",
-                "evidence": "高血压",
-                "matched_keywords": [],
-            },
+            "急性心肌梗死": "急性心肌梗死(I21.900)",
+            "慢性胃炎": "慢性胃炎(K29.500)",
+            "高血压病3级（极高危）": "高血压病3级（极高危）(I10.x00x032)",
         }
-        hit = mapping.get(query)
-        return [hit] if hit else []
+        content = mapping.get(query)
+        if not content:
+            return []
+        return [
+            {
+                "original_content": content,
+                "score": 0.9,
+                "matched_keywords": [{"kw_text": query, "score": 0.9}],
+            }
+        ]
 
 
 def test_other_diagnosis_registered():

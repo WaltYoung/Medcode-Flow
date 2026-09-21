@@ -76,7 +76,7 @@ curl -X POST http://127.0.0.1:8000/api/v1/workflows/secondary_diagnosis/invoke ^
 
 `other_diagnosis` 会调用智能病案编码检索服务：
 
-- 接口：`POST {KB_BASE_URL}/search`
+- 接口：`POST {KB_BASE_URL}/search/other-diagnosis`
 - 本环境默认：`http://127.0.0.1:8090`（注意不是文档里的 8000）
 - 可在 `.env` 调整 `KB_BASE_URL` / `KB_TOP_K` / `KB_CANDIDATE_K`
 ## LLM 切换

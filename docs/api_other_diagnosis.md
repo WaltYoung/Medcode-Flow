@@ -121,14 +121,14 @@ curl -X POST http://127.0.0.1:8000/api/v1/workflows/other_diagnosis/invoke ^
 
 本工作流会对出院诊断列表 **逐条** 调用知识库：
 
-- 接口：`POST {KB_BASE_URL}/search`
+- 接口：`POST {KB_BASE_URL}/search/other-diagnosis`
 - 本环境默认：`http://127.0.0.1:8090`（**不是**知识库文档中的默认端口 8000）
 - 相关配置（服务 `.env`）：
 
 | 配置项 | 默认值 | 说明 |
 |--------|--------|------|
 | KB_BASE_URL | `http://127.0.0.1:8090` | 知识库根地址 |
-| KB_TOP_K | `4` | 返回诊断码条数 |
+| KB_TOP_K | `4` | 返回父文档条数 |
 | KB_CANDIDATE_K | `80` | 子向量召回条数 |
 | KB_TIMEOUT_SECONDS | `30` | 超时秒数 |
 | KB_ENABLED | `true` | 是否启用知识库 |

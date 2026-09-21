@@ -29,7 +29,7 @@ registry.register(
         workflow_id=WORKFLOW_ID,
         name="其他诊断提取",
         version=VERSION,
-        description="对齐 Dify【生产】病案编码-工具-其他诊断工作流；知识库调用 127.0.0.1:8090",
+        description="对齐 Dify【生产】病案编码-工具-其他诊断工作流；知识库 POST /search/other-diagnosis（127.0.0.1:8090）",
         build_graph=build_graph,
         request_model=OtherDiagnosisRequest,
         response_model=OtherDiagnosisResult,

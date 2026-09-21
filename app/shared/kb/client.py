@@ -55,6 +55,42 @@ class KnowledgeBaseClient:
             raise ValueError(f"Unexpected KB response: results is {type(results)}")
         return results
 
+    def search_other_diagnosis(
+        self,
+        query: str,
+        *,
+        top_k: int | None = None,
+        candidate_k: int | None = None,
+    ) -> list[dict[str, Any]]:
+        """查询其他诊断知识库（POST /search/other-diagnosis）。"""
+        if not self.settings.kb_enabled:
+            logger.warning("kb_disabled query=%s", query)
+            return []
+
+        payload = {
+            "query": query,
+            "top_k": top_k if top_k is not None else self.settings.kb_top_k,
+            "candidate_k": (
+                candidate_k
+                if candidate_k is not None
+                else self.settings.kb_candidate_k
+            ),
+        }
+        url = f"{self.base_url}/search/other-diagnosis"
+        try:
+            with httpx.Client(timeout=self.settings.kb_timeout_seconds) as client:
+                resp = client.post(url, json=payload)
+                resp.raise_for_status()
+                data = resp.json()
+        except Exception:
+            logger.exception("kb_search_other_diagnosis_failed url=%s query=%s", url, query)
+            raise
+
+        results = data.get("results") or []
+        if not isinstance(results, list):
+            raise ValueError(f"Unexpected KB response: results is {type(results)}")
+        return results
+
     def health(self) -> dict[str, Any]:
         url = f"{self.base_url}/health"
         with httpx.Client(timeout=self.settings.kb_timeout_seconds) as client:
@@ -63,10 +99,22 @@ class KnowledgeBaseClient:
             return resp.json()
 
 
+def other_diagnosis_results_to_knowledges(
+    results: list[dict[str, Any]],
+) -> list[dict[str, str]]:
+    """将 /search/other-diagnosis 的父文档结果转为知识 content。"""
+    knowledges: list[dict[str, str]] = []
+    for row in results:
+        content = str(row.get("original_content") or "").strip()
+        if content:
+            knowledges.append({"content": content})
+    return knowledges
+
+
 def search_results_to_knowledges(
     results: list[dict[str, Any]],
 ) -> list[dict[str, str]]:
-    """将本地检索结果转为接近 Dify knowledge-retrieval 的 content 结构。"""
+    """将 /search 检索结果转为接近 Dify knowledge-retrieval 的 content 结构。"""
     knowledges: list[dict[str, str]] = []
     for row in results:
         name = str(row.get("diag_name") or "").strip()

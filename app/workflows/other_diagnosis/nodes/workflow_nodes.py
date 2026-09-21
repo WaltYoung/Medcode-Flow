@@ -6,7 +6,10 @@ from typing import Any
 from langchain_core.messages import HumanMessage, SystemMessage
 
 from app.core.llm import get_llm_factory
-from app.shared.kb.client import get_kb_client, search_results_to_knowledges
+from app.shared.kb.client import (
+    get_kb_client,
+    other_diagnosis_results_to_knowledges,
+)
 from app.workflows.other_diagnosis.nodes.logic import (
     extract_knowledge_for_diagnosis,
     parse_discharge_diagnosis_list,
@@ -30,12 +33,12 @@ def node_iterate_knowledge(state: OtherDiagnosisState) -> dict:
 
     for name in state.get("cyzd_list") or []:
         try:
-            results = kb.search(name)
+            results = kb.search_other_diagnosis(name)
         except Exception:
-            logger.exception("kb_search_item_failed name=%s", name)
+            logger.exception("kb_search_other_diagnosis_item_failed name=%s", name)
             results = []
 
-        knowledges = search_results_to_knowledges(results)
+        knowledges = other_diagnosis_results_to_knowledges(results)
         filtered = extract_knowledge_for_diagnosis(knowledges, name)
 
         # 若精确行过滤为空，回退使用检索原始结构化条目，避免上下文完全缺失
