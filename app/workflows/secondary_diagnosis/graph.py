@@ -41,9 +41,10 @@ def _build() -> CompiledStateGraph:
 
     graph.add_edge("extract_discharge", "parse_discharge")
 
-    # 汇聚后调用 other_diagnosis 子工作流
-    graph.add_edge("normalize_main", "call_other_diagnosis")
-    graph.add_edge("parse_discharge", "call_other_diagnosis")
+    # 汇聚后调用 other_diagnosis：必须用 list 入边做 barrier，
+    # 两条独立 add_edge 会在任一分支完成时就触发（出院分支更短），
+    # 导致 main_diagnosis_normalized 仍为空并触发 OtherDiagnosisRequest 校验失败。
+    graph.add_edge(["normalize_main", "parse_discharge"], "call_other_diagnosis")
     graph.add_edge("call_other_diagnosis", END)
     return graph.compile()
 
