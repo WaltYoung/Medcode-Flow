@@ -1,0 +1,40 @@
+[
+  {
+    "title": "入院记录",
+    "content": {
+      "科别": "胸外科",
+      "出生日期": "1981-09-14",
+      "年龄": "43岁",
+      "性别": "男",
+      "病案号": "3878866",
+      "入院日期": "2025-07-07 10:51:00",
+      "主诉": "确诊食管下段鳞癌2月余",
+      "现病史": "患者2月余前因吞咽不畅于当地医院就诊, 超声胃镜提示: 食管距门齿26-30cm见散在粘膜发红、糜烂; 距门齿34-40cm见溃疡新生物, 占据食管管腔约2/1周; 超声内镜可以顺利通过。病理提示: 1. (食管34-38cm活检组织) 鳞状细胞癌; 2. (食管28cm活检组织) 高级别鳞状上皮内瘤变; 3. (胃窦活检组织) 黏膜组织中度慢性活动性炎症, 合并HP(+); 食管ct平扫+增强提示: 双肺散在多个微小结节, 气管及双侧主支气管通畅, 纵隔内多发小淋巴结; 食管下段管壁增厚, 增强后可见强化, 病灶长约7.1cm, 周围见小淋巴结, 贲门周围见肿大淋巴结, 增强后环形强化, 大小约2.6*2.1cm。今为求进一步诊治, 特来我院就诊, 门诊以'食管恶性肿瘤'收治入院。",
+      "既往史": "平时健康状况: 良好, 疾病史: 呼吸系统症状: 无, 循环系统症状: 无, 消化系统症状: 无, 泌尿系统症状: 无, 血液系统症状: 无, 内分泌代谢症状: 无, 神经系统症状: 无, 生殖系统症状: 无, 运动系统症状: 无, 传染病史: 无, 预防接种史: 按国家计划进行接种。其他: 无。 手术外伤史: 手术: 痔疮",
+      "家族史": "父：已故，死因：肺癌，母：健在，家中有遗传性及传染性疾病：无，其他：无。",
+      "手术外伤史": "手术: 痔疮",
+      "辅助检查": "襄阳市第一人民医院相关检查报告单"
+    },
+    "content_type": "text"
+  },
+  {
+    "title": "出院记录",
+    "content": {
+      "病案号": "3878866",
+      "入院日期": "2025-07-07 10:51:00",
+      "出院日期": "2025-07-15 09:23:00",
+      "检验及特殊检查结果": "详见检查报告单",
+      "病理检查结果": "2025-07-14, 超声胃镜检查【内镜】:检查所见: 超声白光: 食管中下段距门齿约28cm-40cm处局部粘膜粗糙发红, 及条状疤痕样改变, NBI呈明显茶褐色改变, 边界尚清晰。超声内镜: 于病灶口侧扫查见食管中下段病灶处食管壁粘膜层至粘膜下层模糊呈均匀低回声增厚, 较大切面食管壁厚约5.0mm, 粘膜层粘膜下层厚约3.5mm, 固有肌层增厚水肿, 外膜呈放射状改变, 病变食管旁纵膈内可探及2枚低回声结节, 较大切面大小约7.5mm*5.4mm, 贲门下及左侧肾上腺旁未见明显肿大淋巴结。检查结论/诊断: 食管中下段粘膜层-粘膜下层低回声病灶(食管Ca治疗后改变较前好转 T1bN1?)",
+      "出院诊断": "1、食管恶性肿瘤((食管Ca治疗后改变较前好转 T1bN1?))",
+      "治疗经过": "入院后积极完善相关检查, 关检查拟于明日行手术治疗, 术前, 考虑手术风险较高, 建议极抗炎治疗, 2周后于我科行手术治疗。医嘱出院。"
+    },
+    "content_type": "text"
+  },
+  {
+    "title": "临时医嘱单",
+    "content": {
+      "医嘱内容": "<table border=\"1\" style=\"border-collapse: collapse; width: 100%;\">  <thead> <tr>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">日期</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">时间</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">医嘱</th>    </tr> </thead>  <tbody>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:32</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血气分析+电解质四项-DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:32</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">大生化34项-1</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:32</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">乙丙艾梅8项(发光法</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:32</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血常规分析-1</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:32</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血型+单特异性抗体-1</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:32</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">凝血四项-1</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:32</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血栓四项(TAT/PIC/t-PAIC/TM)</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:32</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">TEG常规检测-1</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:32</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">MR脑平扫+增强【磁共振】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:32</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">肺通气弥散+IOS(不含MVV)【肺功能室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:32</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">床边(急诊)网络心电图+心电事件记录【心电图】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:32</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">下肢深静脉+浅静脉超声检查(双侧)【超声医学科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:32</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">颈部血管:颈动脉+椎动脉超声检查(双侧)【超声医学科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:32</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">心脏超声检查(含心功能+室壁运动分析+TDI)【超声医学科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:32</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">全身糖代谢PET/CT显像【PET科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:33</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">X线摄影-上消化道钡剂造影【DR】</td>    </tr>  </tbody></table>"
+    },
+    "content_type": "html_text"
+  }
+]

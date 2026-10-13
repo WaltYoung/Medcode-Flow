@@ -1,0 +1,180 @@
+[
+    {
+        "title": "人工编码结果",
+        "content": {
+            "主要诊断结果": {
+                "主要诊断编码": "C22.000",
+                "主要诊断名称": "肝细胞癌"
+            },
+            "病理诊断": {
+                "病理诊断": "M81700/3",
+                "病理诊断描述": ""
+            },
+            "手术操作": {
+                "手术日期": "",
+                "手术编码": "39.7903",
+                "手术名称": "经导管肝动脉栓塞术",
+                "手术级别": "",
+                "医生手术描述": ""
+            },
+            "其他诊断结果": [
+                {
+                    "其他诊断编码": "R93.203",
+                    "其他诊断名称": "肝占位性病变"
+                },
+                {
+                    "其他诊断编码": "K74.602",
+                    "其他诊断名称": "乙型肝炎后肝硬化失代偿期"
+                },
+                {
+                    "其他诊断编码": "K83.102",
+                    "其他诊断名称": "胆汁淤积症"
+                },
+                {
+                    "其他诊断编码": "K74.619+I98.2*",
+                    "其他诊断名称": "肝硬化伴食管胃底静脉曲张"
+                },
+                {
+                    "其他诊断编码": "R16.100x001",
+                    "其他诊断名称": "脾大"
+                },
+                {
+                    "其他诊断编码": "K72.905",
+                    "其他诊断名称": "肝功能不全"
+                }
+            ]
+        }
+    },
+    {
+        "title": "AI编码依据",
+        "content": {
+            "编码理由": ""
+        }
+    },
+    {
+        "title": "AI编码结果",
+        "content": {
+            "主要诊断结果": {
+                "主要诊断名称": "",
+                "主要诊断编码": "",
+                "AI编码一致性": "不一致"
+            },
+            "人工主要诊断名称": "肝细胞癌",
+            "人工主要诊断编码": "C22.000"
+        }
+    },
+    {
+        "title": "入院记录",
+        "content": {
+            "入院记录": {
+                "科别": "介入科",
+                "出生日期": "1957-10-05",
+                "年龄": "67岁",
+                "性别": "女",
+                "病案号": "3769897",
+                "入院日期": "2024-12-26",
+                "主诉": "发现肝占位半年。",
+                "现病史": "体检行CT检查发现肝S7段占位，未给予特殊治疗。2024年12月25号我院MR检查提示肝S7段占位性病变，肝癌可能；肝硬化，食管胃底静脉曲张，脾大，肝囊肿。为求进一步诊治来我院，门诊以'肝占位性病变'收入我科。自发病以来，良好，饮食正常，体重无明显变化，睡眠正常，小便正常，大便正常。",
+                "既往史": "平时健康状况：一般，疾病史：有乙肝肝硬化病史，血吸虫感染史，预防接种史：按国家计划进行接种。",
+                "手术外伤史": "手术：无，外伤：无。",
+                "辅助检查": "2024年12月25号我院MR检查提示肝S7段占位性病变，肝癌可能；肝硬化，食管胃底静脉曲张，脾大，肝囊肿。"
+            }
+        },
+        "content_type": "text"
+    },
+    {
+        "title": "出院记录",
+        "content": {
+            "病案号": "3769897",
+            "入院日期": "2024-12-26 16:25:00",
+            "出院日期": "2025-01-02 08:35:00",
+            "检验及特殊检查结果": "2024-12-29：肝肾电21项（肌酐酶-1[血清]：总胆红素：17.9 μmol/L，直接胆红素：8.7 μmol/L，丙氨酸氨基转移酶：78U/L↑，天门冬氨酸氨基转移酶：88U/L↑，碱性磷酸酶：73U/L，Y-谷氨酰转移酶：20U/L，亮氨酸氨基肽酶：27U/L，总蛋白：48.1g/L↓，白蛋白：26.4g/L↓，球蛋白：21.7g/L，白球比例：1.2↓，前白蛋白：0.079g/L↓，总胆汁酸：25.1μmol/L↑，肌酐（酶法）：69.3μmol/L，尿素：3.99mmol/L，尿酸：366.0μmol/L↑，钠：142.0mmol/L，钾：4.03mmol/L，氯：110.3mmol/L↑，钙：2.17mmol/L，总二氧化碳：23.3mmol/L，磷：0.71mmol/L↓，镁：0.78mmol/L，阴离子隙：8mmol/L，肾小球滤过率：78.43ml/min/(1.73m2)↓；2024-12-29：血常规分析-1[全血]：白细胞：6.67×10^9/L，红细胞：2.34×10^12/L↓，血红蛋白：72g/L，红细胞压积：21.7%，MCV：92.7fL，MCH：30.8pg，MCHC：332g/L，血小板：277×10^9/L，中性粒细胞%：62.00%，淋巴细胞%：14.7%，单核细胞%：13.60%，嗜酸性细胞%：9.10%，嗜碱性细胞%：0.60%，中性粒细胞：4.13×10^9/L，淋巴细胞：0.98×10^9/L，单核细胞：0.91×10^9/L，嗜酸性细胞：0.61×10^9/L，嗜碱性细胞：0.04×10^9/L，血小板平均体积：11.6fL，血小板压积：0.32%，血小板平均分布宽度：12.8%，大血小板比率：37.3%，红细胞分布宽度标准差：54.9fL↑，红细胞分布变异系数：16.1%；2024-12-27：乙肝DNA定量（超敏）-1[血清]：乙肝病毒DNA定量：3.35E+01IU/mL↑；2024-12-27：大便常规-1[大便]：大便颜色：黄色，大便性状：软便，大便红细胞：阴性/HP，大便白细胞：阴性/HP，大便吞噬细胞：阴性/HP，脂肪球：阴性/LP；2024-12-27：血小板特异性抗体检测：血小板特异性抗体：阴性",
+            "病理检查结果": "-",
+            "出院诊断": [
+                "肝细胞癌",
+                "肝占位性病变",
+                "乙型肝炎后肝硬化失代偿期",
+                "肝功能不全",
+                "胆汁淤积症",
+                "脾大",
+                "肝硬化伴食管胃底静脉曲张"
+            ],
+            "治疗经过": "入院后，完善相关检查，行介入治疗。"
+        },
+        "content_type": "text"
+    },
+    {
+        "title": "检验检查记录",
+        "content": [
+            {
+                "报告标题": "乙肝病毒DNA定量检验报告",
+                "采样日期": "2024-12-27 05:19:00",
+                "报告日期": "2024-12-27 08:31:00",
+                "报告内容": "| 项目 | 结果 | 参考范围 单位 |\n|------|------|------------------|\n| 1 ★乙肝病毒DNA定量 | 3.35E+01 | ↑ IU/mL"
+            },
+            {
+                "报告标题": "大便常规检查报告",
+                "采样日期": "无",
+                "报告日期": "2024-12-27 12:00:00",
+                "报告内容": "| 项目 | 结果 | 参考范围 单位 |\n|------|------|------------------|\n| 1 大便颜色 | 黄色 | \n| 2 大便性状 | 软便 | \n| 3 大便红细胞 | 阴性 | /HP\n| 4 大便白细胞 | 阴性 | /HP\n| 5 大便吞噬细胞 | 阴性 | /HP\n| 6 脂肪球 | 阴性 | /LP"
+            },
+            {
+                "报告标题": "血小板特异性抗体检验报告",
+                "采样日期": "2024-12-27 05:19:00",
+                "报告日期": "2024-12-27 09:37:00",
+                "报告内容": "| 项目 | 结果 | 参考范围 单位 |\n|------|------|------------------|\n| 1 血小板特异性抗体 | 阴性 | "
+            },
+            {
+                "报告标题": "凝血功能检验报告",
+                "采样日期": "2024-12-27 05:19:00",
+                "报告日期": "2024-12-27 08:32:00",
+                "报告内容": "| 项目 | 结果 | 参考范围 单位 |\n|------|------|------------------|\n| 1 ★PT | 14.9 ↑ | 11.0-14.2 sec\n| 2 ★INR | 1.23 ↑ | 0.80-1.20\n| 3 PTA | 78 ↓ | 80-126 %\n| 4 ★APTT | 38.0 | 28.0-43.5 sec\n| 5 ★FIB | 1.83 ↓ | 2.0-4.0 g/l\n| 6 ★TT | 19.3 | 14.0-21.0 sec"
+            },
+            {
+                "报告标题": "甲胎蛋白及PIVKA-II检验报告",
+                "采样日期": "2024-12-27 05:19:00",
+                "报告日期": "2024-12-27 08:19:00",
+                "报告内容": "| 项目 | 结果 | 参考范围 单位 |\n|------|------|------------------|\n| 1 ★甲胎蛋白 | 1.3 | 0.89-8.78 μg/L\n| 2 PIVKA-II | 16.91 | 0-40 mAU/ml"
+            },
+            {
+                "报告标题": "血氨检验报告",
+                "采样日期": "2024-12-27 05:19:00",
+                "报告日期": "2024-12-27 09:05:00",
+                "报告内容": "| 项目 | 结果 | 参考范围 单位 |\n|------|------|------------------|\n| 1 血氨 | 61 ↑ | 9-30 μmol/L"
+            },
+            {
+                "报告标题": "乙肝五项及丙肝、HIV、梅毒抗体检验报告",
+                "采样日期": "2024-12-27 05:19:00",
+                "报告日期": "2024-12-27 08:39:00",
+                "报告内容": "| 项目 | 结果 | 参考范围 单位 |\n|------|------|------------------|\n| 1 ★乙型肝炎病毒表面抗原 | 206.98 | + IU/mL\n| 2 ★乙型肝炎病毒表面抗体 | 2.14 | - mIU/mL\n| 3 ★乙型肝炎病毒e抗原 | 0.382 | - S/CO\n| 4 ★乙型肝炎病毒e抗体 | 0.03 | + S/CO\n| 5 ★乙型肝炎病毒核心抗体 | 6.78 | + S/CO\n| 6 ★丙型肝炎病毒抗体 | 0.08 | - S/CO\n| 7 人类免疫缺陷病毒抗原及抗体 | 0.35 | - S/CO\n| 8 ★梅毒螺旋体特异性抗体 | 0.11 | - S/CO"
+            }
+        ],
+        "content_type": "group_html_text"
+    },
+    {
+        "title": "临时医嘱单",
+        "content": {
+            "医嘱内容": "<table border=\"1\" style=\"border-collapse: collapse; width: 100%;\">  <thead> <tr>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">日期</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">时间</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">医嘱</th>    </tr> </thead>  <tbody>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-26</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">营养风险筛查与营养测评(1次) st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-26</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">深静脉血栓风险筛查与测评(1次) st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-26</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">跌倒风险筛查与测评(1次) st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-26</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">压疮风险评估(1次) st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-26</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血常规分析-1 【全血】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-26</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">大生化34项-1 【血清】【生化室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-26</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">乙肝DNA定量(超敏)-1 【血清】【PCR室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-26</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血氨-1 【血浆】【急诊快检】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-26</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">大便常规-1 【大便】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-26</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">尿常规分析-1 【尿】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-26</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血小板特异性抗体检测 【血清】【输血科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-26</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">凝血四项-1 【血浆】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-26</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">AFP+PIVKA-II 【血清】【生化室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-26</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">乙丙艾梅8项(发光法 【血清】【免疫室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-26</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12导心电图(常规)+心电事件记录【心电图】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]术后医嘱 st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]拟于今日行介入手术 st-一次性使用正压静脉留置针</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]备皮 st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">康莱特注射液 [10g:100ml] 200ml 2瓶静滴(现配) on ce</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">5%葡萄糖注射液 [5%*250ml] 250ml 1袋静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(小孚尔健)注射用甲硫氨酸维B1(小孚尔健) [40mg] 5支 5支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">5%葡萄糖注射液 [5%*250ml] 250ml 1袋静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(天晴甘美)异甘草酸镁注射液 [10ml:50mg] 200mg 4支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(小双益健)注射用还原型谷胱甘肽(小双益健) [0.9g] 1.8g 2支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">5%葡萄糖注射液 [5%*250ml] 250ml 1袋静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(赛盛)脱氧核苷酸钠注射液 [50mg:2ml] 150mg 3支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">0.9%氯化钠注射液(青岛华仁) [0.9%*250ml] 250ml 1袋静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(锡妥)注射用盐酸丙帕他莫(锡妥) [2.0g] 2g 1支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(青岛华仁)0.9%氯化钠注射液 [0.9%*250ml] 250ml 1袋静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(阿米福汀)注射用氨磷汀 [0.4g] 0.4g 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(滨湖双鹤)0.9%氯化钠注射液(内封式) [0.9%*100ml] 100ml 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(瑞齐泰)注射用盐酸托烷司琼 [2mg] 4mg 2瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(纳嘉美)复方醋酸钠林格注射液【250mL】500ml 2袋静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">拟于2024年12月27日09时04分 进行经导管肝动脉栓塞术手术 st手术部位:其他,,,,</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:34</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(赛维德)注射用雷替曲塞【2mg】4mg 2瓶静滴 once 术中</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:34</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">注射用洛铂【50mg】100mg 2支静滴 once 术中</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">19:39</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(石家庄四)复方氯化钠注射液【500ml】500ml 1袋静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-28</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:28</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血常规分析-1 【全血】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-28</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:28</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">肝肾电21项(肌酐酶-1 【血清】【生化室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-30</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">14:47</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">拟于2024年12月31日08时00分 进行CT引导下肝病损射频消融术手术 st手术部位:其他,,,,</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">15:42</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(滨湖双鹤)0.9%氯化钠注射液(内封式)【0.9%*100ml】100ml 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">15:42</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(凯纷)氟比洛芬酯注射液(国)【5ml:50mg】10ml 2支静滴 once 术中</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">17:00</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(锐宁)盐酸氢吗啡酮注射液【2ml:2mg】2mg 1支肌注 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">18:14</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">葡萄糖注射液【50%*20ml】20ml 1支口服 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">20:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(瑞卓通)呋塞米注射液(国)【2ml:20mg】20mg 1支静脉注射 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">20:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(石家庄四)复方氯化钠注射液【500ml】500ml 1袋静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-01</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:41</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(滨湖双鹤)0.9%氯化钠注射液(内封式)【0.9%*100ml】100ml 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-01</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:41</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(奥加明)注射用雷贝拉唑钠【20mg】20mg 1支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-02</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:00</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]今日出院 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-02</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">复生康片【0.33g*24】00.33g 5盒口服 once一日三次,一次三片</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-02</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">肝达康颗粒【4g*9袋】4g 5盒口服 once一日三次,一次一袋</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-02</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(爽舒宝)凝结芽孢杆菌活菌片【350mg*30】350mg 1盒口服 once</td>    </tr>  </tbody></table>"
+        },
+        "content_type": "html_text"
+    },
+    {
+        "title": "长期医嘱单",
+        "content": {
+            "医嘱内容": "<table border=\"1\" style=\"border-collapse: collapse; width: 100%;\">  <thead> <tr>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">日期</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">时间</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">医嘱</th>    </tr> </thead>  <tbody>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(小双益健)注射用还原型谷胱甘肽(小双益健)【0.9g】1.8g 2支静滴 qd</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(天晴甘美)异甘草酸镁注射液【10ml:50mg】200mg 4支静滴 qd</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">5%葡萄糖注射液【5%+250ml】250ml 1袋静滴 qd</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(赛盛)脱氧核苷酸钠注射液【50mg:2ml】150mg 3支静滴 qd</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">0.9%氯化钠注射液(青岛华仁)【0.9%+250ml】250ml 1袋静滴 qd</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(锡妥)注射用盐酸丙帕他莫(锡妥)【2.0g】2g 1支静滴 qd</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">康莱特注射液【10g:100ml】200ml 2瓶静滴(现配) qd</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-01</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:42</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(滨湖双鹤)0.9%氯化钠注射液(内封式)【0.9%+100ml】100ml 1瓶静滴 qd</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-01</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:42</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(奥加明)注射用雷贝拉唑钠【20mg】20mg 1支静滴 qd</td>    </tr>  </tbody></table>"
+        },
+        "content_type": "html_text"
+    },
+    {
+        "title": "手术记录",
+        "content": {
+            "手术记录": {
+                "科别": "介入科",
+                "性别": "女",
+                "年龄": "67岁"
+            }
+        },
+        "content_type": "text"
+    }
+]
+

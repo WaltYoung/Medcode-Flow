@@ -1,0 +1,150 @@
+[
+    {
+        "title": "人工编码结果",
+        "content": {
+            "主要诊断结果": {
+                "主要诊断编码": "C22.000",
+                "主要诊断名称": "肝细胞癌"
+            },
+            "病理诊断": {
+                "病理诊断": "M81700/3",
+                "病理诊断描述": ""
+            },
+            "手术操作": {
+                "手术日期": "",
+                "手术编码": "39.7903",
+                "手术名称": "经导管肝动脉栓塞术",
+                "手术级别": "",
+                "医生手术描述": ""
+            },
+            "其他诊断结果": [
+                {
+                    "其他诊断编码": "K74.602",
+                    "其他诊断名称": "乙型肝炎后肝硬化失代偿期"
+                },
+                {
+                    "其他诊断编码": "K72.905",
+                    "其他诊断名称": "肝功能不全"
+                },
+                {
+                    "其他诊断编码": "K83.102",
+                    "其他诊断名称": "胆汁淤积症"
+                }
+            ]
+        }
+    },
+    {
+        "title": "AI编码依据",
+        "content": {
+            "编码理由": ""
+        }
+    },
+    {
+        "title": "AI编码结果",
+        "content": {
+            "主要诊断结果": {
+                "主要诊断名称": "",
+                "主要诊断编码": "",
+                "AI编码一致性": "不一致"
+            },
+            "人工主要诊断名称": "肝细胞癌",
+            "人工主要诊断编码": "C22.000"
+        }
+    },
+    {
+        "title": "入院记录",
+        "content": {
+            "科别": "介入科",
+            "出生日期": "1952-10-12",
+            "年龄": "72岁",
+            "性别": "男",
+            "病案号": "3716733",
+            "入院日期": "2025-01-06 12:37:00",
+            "主诉": "肝癌介入术后一年半余。",
+            "现病史": "患者于2024年8月体检行CT检查发现肝占位，无腹痛腹胀、恶心呕吐、黄疸等症状。40年，肝硬化1年余。2024-9-15洪湖市人民医院B超检查提示肝内占位性病变，查血结果PIVKA 1002AU/L。2024-9-20我院MR检查示肝S8段恶性肿瘤性病变，考虑HCC，并于当月于我科行TACE术，术后恢复可。2024-11-13于我院行经导管肝动脉栓塞术（其他）+动脉化疗栓塞+肝动脉造影，今为求进一步诊治来我院就诊，门诊以'肝恶性肿瘤'收入我科。自发病以来，良好，饮食正常，体重无明显变化，睡眠正常，小便正常，大便正常。",
+            "既往史": "平时健康状况：一般，疾病史：无呼吸系统症状、无循环系统症状、无消化系统症状、无泌尿系统症状、无血液系统症状、无内分泌代谢症状、无神经系统症状、无生殖系统症状、无运动系统症状、无传染病史，预防接种史：按国家计划进行接种。其他：无。",
+            "手术外伤史": "2024-11-13经导管肝动脉栓塞术（其他）+动脉化疗栓塞+肝动脉造影",
+            "辅助检查": "2024-9-15洪湖市人民医院B超检查提示肝内占位性病变，查血结果PIVKA 1002AU/L。2024-9-20我院MR检查示肝S8段恶性肿瘤性病变，考虑HCC。"
+        },
+        "content_type": "text"
+    },
+    {
+        "title": "出院记录",
+        "content": {
+            "病案号": "3716733",
+            "入院日期": "2025-01-06 12:37:00",
+            "出院日期": "2025-01-13 08:44:00",
+            "检验及特殊检查结果": "1. 肝Ca介入术后,肝S8段病灶内碘油沉积,其边缘碘油缺损区可见\"快进快出\"强化结节、较前稍大,提示肿瘤活灶,其后缘新见片状动脉期强化影(层面302-25),需鉴别于灌注不均或活灶,建议MR或DSA检查;\n2. 肝S6段新见弱强化结节(层面402-62),考虑肿瘤活性可能;\n3. 肝硬化、门脉高压表现,脾脏稍饱满;\n肝S6段致密小结节;\n门脉期肝右叶近膈顶部似弱强化小结节,同前,建议复查或MR;\n肝脏多发囊肿;\n4. 中肠旋转不良;\n5. 所及右肾小结石,左肾囊肿,同前;\n6. 双肺散在小结节,建议随诊复查;\n双肺散在慢性炎性病变/节段性肺不张,双肺下叶者较前稍增多;\n主动脉及冠脉粥样硬化表现。",
+            "病理检查结果": "-",
+            "出院诊断": "1、肝细胞癌\n2、乙型肝炎后肝硬化失代偿期\n3、肝功能不全\n4、胆汁淤积症",
+            "治疗经过": "入院后完善相关检查,行对症支持治疗,并行介入手术治疗"
+        },
+        "content_type": "text"
+    },
+    {
+        "title": "检验检查记录",
+        "content": [
+            {
+                "报告标题": "检验报告单",
+                "采样日期": "2025-01-12 05:34:00",
+                "报告日期": "2025-01-12 09:21:00",
+                "报告内容": "| 项目 | 结果 | 参考范围 单位 |\n|------|------|--------------|\n| 1 降钙素原 | 0.70 | ↑ &lt;0.5 ng/ml |\n| 2 C-反应蛋白 | 14.10 | ↑ &lt;8.00 mg/L |"
+            },
+            {
+                "报告标题": "检验报告单",
+                "采样日期": "2025-01-07 05:00:00",
+                "报告日期": "2025-01-07 08:38:00",
+                "报告内容": "| 项目 | 项目简称 | 结果 | 参考范围 | 单位 |\n|------|----------|------|----------|------|\n| 1 ★乙肝病毒DNA定量 | HBV-DNA | 3.50E+01 | ↑ | IU/mL |"
+            },
+            {
+                "报告标题": "检验报告单",
+                "采样日期": "2025-01-07 05:00:00",
+                "报告日期": "2025-01-07 09:04:00",
+                "报告内容": "| 项目 | 结果 | 参考范围 单位 |\n|------|------|--------------|\n| 1 ★PT | 14.2 | 11.0-14.2 sec |\n| 2 ★INR | 1.16 | 0.80-1.20  |\n| 3 PTA | 85 | 80-126 % |\n| 4 ★APTT | 37.9 | 28.0-43.5 sec |\n| b ★FIB | 2.38 | 2.0-4.0 g/l |\n| 6 ★TT | 17.8 | 14.0-21.0 sec |"
+            },
+            {
+                "报告标题": "检验报告单",
+                "采样日期": "2025-01-07 05:00:00",
+                "报告日期": "2025-01-07 10:06:00",
+                "报告内容": "| 项目 | 结果 |  |\n|------|------|----|\n| 1 血小板特异性抗体 | 阴性 |  |"
+            },
+            {
+                "报告标题": "检验报告单",
+                "采样日期": "2025-01-07 05:00:00",
+                "报告日期": "2025-01-07 08:31:00",
+                "报告内容": "| 项目 | 结果 | 参考范围 单位 |\n|------|------|--------------|\n| 1 ★甲胎蛋白 | 458.9 | ↑ 0.89-8.78 μg/L |\n| 2 PIVKA-II | 30.86 | 0-40 mAU/ml |"
+            },
+            {
+                "报告标题": "检验报告单",
+                "采样日期": "2025-01-07 05:00:00",
+                "报告日期": "2025-01-07 09:09:00",
+                "报告内容": "| 项目 | 结果 | 参考范围 单位 |\n|------|------|--------------|\n| 1 血氨 | 29 | 9-30 μmol/L |"
+            },
+            {
+                "报告标题": "CT检查报告单",
+                "采样日期": "2025-01-06 00:00:00",
+                "报告日期": "2025-01-06 00:00:00",
+                "报告内容": "h2>肝胆平扫+增强+三维,CT肺支气管高分辨平扫</h2>\n<p>扫描技术与三维重建:横断面 冠状面 矢状面</p>\n<p>检查所见: </p>\n<p>双肺散在实性/磨玻璃微小结节,大小约3- 6mm,右肺中叶、左肺下舌段及双肺下叶可见条索影、网格影并胸膜稍厚;气管和主支气管通畅;纵隔内小淋巴结稍增多,未见明显增大淋巴结。  </p>\n<p>肝Ca介入术后,原肝S8段病灶内大部分被碘油填充,其边缘结节状、斑片状强化影,延迟期分别呈稍低、等密度,长径约15mm、30mm;肝脏体积缩小,肝裂增宽,肝包膜呈波浪状改变,肝S6段致密小结节影。肝S6段新见长径约10mm不均匀强化减低结节。肝内散在低密度小结节影,大者直径约5mm,增强扫描强化不明显。门脉期肝右叶近膈顶部似弱强化小结节影,直径约5mm。脾脏稍饱满,脾门区及胃底周边迁曲扩张血管强化。胆囊、胰腺大小形态及信号未见异常,腹膜后未见肿大淋巴结。十二指肠及空肠走行于右腹。  </p>\n<p>意见:  </p>\n<p>对比2024- 11- 12日前片:  </p>\n<ol>\n<li>肝Ca介入术后,肝S8段病灶内碘油沉积,其边缘碘油缺损区可见\"快进快出\"强化结节、较前稍大,提示肿瘤活灶,其后缘新见片状动脉期强化影(层面302-25),需鉴别于灌注不均或活灶,建议MR或DSA检查;  </li>\n</ol>\n<p>此报告,如有变更,本科室将于24小时内通知。"
+            }
+        ],
+        "content_type": "group_html_text"
+    },
+    {
+        "title": "临时医嘱单",
+        "content": {
+            "医嘱内容": "<table border=\"1\" style=\"border-collapse: collapse; width: 100%;\">  <thead> <tr>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">日期</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">时间</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">医嘱</th>    </tr> </thead>  <tbody>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">营养风险筛查与营养测评(1次) st-DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">深静脉血栓风险筛查与测评(1次) st-DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">跌倒风险筛查与测评(1次) st-DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">压疮风险评估(1次) st-DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">乙肝DNA定量(超敏)-1 【血清】【PCR室】 -DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">甲功五项-1 【血清】【生化室】 -DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">AFP+PIVKA-II 【血清】【生化室】 -DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">凝血四项-1 【血浆】【临检室】 -DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血氨-1 【血浆】【急诊快检】 -DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">肝肾心肌酶谱25项-1 【血清】【生化室】 -DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">MR肝脾平扫+增强【磁共振】 -DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:43</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">营养风险筛查与营养测评(1次) st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:43</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">深静脉血栓风险筛查与测评(1次) sl</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:43</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">跌倒风险筛查与测评(1次) st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:43</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">压疮风险评估(1次) st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:43</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血常规分析-1 【全血】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:43</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">大生化34项-1 【血清】【生化室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:43</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">乙肝DNA定量(超敏)-1 【血清】【PCR室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:43</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血氨-1 【血浆】【急诊快检】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:43</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血小板特异性抗体检测 【血清】【输血科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:43</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">凝血四项-1 【血浆】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:43</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">AFP+PIVKA-II 【血清】【生化室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:43</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">CT肺支气管高分辨平扫【CT】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:43</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">CT肝胆平扫+增强+三维【CT】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:43</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">肝纤(传) 【血清】【传染科实验室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:43</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">肝脏硬度、脂肪含量测定【传染科实验室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:39</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(青岛华仁)5%葡萄糖氯化钠注射液(糖盐)【500ml】500ml 1袋静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:39</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">地塞米松磷酸钠注射液(国)【1ml:5mg】5mg 1支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:39</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">浓氯化钠注射液【10ml】10ml 1支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:39</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">吸入用布地奈德混悬液(国)【2ml:1mg*30】1mg 1支雾吸 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-08</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:32</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(利动)乳果糖口服溶液(省)【100ml】100ml 1瓶口服 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">「H」术后医嘱 st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(滨湖双鹤)0.9%氯化钠注射液(内封式)【0.9%*100ml】100ml 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-00</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">00:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(瑞齐泰)注射用盐酸托烷司琼【2mg】4mg 2瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:01</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">拟于2025年01月09日10时01分 进行经导管肝动脉栓塞术手术 St手术部位:其他,,,,</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">注射用洛铂【50mg】100mg 2支静滴 once术中</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(赛维健)注射用雷替曲塞【2mg】4mg 2瓶静滴 once 术中</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">14:42</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">地塞米松磷酸钠注射液(国)【1ml:5mg】5mg 1支静脉注射 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">15:47</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">地塞米松磷酸钠注射液(国)【1ml:5mg】5mg 1支静脉注射 once-DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">13:33</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(阿拉莫兰)谷胱甘肽片【0.1g*36】00.1g 6瓶口服 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:48</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血常规分析-1 【全血】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:48</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">CRP+PCT-1 【血清】【免疫室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:48</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">肝肾电21项(肌酐酶-1 【血清】【生化室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-13</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:47</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]今日出院 once-DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-13</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:48</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]今日出院 once一次性使用正压静脉留置针</td>    </tr>  </tbody></table>"
+        },
+        "content_type": "html_text"
+    },
+    {
+        "title": "手术记录",
+        "content": {
+            "科别": "介入科",
+            "年龄": "72岁",
+            "性别": "男",
+            "住院病历号": "3716733"
+        },
+        "content_type": "text"
+    }
+]
+

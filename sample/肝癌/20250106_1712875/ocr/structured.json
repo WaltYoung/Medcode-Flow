@@ -1,0 +1,115 @@
+[
+    {
+        "title": "入院记录",
+        "content": {
+            "病案号": "1712875",
+            "科别": "肝胆外科",
+            "出生日期": "1951-09-03",
+            "年龄": "73岁",
+            "性别": "男",
+            "入院日期": "2024-12-31 09:04",
+            "主诉": "确诊肝癌，综合治疗3周余",
+            "现病史": "患者3周余前体检发现肝脏右叶占位，至我院门诊查MRI提示肝右叶巨大占位，行'肝占位穿刺活检术＋肝动脉灌注化疗术'，病理提示：'（肝脏穿刺活检组织）肝细胞癌'，HAIC治疗后出院。今为求进一步治疗，门诊以'肝细胞癌'收治。",
+            "既往史": "平时健康状况：一般，疾病史：呼吸系统症状：无，循环系统症状：无，消化系统症状：无，泌尿系统症状：无，血液系统症状：无，内分泌代谢症状：无，神经系统症状：无，生殖系统症状：无，运动系统症状：无，传染病史：无，预防接种史：按国家计划进行接种。其他：房颤行消融治疗。",
+            "手术外伤史": "手术：无，外伤：无。",
+            "辅助检查": "无"
+        },
+        "content_type": "text"
+    },
+    {
+        "title": "出院记录",
+        "content": {
+            "病案号": "1712875",
+            "入院日期": "2024-12-31 09:04:00",
+            "出院日期": "2025-01-06 09:47:00",
+            "检验及特殊检查结果": "详见检查检验报告单",
+            "病理检查结果": "(肝脏穿刺活检组织)肝细胞癌",
+            "出院诊断": [
+                "肝癌伴门静脉癌栓",
+                "肝癌免疫治疗",
+                "肝恶性肿瘤介入治疗",
+                "肝功能异常",
+                "胆汁淤积症",
+                "化疗后骨髓抑制",
+                "呕吐"
+            ],
+            "治疗经过": "行HAIC"
+        },
+        "content_type": "text"
+    },
+    {
+        "title": "检验检查记录",
+        "content": [
+            {
+                "报告标题": "CT检查报告单",
+                "采样日期": "2024-12-31",
+                "报告日期": "2025-01-01",
+                "报告内容": "| 检查所见 | 详细内容 |\n|---------|---------|\n| 肝左叶稍小, 肝裂稍宽 | - |\n| 肝右叶见低、稍低、稍高混杂密度团块影, 较大截面约96mm×80mm | - |\n| 动脉期可见肝动脉供血, 增强可见不均匀快进快出式强化 | - |\n| 门静脉肝门段管腔略显受压, 门静脉右支显示欠清 | - |\n| 前述病变下份背侧推压右肾 | - |\n| 肝内多发类圆形低-稍低密度影, 部分可疑弱强化 | - |\n| 肝左外叶门脉期见斑片状明显强化灶, 余期未见确切显示 | - |\n| 胆囊充盈可, 壁不厚, 内容物密度不均增高 | - |\n| 胰腺脂肪化, 脾未见明显异常 | - |\n| 腹膜后未见明显增大淋巴结 | - |"
+            },
+            {
+                "报告标题": "肝肾电21项(肌酐酶-1)",
+                "采样日期": "2025-01-01",
+                "报告日期": "2025-01-01",
+                "报告内容": "| NO 项目 | 结果 | 参考范围 单位 |\n|---------|------|--------------|\n| 1 总胆红素 | 17.2 | 5.1-19.0 μmol/L |\n| 2 直接胆红素 | 7.5 | 1.7-6.8 μmol/L |\n| 3 丙氨酸氨基转移酶 | 50 | 5-40 U/L |\n| 4 天门冬氨酸氨基转移酶 | 87 | 8-40 U/L |\n| 5 碱性磷酸酶 | 175 | ↑ 40-150 U/L |\n| 6 γ-谷氨酰转移酶 | 130 | ↑ 11-50 U/L |\n| 7 亮氨酰氨基肽酶 | 48 | ↑ 12-37 U/L |\n| 8 总蛋白 | 73.9 | 64-83 g/L |\n| 9 白蛋白 | 37.5 | 35-55 g/L |\n| 10 球蛋白 | 36.4 | ↑ 20-30 g/L |\n| 11 白球比例 | 1.0 | ↓ 1.5-2.5 |\n| 12 前白蛋白 | 0.188 | ↓ 0.20-0.40 g/L |\n| 13 总胆汁酸 | 10.7 | ↑ 0-10.0 μmol/L |\n| 14 肌酐(酶法) | 118.9 | 44.0-133.0 μmol/L |\n| 15 尿素 | 4.52 | 2.9-8.2 mmol/L |\n| 16 尿酸 | 376.5 | 208-428 μmol/L |\n| 17 钠 | 140.8 | 136-145 mmol/L |\n| 18 钾 | 4.00 | 3.5-5.2 mmol/L |"
+            },
+            {
+                "报告标题": "PIVKA-II+AFP",
+                "采样日期": "2025-01-01",
+                "报告日期": "2025-01-01",
+                "报告内容": "| NO 项目 | 结果 | 参考范围 单位 |\n|---------|------|--------------|\n| 1 甲胎蛋白 | 205.2 ↑ | 0.89-8.78 μg/L |\n| 2 PIVKA-II | 5771.09 ↑ | 0-40 mAU/ml |"
+            },
+            {
+                "报告标题": "凝血四项-1",
+                "采样日期": "2025-01-01",
+                "报告日期": "2025-01-01",
+                "报告内容": "| NO 项目 | 结果 | 参考范围 单位 |\n|---------|------|--------------|\n| 1 PT | 13.8 | 11.0-14.2 sec |\n| 2 INR | 1.12 | 0.80-1.20 |\n| 3 PTA | 90 | 80-126 % |\n| 4 APTT | 40.0 | 28.0-43.5 sec |\n| 5 FIB | 5.85 | 2.0-4.0 g/l |\n| 6 TT | 21.0 | 14.0-21.0 sec |"
+            },
+            {
+                "报告标题": "检验检查报告",
+                "采样日期": "2025-01-01",
+                "报告日期": "2025-01-01",
+                "报告内容": "| NO 项目 | 结果 | 参考范围 单位 |\n|---------|------|--------------|\n| 1 PT | 13.8 | 11.0-14.2 sec |\n| 2 INR | 1.12 | 0.80-1.20 |\n| 3 PTA | 90 | 80-126 % |\n| 4 APTT | 40.0 | 28.0-43.5 sec |\n| 5 FIB | 5.85 | 2.0-4.0 g/l |\n| 6 TT | 21.0 | 14.0-21.0 sec |"
+            },
+            {
+                "报告标题": "凝血四项-1",
+                "采样日期": "2025-01-01",
+                "报告日期": "2025-01-01",
+                "报告内容": "| NO 项目 | 结果 | 参考范围 单位 |\n|---------|------|--------------|\n| 1 PT | 13.8 | 11.0-14.2 sec |\n| 2 INR | 1.12 | 0.80-1.20 |\n| 3 PTA | 90 | 80-126 % |\n| 4 APTT | 40.0 | 28.0-43.5 sec |\n| 5 FIB | 5.85 | 2.0-4.0 g/l |\n| 6 TT | 21.0 | 14.0-21.0 sec |"
+            },
+            {
+                "报告标题": "肝肾电21项(肌酐酶-1)",
+                "采样日期": "2025-01-01",
+                "报告日期": "2025-01-01",
+                "报告内容": "| NO 项目 | 结果 | 参考范围 单位 |\n|---------|------|--------------|\n| 1 总胆红素 | 17.2 | 5.1-19.0 μmol/L |\n| 2 直接胆红素 | 7.5 | 1.7-6.8 μmol/L |\n| 3 丙氨酸氨基转移酶 | 50 | 5-40 U/L |\n| 4 天门冬氨酸氨基转移酶 | 87 | 8-40 U/L |\n| 5 碱性磷酸酶 | 175 | ↑ 40-150 U/L |\n| 6 γ-谷氨酰转移酶 | 130 | ↑ 11-50 U/L |\n| 7 亮氨酰氨基肽酶 | 48 | ↑ 12-37 U/L |\n| 8 总蛋白 | 73.9 | 64-83 g/L |\n| 9 白蛋白 | 37.5 | 35-55 g/L |\n| 10 球蛋白 | 36.4 | ↑ 20-30 g/L |\n| 11 白球比例 | 1.0 | ↓ 1.5-2.5 |\n| 12 前白蛋白 | 0.188 | ↓ 0.20-0.40 g/L |\n| 13 总胆汁酸 | 10.7 | ↑ 0-10.0 μmol/L |\n| 14 肌酐(酶法) | 118.9 | 44.0-133.0 μmol/L |\n| 15 尿素 | 4.52 | 2.9-8.2 mmol/L |\n| 16 尿酸 | 376.5 | 208-428 μmol/L |\n| 17 钠 | 140.8 | 136-145 mmol/L |\n| 18 钾 | 4.00 | 3.5-5.2 mmol/L |"
+            },
+            {
+                "报告标题": "检验检查报告",
+                "采样日期": "2025-01-01",
+                "报告日期": "2025-01-01",
+                "报告内容": "| NO 项目 | 结果 | 参考范围 单位 |\n|---------|------|--------------|\n| 1 丙氨酸氨基转移酶 | 50 | 5-40 U/L |\n| 2 天门冬氨酸氨基转移酶 | 87 | 8-40 U/L |\n| 3 碱性磷酸酶 | 175 | ↑ 40-150 U/L |\n| 4 γ-谷氨酰转移酶 | 130 | ↑ 11-50 U/L |\n| 5 亮氨酰氨基肽酶 | 48 | ↑ 12-37 U/L |\n| 6 总蛋白 | 73.9 | 64-83 g/L |\n| 7 白蛋白 | 37.5 | 35-55 g/L |\n| 8 球蛋白 | 36.4 | ↑ 20-30 g/L |\n| 9 白球比例 | 1.0 | ↓ 1.5-2.5 |\n| 10 前白蛋白 | 0.188 | ↓ 0.20-0.40 g/L |\n| 11 总胆汁酸 | 10.7 | ↑ 0-10.0 μmol/L |\n| 12 肌酐(酶法) | 118.9 | 44.0-133.0 μmol/L |\n| 13 尿素 | 4.52 | 2.9-8.2 mmol/L |\n| 14 尿酸 | 376.5 | 208-428 μmol/L |\n| 15 钠 | 140.8 | 136-145 mmol/L |\n| 16 钾 | 4.00 | 3.5-5.2 mmol/L |"
+            }
+        ],
+        "content_type": "group_html_text"
+    },
+    {
+        "title": "临时医嘱单",
+        "content": {
+            "医嘱内容": "<table border=\"1\" style=\"border-collapse: collapse; width: 100%;\">  <thead> <tr>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">日期</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">时间</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">医嘱</th>    </tr> </thead>  <tbody>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:18</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">疼痛综合评定(1次) st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:18</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">压疮风险评估(1次) st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:18</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">深静脉血栓风险筛查与测评(1次) st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:18</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">跌倒风险筛查与测评(1次) st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:18</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">营养风险筛查与营养测评(1次) st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:18</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">肝肾电21项(肌酐酶-1 【血清】【生化室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:18</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血常规分析-1 【全血】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:18</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">AFP 【血清】【生化室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:18</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">PIVKA-II 【血清】【生化室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:18</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">TEG常规检测-1 【血浆】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:18</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血栓四项(TAT/PIC/t-PAIC/TM) 【血浆】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:18</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">CT肝胆平扫+增强+三维【CT】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:19</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">凝血四项-1 【血浆】【急诊快检】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:04</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(滨湖双鹤)5%葡萄糖注射液【5%*250ml】250ml 1袋静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:04</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">通关藤注射液【20ml】60ml 3支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:04</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">康莱特注射液【10g:100ml】200ml 2瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:04</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(滨湖双鹤)5%葡萄糖注射液【5%*250ml】250ml 1袋静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:04</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">L-康艾注射液【10ml】60ml 6支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2024-12-31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:12</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(万特普安)铜绿假单胞菌注射液【1ml】1ml 1支皮下 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-02</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:55</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">邀请介入科会诊 st-院内会诊</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-02</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:56</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">邀请介入科科室处置 st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:59</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">右下肢束缚48h once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:59</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">介入回后立即冲管(动脉) once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:59</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(大纳嘉美)复方醋酸钠林格注射液【500ml】500ml 1袋静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:59</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(塑瓶)10%氯化钾注射液【10ml:1.0g】10ml 1支静滴once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:59</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(乐凡命)复方氨基酸注射液(18AA-II)【250ml:21.25g】250ml 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:59</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(卫美佳)注射用多种维生素(12)【复方】1瓶 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:59</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">地塞米松磷酸钠注射液(国)【1ml:5mg】5mg 1支静脉注射 once化疗前</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:59</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(佳乐同泰)奥沙利铂甘露醇注射液【100ml:100mg】170mg 1.7瓶静滴once第一组,1A,2h (85mg/m2)</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(滨湖双鹤)0.9%氯化钠注射液(内封式)【0.9%*100ml】100ml 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(立必复)甲磺酸多拉司琼注射液【1ml:12.5mg】50mg 4支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(滨湖双鹤)0.9%氯化钠注射液(内封式)【0.9%*100ml】100ml 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(艾莫康)注射用艾司奥美拉唑钠(国)【40mg】40mg 1支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(滨湖双鹤)0.9%氯化钠注射液(内封式)【0.9%*100ml】100ml 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(丙帕他莫-同悦)注射用盐酸丙帕他莫瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(回能)甘草酸单铵半胱氨酸氯化钠注射液【100ml】200ml 2瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-03</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">15:43</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(青岛华仁)5%葡萄糖氯化钠注射液(糖盐)【500ml】500ml 1袋静滴 once补</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-04</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">22:02</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(胃复安)盐酸甲氧氯普胺注射液【10mg】10mg 1支静脉注射 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:58</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">甲功三项-1 【血清】【生化室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:58</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">心肌酶3项+CKMB质量+TNI-1 【血清】【急诊快检】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:58</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">肝肾电糖22 【血清】【生化室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:58</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血常规分析-1 【全血】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:59</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(达伯舒)倍迪利单抗注射液【10ml:100mg】200mg 2支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:00</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(阿拓莫兰)谷胱甘肽片【0.1g*36】00.1g 4瓶口服.one ce每次4片,每天3次</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">15:43</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">小换药(2次/部位) once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:16</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">抗肿瘤化学药物配置(1组) once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:16</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]心电监护 once4h一心电脑测(滨湖双鹤)0.9%氯化钠注射液(内封式)【0.9%*100ml】100ml 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:16</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(达伯舒)倍迪利单抗注射液【10ml:100mg】200mg 2支静滴 once 不取药</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:16</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">0.9%氯化钠注射液(青岛华仁)【0.9%*250ml】250ml 1袋静滴 st冲管</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:16</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(恩奥欣(30粒))奥美拉唑碳酸氢钠胶囊(国)【20mg/110mg*30】20mg 1瓶口服袋前 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-01-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:47</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]今日出院 once</td>    </tr>  </tbody></table>"
+        },
+        "content_type": "html_text"
+    },
+    {
+        "title": "手术记录",
+        "content": {
+            "日期时间": "2025-01-03 11:00:00",
+            "手术名称": "动脉注射化疗药物（右侧腹股沟）",
+            "手术等级": "三级",
+            "手术入路": "股动脉入路",
+            "手术部位": "右侧腹股沟",
+            "术前诊断": "肝细胞癌",
+            "发现病理": "无",
+            "术后诊断": "肝细胞癌"
+        },
+        "content_type": "text"
+    }
+]

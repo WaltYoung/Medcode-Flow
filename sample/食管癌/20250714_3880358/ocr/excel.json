@@ -1,0 +1,137 @@
+[
+    {
+        "title": "人工编码结果",
+        "content": {
+            "主要诊断结果": {
+                "主要诊断编码": "C15.100x004",
+                "主要诊断名称": "食管胸下段恶性肿瘤"
+            },
+            "病理诊断": {
+                "病理诊断": "M81400/3",
+                "病理诊断描述": ""
+            },
+            "手术操作": {
+                "手术日期": "",
+                "手术编码": "42.24",
+                "手术名称": "闭合性[内镜的]食管活组织检查",
+                "手术级别": "",
+                "医生手术描述": ""
+            },
+            "其他诊断结果": [
+                {
+                    "其他诊断编码": "I10.x00x002",
+                    "其他诊断名称": "高血压"
+                },
+                {
+                    "其他诊断编码": "C77.900x001",
+                    "其他诊断名称": "淋巴结继发恶性肿瘤"
+                },
+                {
+                    "其他诊断编码": "J42.x00",
+                    "其他诊断名称": "慢性支气管炎"
+                },
+                {
+                    "其他诊断编码": "R94.303",
+                    "其他诊断名称": "心电图异常"
+                },
+                {
+                    "其他诊断编码": "Z53.200",
+                    "其他诊断名称": "由于其他和未特指原因而使病人决定不进行操作"
+                },
+                {
+                    "其他诊断编码": "R94.200",
+                    "其他诊断名称": "肺功能检查的异常结果"
+                },
+                {
+                    "其他诊断编码": "I34.000",
+                    "其他诊断名称": "二尖瓣关闭不全"
+                },
+                {
+                    "其他诊断编码": "R93.203",
+                    "其他诊断名称": "肝占位性病变"
+                }
+            ]
+        }
+    },
+    {
+        "title": "AI编码依据",
+        "content": {
+            "编码理由": ""
+        }
+    },
+    {
+        "title": "AI编码结果",
+        "content": {
+            "主要诊断结果": {
+                "主要诊断名称": "",
+                "主要诊断编码": "",
+                "AI编码一致性": "不一致"
+            },
+            "人工主要诊断名称": "食管胸下段恶性肿瘤",
+            "人工主要诊断编码": "C15.100x004"
+        }
+    },
+    {
+        "title": "入院记录",
+        "content": {
+            "科别": "胸外科",
+            "病案号": "3880358",
+            "入院日期": "2025-07-09"
+        },
+        "content_type": "text"
+    },
+    {
+        "title": "出院记录",
+        "content": {
+            "病案号": "3880358",
+            "入院日期": "2025-07-09 10:07:00",
+            "出院日期": "2025-07-14 10:27:00",
+            "检验及特殊检查结果": "2025-07-09,床边(急诊)网络心电图+心电事件记录【心电图】:检查结论/诊断:窦性心律不齐 左心室高电\n2025-07-09,肺通气(不含MVV)+弥散【呼吸实验】:检查结论/诊断:肺通气功能在正常范围肺弥散功能轻度障碍,肺泡弥散量(单位弥散量)正常(以上意见仅供临床)\n2025-07-10,心脏超声检查(含心功能+室壁运动分析+TDI)【超声影像科】:检查结论/诊断:升主动脉稍宽左房增大二尖瓣轻度关闭不全主动脉瓣退行性变\n2025-07-10,颈部血管:颈动脉+颈内静脉超声检查(双侧)【超声影像科】:检查结论/诊断:双侧颈动脉粥样硬化斑块形成双侧颈内静脉回流通畅\n2025-07-10,下肢动脉+深静脉超声检查(双侧)【超声影像科】:检查结论/诊断:双下肢动脉多发粥样硬化斑块形成,血流尚通畅双下肢深静脉管腔通畅\n2025-07-10,CT颈部包块平扫+三维,CT上腹部平扫+增强+三维,CT肺纵隔平扫+增强+三维【CT】:检查结论/诊断:1、上述食管下段及周缘所见,考虑肿瘤性病变并周围淋巴结转移可能,请结合临床病史及专科检查明确;2、肝占位,恶性肿瘤性病变(转移瘤?)可能,建议短期复查或必要时进一步检查;3、双肺散在大小不一的实性结节影,建议密切随诊复查;4、双肺轻度细支气管炎可能,少许肺气肿;左肺上叶少许条索条片影伴钙化灶,考虑慢性感染性病变可能;双肺散在小钙化灶;5、甲状腺双叶实质强化稍显欠均,请结合专科;双侧颈部散在小淋巴结影;6、肝脏小囊肿;肝镰状韧带旁局灶性脂肪浸润可能;7、所及左肾点状结石或钙化灶;双肾微小囊肿可能;左侧肾上腺略饱满,请结合临床生化;8、片示左侧腮腺萎缩/脂肪化表现,请结合临床;9、部分椎体密度不均,请结合临床、必要时进一步检查;片及主动脉局部粥样硬化表现,冠脉走行区见致密影,请结合专科考虑。\n2025-07-11,超声胃镜检查【内镜】:检查结论/诊断:食管下段全层低回声浸润性病变(Ca T3N2?) 活检定性\n2025-07-11,MR脑平扫(体检筛查)【磁共振】:检查结论/诊断:1. 双侧大脑半球白质高信号(Fazekas2级),建议MR脑增强复查;2. 桥脑、双侧侧脑室旁及基底节区小软化灶;3. 所及双侧下鼻甲肥大、鼻中隔偏曲,鼻窦炎,请结合临床专科。\n2025-07-15,冠状动脉CTA+钙化积分【CT】:检查结论/诊断:1. 冠状动脉粥样硬化表现(CAD- RADS4- 5),前降支中段局部闭塞可能,建议进一步检查。2. 冠脉钙化总积分2335.6。3. 右冠状动脉起源于右窦上缘窦管交界区,考虑轻度开口高位。4. 所及主动脉瓣区钙化,请结合专科检查;主动脉粥样硬化改变。",
+            "病理检查结果": "2025-07-16,GI25-07364_常规:检查结论/诊断:\n(食管活检组织)低分化癌,倾向腺癌。\n免疫组化染色示癌细胞:PCK(+),CK8/18(+),P40(-),Syn(-),SOX10(-)。\n2025-07-21,GI25-07364_常规:\n检查结论/诊断:\n应临床申请,行肿瘤组织PD-L1免疫组化检测:\nPD-L1检测结果:肿瘤组织综合阳性评分:CPS:<1。\nPD-L1抗体克隆号:迈新PDL1(MXR006);检测平台:Roche Benchmark ULTRA\n备注:①本次检测中所设置质控样本(阴性及阳性对照组级)染色合格;②本次检测样本瘤细胞数<100个;③本次检测结果仅供临床参考,请结合临床情况选择治疗方案。",
+            "出院诊断": [
+                "食管肿瘤",
+                "高血压",
+                "淋巴结继发恶性肿瘤",
+                "肝恶性肿瘤",
+                "慢性支气管炎",
+                "二尖瓣关闭不全",
+                "心电图异常",
+                "肺功能检查的异常结果"
+            ],
+            "治疗经过": "入院后予以完善相关检查,完善CT检查示:1、上述食管下段及周缘所见,考虑肿瘤性病变并周围淋巴结转移可能,2、肝占位,恶性肿瘤性病变(转移瘤?)可能,建议短期复查或必要时进一步检查;予以完善超声胃镜2025-07-11,超声胃镜检查【内镜】:检查结论/诊断:食管下段全层低回声浸润性病变(Ca T3N2?) 活检定性,建议科行专科检查,予以办理出院手续。"
+        },
+        "content_type": "text"
+    },
+    {
+        "title": "检验检查记录",
+        "content": [
+            {
+                "报告标题": "MR检查报告单",
+                "采样日期": "2025-07-10",
+                "报告日期": "2025-07-10",
+                "报告内容": "| 检查所见 | 意见 |\n|---------|---------|\n| 双侧大脑半球结构对称, 灰白质对比正常; 桥脑、双侧侧脑室旁及基底节区见长1长T2信号, 于flair序列呈低信号, 部分呈周高中低信号, 另双侧大脑半球内见斑片状FLAIR高信号; 脑室系统稍扩大, 脑沟、脑裂稍增宽、加深, 中线结构居中。 | 1. 双侧大脑半球白质高信号(Fazekas 2级), 建议MR脑增强复查; 2. 桥脑、双侧侧脑室旁及基底节区小软化灶; 3. 所及双侧下鼻甲肥大、鼻中隔偏曲, 鼻窦炎, 请结合临床专科。 |"
+            },
+            {
+                "报告标题": "CT检查报告单",
+                "采样日期": "2025-07-10",
+                "报告日期": "2025-07-10",
+                "报告内容": "| 检查所见 | 意见 |\n|---------|---------|\n| 片示食管中下段管壁局部不同程度增厚, 以下段近贲门处为著 (较厚处径约17mm、上下径范围约46mm), 增强扫描强化略不均, 周围淋巴结稍增多, 较大者位于肝胃间隙、大小约25×21mm, 强化略欠均。双侧颈部散在小淋巴结影, 未见明显肿大淋巴结。甲状腺不大, 双叶实质强化稍显欠均。双肺纹理增强、隐约树芽征表现, 双肺散在少许小透亮影; 双肺散在大小不一的实性结节影, 长径约2-9mm; 左肺上叶建条索条片影伴钙化灶, 双肺散在小钙化灶。大气道通畅; 余纵隔内、双肺门散在淋巴结, 较大者短径约8mm。片示心膈角区少许小淋巴结影显示。肝脏大小形态显示尚可; 肝左内叶见一边界稍欠清的混杂低/稍低密度团块状影, 大小约为6.5<em>5.7</em>7.6cm(较大横断面*上下径), 强化不均, 以远肝左内叶胆管稍扩张; 肝内另散在小圆形无强化低密度影, 较大者径约4-5mm; 肝脏近镰状韧带旁见相对弱强化小斑片状影。胆囊稍充盈, 脾脏及胰腺实质密度未见明显异常, 主胰管未见明显扩张; 所及左肾见点状致密影; 所及腹膜后未见明显肿大淋巴结影。 | 1. 上述食管下段及周缘所见, 考虑肿瘤性病变并周围淋巴结转移可能, 请结合临床病史及专科检查明确; 2、肝占位,恶性肿瘤性病变(转移瘤?)可能,建议短期复查或必要时进一步检查; 3、双肺散在大小不一的实性结节影,建议密切随诊复查; 4、双肺轻度细支气管炎可能,少许肺气肿;左肺上叶少许条索条片影伴钙化灶,考虑慢性感染性病变可能; 双肺散在小钙化灶; 5、甲状腺双叶实质强化稍显欠均,请结合专科; 双侧颈部散在小淋巴结影; 6、肝脏小囊肿;肝镰状韧带旁局灶性脂肪浸润可能; 7、所及左肾点状结石或钙化灶;双肾微小囊肿可能;左侧肾上腺略饱满,请结合临床生化; 8、片示左侧腮腺萎缩/脂肪化表现,请结合临床; 9、部分椎体密度不均,请结合临床、必要时进一步检查; 片及主动脉局部粥样硬化表现,冠脉走行区见致密影,请结合专科考虑。 |"
+            },
+            {
+                "报告标题": "CT检查报告单",
+                "采样日期": "2025-07-14",
+                "报告日期": "2025-07-15",
+                "报告内容": "| 检查所见 | 意见 |\n|---------|---------|\n| 首过灌注示左室心肌强化均匀。钙化积分: LM: 117.9; LAD: 921.1; LCX: 212.1; RCA: 1084.4; 总积分: 2335.6。 | 1. 冠状动脉粥样硬化表现 (CAD-RADS 4-5), 前降支中段局部闭塞可能, 建议进一步检查。2. 冠脉钙化总积分2335.6。3. 右冠状动脉起源于右窦上缘窦管交界区, 考虑轻度开口高位。4. 所及主动脉瓣区钙化, 请结合专科检查; 主动脉粥样硬化改变。 |"
+            }
+        ],
+        "content_type": "group_html_text"
+    },
+    {
+        "title": "临时医嘱单",
+        "content": {
+            "医嘱内容": "<table border=\"1\" style=\"border-collapse: collapse; width: 100%;\">  <thead> <tr>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">日期</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">时间</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">医嘱</th>    </tr> </thead>  <tbody>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">动脉采血(1次) once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血气分析(1次) once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">DIC全套7项-1 【血浆】【急诊快检】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">大生化34项+心肌酶谱-【血清】【生化室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">乙丙艾梅8项(发光法【血清】【免疫室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血型+单特异性抗体-1【全血】【输血科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血栓四项(TAT/PIC/t-PAIC/TM)【血浆】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">痰细菌培养鉴定及药敏(一般细菌+嗜血杆菌)【痰液】【微生物室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">尿常规分析-1【尿】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血常规+CRP-1【全血】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">颈部血管:颈动脉+颈内静脉超声检查(双侧)【超声医学科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">心脏超声检查(含心功能+室壁运动分析+TDI)【超声医学科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">下肢动脉+深静脉超声检查(双侧)【超声医学科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">CT上腹部平扫+增强+三维【CT】-DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">CT肺纵隔三维CT平扫+增强【CT】-DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">冠状动脉CTA+钙化积分【CT】-DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">CT颈部包块平扫+三维【CT】 -DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">肺通气(不含MVV)+弥散【肺功能室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">MR脑平扫(体检筛查)【磁共振】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">超声胃镜检查【内镜中心】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:40</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">内镜标本病理检查【2-1、住院常规申请单】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:41</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">冠状动脉CTA+钙化积分【CT】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:42</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">床边(急诊)网络心电图+心电事件记录【心电图】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:44</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">CT颈部包块平扫+三维【CT】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:44</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">CT肺纵隔三维CT平扫+增强【CT】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:44</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">CT上腹部平扫+增强+三维【CT】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:24</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">((新))蓝芩口服液【10ml*12】10ml 1盒口服 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-07-14</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:30</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]今日出院 once</td>    </tr>  </tbody></table>"
+        },
+        "content_type": "html_text"
+    }
+]
+

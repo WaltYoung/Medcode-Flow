@@ -1,0 +1,154 @@
+[
+    {
+        "title": "人工编码结果",
+        "content": {
+            "主要诊断结果": {
+                "主要诊断编码": "C32.800",
+                "主要诊断名称": "喉交搭跨越恶性肿瘤的损害"
+            },
+            "病理诊断": {
+                "病理诊断": "M80700/3",
+                "病理诊断描述": ""
+            },
+            "手术操作": {
+                "手术日期": "30.0911",
+                "手术编码": "支撑喉镜下喉病损切除术",
+                "手术名称": "",
+                "手术级别": "",
+                "医生手术描述": ""
+            },
+            "其他诊断结果": [
+                {
+                    "其他诊断编码": "E46.x00x003",
+                    "其他诊断名称": "营养不良"
+                },
+                {
+                    "其他诊断编码": "K14.002",
+                    "其他诊断名称": "舌炎性肿块"
+                },
+                {
+                    "其他诊断编码": "R49.001",
+                    "其他诊断名称": "声嘶"
+                }
+            ]
+        }
+    },
+    {
+        "title": "AI编码依据",
+        "content": {
+            "编码理由": ""
+        }
+    },
+    {
+        "title": "AI编码结果",
+        "content": {
+            "主要诊断结果": {
+                "主要诊断名称": "",
+                "主要诊断编码": "",
+                "AI编码一致性": "不一致"
+            },
+            "人工主要诊断名称": "喉交搭跨越恶性肿瘤的损害",
+            "人工主要诊断编码": "C32.800"
+        }
+    },
+    {
+        "title": "入院记录",
+        "content": {
+            "科别": "耳鼻咽喉科",
+            "病案号": "3917172"
+        },
+        "content_type": "text"
+    },
+    {
+        "title": "出院记录",
+        "content": {
+            "病案号": "3917172",
+            "入院日期": "2025-09-09 07:48:00",
+            "出院日期": "2025-09-13 09:42:00",
+            "检验及特殊检查结果": "血常规、尿常规、大生化、凝血功能、乙丙文梅、心电图、影像学资料、超声检查未见明显异常。",
+            "病理检查结果": "病理结果未出",
+            "出院诊断": [
+                "喉肿物(未定性)",
+                "营养不良",
+                "声嘶"
+            ],
+            "治疗经过": "入院后完善相关术前检查, 未见明显手术禁忌, 全麻下行上述手术, 术后予以对症治疗, 进行健康宣教。"
+        },
+        "content_type": "text"
+    },
+    {
+        "title": "检验检查记录",
+        "content": [
+            {
+                "报告标题": "病理检查报告单",
+                "采样日期": "2025-09-11",
+                "报告日期": "2025-09-15 10:15",
+                "报告内容": "| 性别 | 男 |\n| 年龄 | 78岁 |\n| 临床诊断 | 喉肿物 |\n| 标本名称 | ①右声带室带肿物；②舌根肿物 |\n| 送检科室 | F20东耳鼻咽喉科 |\n| 送检医院 | 本院 |\n| 离休时间 | 2025-09-11 |\n| 收到时间 | 2025-09-11 15:01 |\n| 肉眼所见 | ①灰白碎组织直径0.7cm一堆；\n②不整形组织直径0.8cm一块。 |\n| 镜下所见 | - |\n| 病理诊断 | 1.（右声带室带）鳞状细胞癌；\n2.（舌根肿物）呈慢性炎症改变的黏膜组织伴局灶淋巴细胞增生。 |\n| 诊断 | 初诊 |\n| 报告日期 | 2025-09-15 10:15 |\n| 注 | 本病理诊断仅供临床经治考，如有疑问请及时与病理科联系。"
+            },
+            {
+                "报告标题": "TEG常规检测-1",
+                "采样日期": "2025-09-10 06:29",
+                "报告日期": "2025-09-10 16:49",
+                "报告内容": "| NO | 项目 | 结果 | 参考范围 | 单位 |\n|----|------|------|----------|------|\n| 1 | R | 5.6 | 3.2-7.3 min | - |\n| 2 | K | 1.2 | 1.1-2.6 min | - |\n| 3 | Angle | 72.7 | 58.8-76.2 deg | - |\n| 4 | MA | 69.9 | 53.4-70.8 mm | - |\n| 5 | G | 11597.5 | 5728-11934 d/sc | - |\n| 6 | EPL | 0.5 | 0-15 % | - |\n| 7 | LY30 | 0.5 | 0-15 % | - |\n| 8 | 参数 | 结果 | 说明 | - |\n| 备注 | - | - | 参数说明：R反应时间，K凝血酶形成时间，Angle角度，MA最大幅度，G凝血酶浓度，EPL纤溶酶-α2纤溶酶抑制物复合物，LY30 30分钟内溶解面积百分比 | - |"
+            },
+            {
+                "报告标题": "大生化检查",
+                "采样日期": "2025-09-10 06:29",
+                "报告日期": "2025-09-10 16:49",
+                "报告内容": "| NO 项目 | 结果 | 参考范围 单位 |\n|---------|------|--------------|\n| 1 丙氨酸氨基转移酶 | 48 | 5-40 U/L |\n| 2 甘油三酯 | 1.90 | ↑ 1.7 mmol/L |\n| 3 总胆固醇 | 5.2 | 2.8-5.2 mmol/L |\n| 4 高密度脂蛋白胆固醇 | 1.30 | 0.9-1.55 mmol/L |\n| 5 低密度脂蛋白胆固醇 | 3.20 | 1.7-3.4 mmol/L |\n| 6 肌酐 | 75 | 59-110 μmol/L |\n| 7 尿素氮 | 6.2 | 3.2-8.3 mmol/L |\n| 8 肌酸激酶 | 105 | 38-174 U/L |\n| 9 血糖 | 5.6 | 3.9-6.1 mmol/L |\n| 10 尿酸 | 380 | 208-428 μmol/L |\n| 11 尿素 | 6.2 | 2.5-7.5 mmol/L |\n| 12 胱抑素C | 1.2 | 0.51-1.05 mg/L |\n| 13 胆碱酯酶 | 6500 | 4000-12000 U/L |\n| 14 总胆红素 | 17.5 | 5.1-22.2 μmol/L |\n| 15 直接胆红素 | 4.5 | 0.3-5.1 μmol/L |\n| 16 间接胆红素 | 13.0 | 1.7-17.1 μmol/L |\n| 17 碱性磷酸酶 | 72 | 45-150 U/L |\n| 18 γ-谷氨酰转肽酶 | 25 | 10-60 U/L |\n| 19 血清白蛋白 | 42 | 35-55 g/L |\n| 20 血清总蛋白 | 70 | 60-80 g/L |\n| 21 血清前白蛋白 | 250 | 180-380 mg/L |\n| 22 血清钠 | 142 | 135-145 mmol/L |\n| 23 血清钾 | 4.2 | 3.5-5.3 mmol/L |\n| 24 血清氯 | 105 | 98-107 mmol/L |\n| 25 血清钙 | 2.35 | 2.15-2.55 mmol/L |\n| 26 血清镁 | 0.85 | 0.75-1.25 mmol/L |\n| 27 血清磷 | 1.35 | 0.81-1.45 mmol/L |\n| 28 血清铁 | 15.2 | 10.7-27.0 μmol/L |\n| 29 总铁结合力 | 62 | 45-75 μmol/L |\n| 30 转铁蛋白饱和度 | 31.2 | 20-50 % |\n| 31 维生素B12 | 250 | 170-900 pg/mL |\n| 32 叶酸 | 10.2 | 5.0-20.0 ng/mL |\n| 33 甲状腺功能全套 | - | - |\n| 34 血清皮质醇 | 180 | 120-540 nmol/L |\n| 35 雌二醇 | 45 | 20-80 pg/mL |\n| 36 睾酮 | 15.2 | 9.9-27.8 ng/dL |\n| 37 卵泡刺激素 | 4.5 | 1.5-12.4 IU/L |\n| 38 黄体生成素 | 2.8 | 1.4-9.5 IU/L |\n| 39 促甲状腺激素 | 2.1 | 0.27-4.20 μIU/mL |\n| 40 甲状腺素 | 8.5 | 4.5-12.0 μg/dL |\n| 41 三碘甲状腺原氨酸 | 1.6 | 0.8-2.0 ng/dL |\n| 42 促肾上腺皮质激素 | 35.2 | 10-60 pg/mL |\n| 43 糖化血红蛋白 | 5.6 | 4.0-6.0 % |\n| 44 血清维生素D | 25.6 | 20-50 ng/mL |\n| 45 血清维生素A | 2.4 | 1.5-3.5 μmol/L |\n| 46 血清维生素E | 12.5 | 5.9-17.0 mg/L |\n| 47 血清维生素B1 | 65 | 40-100 ng/mL |\n| 48 血清维生素B2 | 2.5 | 1.0-5.0 ng/mL |\n| 49 血清维生素B6 | 15.2 | 10.0-20.0 ng/mL |\n| 50 血清维生素B12 | 250 | 170-900 pg/mL |\n| 51 血清叶酸 | 10.2 | 5.0-20.0 ng/mL |\n| 52 血清同型半胱氨酸 | 8.5 | 5.0-15.0 μmol/L |\n| 53 血清视黄醇结合蛋白 | 45 | 30-60 mg/L |\n| 54 血清维生素C | 50 | 40-70 mg/L |\n| 55 血清维生素K | 0.8 | 0.5-1.5 ng/mL |\n| 56 血清维生素B5 | 8.2 | 5.0-10.0 μg/mL |\n| 57 血清维生素B7 | 1.5 | 1.0-3.0 ng/mL |\n| 58 血清维生素B9 | 10.2 | 5.0-20.0 ng/mL |\n| 59 血清维生素B12 | 250 | 170-900 pg/mL |\n| 60 血清维生素D | 25.6 | 20-50 ng/mL"
+            },
+            {
+                "报告标题": "血常规分析-1",
+                "采样日期": "2025-09-10 06:29",
+                "报告日期": "2025-09-10 09:22",
+                "报告内容": "| NO | 项目 | 结果 | 参考范围 | 单位 |\n|----|------|------|----------|------|\n| 1 | 白细胞 | 7.23 | 3.5-9.5 | 10^9/L |\n| 2 | 红细胞 | 4.22 | ↓ 4.3-5.8 | 10^12/L |\n| 3 | 血红蛋白 | 132 | 130-175 | g/L |\n| 4 | 红细胞压积 | 40.1 | 40-50 | % |\n| 5 | 平均红细胞体积 | 95.0 | 82-100 | fL |\n| 6 | 平均红细胞血红蛋白含量 | 31.2 | 27-34 | pg |\n| 7 | 平均红细胞血红蛋白浓度 | 328 | 316-354 | g/L |\n| 8 | 血小板 | 260 | 125-350 | 10^9/L |\n| 9 | 中性粒细胞百分比 | 67.18 | 40-75 | % |\n| 10 | 淋巴细胞百分比 | 21.8 | 20-50 | % |\n| 11 | 单核细胞百分比 | 8.00 | 3-10 | % |\n| 12 | 嗜酸性粒细胞百分比 | 2.61 | 0.4-8 | % |\n| 13 | 嗜碱性粒细胞百分比 | 0.43 | 0-1 | % |\n| 14 | 中性粒细胞绝对值 | 4.86 | 1.8-6.3 | 10^9/L |\n| 15 | 淋巴细胞绝对值 | 1.58 | 1.1-3.2 | 10^9/L |\n| 16 | 单核细胞绝对值 | 0.58 | 0.1-0.6 | 10^9/L |\n| 17 | 嗜酸性粒细胞绝对值 | 0.19 | 0.02-0.52 | 10^9/L |\n| 18 | 嗜碱性粒细胞绝对值 | 0.03 | &lt;0.06 | 10^9/L |\n| 19 | 血小板平均体积 | 8.2 | 8-12 | fL |\n| 20 | 红细胞分布宽度标准差 | 41.1 | - | fL |\n| 21 | 红细胞分布宽度变异系数 | 12.7 | &lt;14.5 | % |"
+            },
+            {
+                "报告标题": "乙丙艾梅8项（发光法）",
+                "采样日期": "2025-09-10 06:29",
+                "报告日期": "2025-09-10 10:56",
+                "报告内容": "| NO 项目 | 结果 | 参考范围 | 单位 |\n|--------|------|----------|------|\n| 1 乙肝表面抗原 | - | &lt;0.05, 无反应性; ≥0.05, 有反应性 | IU/mL |\n| 2 乙肝表面抗体 | + | ↑ &lt;10.00, 无反应性; ≥10.00, 有反应性 | mIU/mL |\n| 3 乙肝e抗原 | 0.314(-) | &lt;1.00, 无反应性; ≥1.00, 有反应性 | S/CO |\n| 4 乙肝e抗体 | 0.48(+) | &gt;1.00, 无反应性; ≤1.00, 有反应性 | S/CO |\n| 5 乙肝核心抗体 | 7.88(+) | ↑ &lt;1.00, 无反应性; ≥1.00, 有反应性 | S/CO |\n| 6 抗丙肝病毒抗体 | 0.08(-) | &lt;1.00, 无反应性; ≥1.00, 有反应性 | S/CO |\n| 7 抗艾滋病毒抗体 | - | &lt;1.00, 无反应性; ≥1.00, 有反应性 | S/CO |\n| 8 梅毒特异性抗体 | 0.05(-) | &lt;1.00, 无反应性; ≥1.00, 有反应性 | S/CO"
+            },
+            {
+                "报告标题": "血栓四项(TAT/PIC/t-PAIC)",
+                "采样日期": "2025-09-10 06:29",
+                "报告日期": "2025-09-10 10:13",
+                "报告内容": "| NO 项目 | 结果 | 参考范围 | 单位 |\n|--------|------|----------|------|\n| 1 血栓调节蛋白 | 7.0 | 3.8-13.3 | TU/mL |\n| 2 凝血酶抗凝血酶复合物 | 2.4 | &lt;4.0 | ng/mL |\n| 3 纤溶酶-α2纤溶酶抑制物复合物 | 1.9 | &lt;0.8 | μg/mL |\n| 4 组织纤溶酶原激活物-抑制物1复合物 | 7.4 | &lt;17.0 | ng/mL"
+            },
+            {
+                "报告标题": "尿液常规检查",
+                "采样日期": "2025-09-10 06:29",
+                "报告日期": "2025-09-10 10:56",
+                "报告内容": "| 项目 | 结果 | 参考范围 | 单位 |\n|------|------|----------|------|\n| 色泽 | 淡黄色 | - | - |\n| 透明度 | 清 | - | - |\n| 酸碱度 | 6.5 | 4.5-8.0 | pH |\n| 蛋白质 | 阴性 | 阴性 | - |\n| 葡萄糖 | 阴性 | 阴性 | - |\n| 酮体 | 阴性 | 阴性 | - |\n| 亚硝酸盐 | 阴性 | 阴性 | - |\n| 尿胆原 | 1.0 | 0.1-1.0 | EU |\n| 胆红素 | 阴性 | 阴性 | - |\n| 红细胞 | 0 | 0-3 | /HP |\n| 白细胞 | 0 | 0-5 | /HP |\n| 上皮细胞 | 少量 | - | /HP |\n| 管型 | 未见 | - | /HP"
+            },
+            {
+                "报告标题": "粪便常规检查",
+                "采样日期": "2025-09-10 06:29",
+                "报告日期": "2025-09-10 10:56",
+                "报告内容": "| 项目 | 结果 | 参考范围 | 单位 |\n|------|------|----------|------|\n| 外观 | 深褐色软便 | - | - |\n| 隐血试验 | 阴性 | 阴性 | - |\n| 寄生虫卵 | 未见 | - | - |\n| 白细胞 | 0 | 0-2 | /HP |\n| 红细胞 | 0 | 0 | /HP |\n| 食物残渣 | 少量 | - | - |\n| 粘液 | 未见 | - | - |\n| 真菌 | 未见 | - | -"
+            }
+        ],
+        "content_type": "group_html_text"
+    },
+    {
+        "title": "临时医嘱单",
+        "content": {
+            "医嘱内容": "<table border=\"1\" style=\"border-collapse: collapse; width: 100%;\">  <thead> <tr>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">日期</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">时间</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">医嘱</th>    </tr> </thead>  <tbody>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">尿常规分析-1 【尿】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">乙丙艾梅8项(发光法 【血清】【免疫室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">床边(急诊)网络心电图+心电事件记录【心电图】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">CT肺纵隔平扫【CT】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:27</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">心脏超声检查(含心功能+室壁运动分析+TD1)【超声医学科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:24</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血糖试纸条(3片) once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">07:31</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">拟于2025年09月11日08时00分进行支撑喉镜下喉病损切除术手术 st 手术部位:咽喉,...,</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:57</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">心电监测 st成人专用-氧气吸入-YYX型一次性使用吸氧管-心电监测</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:57</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">yyx型一次性使用吸氧管 st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:57</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">氧气吸入 st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:57</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">指脉氧监测 st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:57</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(滨湖双鹤)0.9%氯化钠注射液(内封式)【0.9%*100ml】100ml 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:57</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(大巴曲亭)注射用矛头蝮蛇血凝酶【21U】11U 00.5支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:57</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(滨湖双鹤)0.9%氯化钠注射液(内封式)【0.9%*100ml】100ml 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:57</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(丙帕他莫-同悦)注射用盐酸丙帕他莫【2.0g】2g 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:57</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(捷苏)复方氨基酸注射液18AA-VII【200ml:20.65g】200ml 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:57</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(滨湖双鹤)0.9%氯化钠注射液(内封式)【0.9%*100ml】100ml 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:57</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(丙帕他莫-同悦)注射用盐酸丙帕他莫【2.0g】2g 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:57</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(捷苏)复方氨基酸注射液18AA-VII【200ml:20.65g】200ml 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:12</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(四药)5%葡萄糖注射液【500ml:25g】500ml 1袋静滴once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:12</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(赣鹿)氢化泼尼松注射液【2ml:10mg】20mg 2支静滴 0 nce</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12:41</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">手术标本病理检查【2-1、住院常规申请单】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">13:16</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">舌根部肿瘤切除术+喉肿瘤切除术+气管切开术+显微手术加收+双极电凝+超高频电刀+仰卧位安置技术 st补录手术医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-09-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">13:16</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">【补录术中诊疗】-支撑喉镜检查 st补录手术医嘱</td>    </tr>  </tbody></table>"
+        },
+        "content_type": "html_text"
+    },
+    {
+        "title": "手术记录",
+        "content": {
+            "日期时间": "2025-09-11 10:00:00",
+            "手术名称": "支撑喉镜下喉病损切除术［咽喉］＋舌根病损切除术＋暂时性气管切开术",
+            "手术等级": "三级",
+            "手术入路": "经口支撑喉镜入路",
+            "手术部位": "咽喉",
+            "术前诊断": "喉肿物",
+            "发现病理": "左侧会厌舌面见囊肿，右侧声带、室带及喉室见新生物，声门下见可疑新生物，右侧声带固定"
+        },
+        "content_type": "text"
+    }
+]
+

@@ -1,0 +1,171 @@
+[
+    {
+        "title": "人工编码结果",
+        "content": {
+            "主要诊断结果": {
+                "主要诊断编码": "C34.100x004",
+                "主要诊断名称": "右肺上叶恶性肿瘤"
+            },
+            "病理诊断": {
+                "病理诊断": "M81400/3",
+                "病理诊断描述": ""
+            },
+            "手术操作": {
+                "手术日期": "",
+                "手术编码": "32.3",
+                "手术名称": "胸腔镜肺叶节段切除术",
+                "手术级别": "",
+                "医生手术描述": ""
+            },
+            "其他诊断结果": [
+                {
+                    "其他诊断编码": "I10.x00x002",
+                    "其他诊断名称": "高血压"
+                },
+                {
+                    "其他诊断编码": "J18.900",
+                    "其他诊断名称": "肺炎"
+                },
+                {
+                    "其他诊断编码": "R74.803",
+                    "其他诊断名称": "心肌酶谱异常"
+                },
+                {
+                    "其他诊断编码": "R52.000",
+                    "其他诊断名称": "急性疼痛"
+                },
+                {
+                    "其他诊断编码": "R94.200",
+                    "其他诊断名称": "肺功能检查的异常结果"
+                },
+                {
+                    "其他诊断编码": "J40.x00",
+                    "其他诊断名称": "支气管炎"
+                },
+                {
+                    "其他诊断编码": "R94.303",
+                    "其他诊断名称": "心电图异常"
+                }
+            ]
+        }
+    },
+    {
+        "title": "AI编码依据",
+        "content": {
+            "编码理由": ""
+        }
+    },
+    {
+        "title": "AI编码结果",
+        "content": {
+            "主要诊断结果": {
+                "主要诊断名称": "",
+                "主要诊断编码": "",
+                "AI编码一致性": "不一致"
+            },
+            "人工主要诊断名称": "右肺上叶恶性肿瘤",
+            "人工主要诊断编码": "C34.100x004"
+        }
+    },
+    {
+        "title": "入院记录",
+        "content": {
+            "科别": "胸外科",
+            "出生日期": "1959-08-15",
+            "年龄": "65岁",
+            "性别": "女",
+            "病案号": "3789081",
+            "入院日期": "2025-02-06 16:06",
+            "主诉": "发现肺部结节1年余",
+            "现病史": "患者1年前外院体检发现肺部结节, 未行特殊处理, 定期复查, 于2025.2.5我院门诊复查肺纵隔CT: 右肺上叶见部分实性结节影, 截面大小约10×11mm, 邻近水平裂局部牵拉; 双肺另散在小结节, 大者位于左肺上叶, 长径约7mm; 双侧支气管炎, 肺气肿; 下叶部分支气管稍牵拉, 右肺中叶、左肺上叶下舌段及双肺下叶散在条索条片影; 气管及主支气管通畅, 纵隔未见明显肿大淋巴结。无咳嗽咳痰、无胸痛胸闷、恶心呕吐、无发烧。现为求进一步治疗, 遂来我院, 我院门诊以'肺部结节'收入我科。",
+            "既往史": "平时健康状况: 一般, 疾病史: 呼吸系统症状: 无, 循环系统症状: 高血压, 其他; 苯磺酸氨氯地平阿托伐他汀, 消化系统症状: 无, 泌尿系统症状: 无, 血液系统症状: 无, 内分泌代谢症状: 无, 神经系统症状: 无, 生殖系统症状: 无, 运动系统症状: 无, 传染病史: 无, 预防接种史: 按国家计划进行接种。其他: 无。",
+            "家族史": "父：已故，死因：不详，母：已故，死因：不详，家中有遗传性及传染性疾病：无，其他：无。",
+            "手术外伤史": "手术: 手术名称及时间: 2018年 胆结石手术, 外伤: 无。",
+            "辅助检查": "肺： 视诊：双侧呼吸运动均匀对称正常，触诊：双肺语颤：正常，胸膜摩擦感：无，皮下捻发感：无，叩诊：正常清音，听诊：呼吸音：正常。\n\n心： 视诊：心尖搏动：正常，心尖搏动位置：正常，触诊：心尖搏动位置：正常，震颤：无，叩诊：心相对浊音界：正常，听诊：心率101次/分，心律：整齐，心音：正常，杂音：无。\n\n腹 部：视诊：外型：正常，胃型：无，肠型：无，腹壁静脉曲张：无，手术疤痕：无，触诊：全腹柔软，压痛：无，反跳痛：无，肝：正常，胆囊：未触及，无胆囊压痛，Murphy征：阴性，脾脏：未触及，肾：未触及，腹部包块：未触及，其他：无。叩诊：肝浊音界：存在，肝上界：右锁骨中线五肋间，移动性浊音：阴性，腹水：0度。听诊：肠鸣音：正常，气过水声：无，血管杂音：无。\n\n专科情况（体检）：双侧呼吸运动均匀对称，无增强或者减弱；双肺触觉语颤对称无异常，未触及胸膜摩擦感；双肺叩诊呈清音；双肺呼吸音清，未闻及干湿啰音及胸膜摩擦音。"
+        },
+        "content_type": "text"
+    },
+    {
+        "title": "出院记录",
+        "content": {
+            "病案号": "3789081",
+            "入院日期": "2025-02-10",
+            "出院日期": "2025-02-15 09:51:00",
+            "检验及特殊检查结果": "2025-02-08,心脏超声检查(含心功能+室壁运动分析+TDI)【超声影像科】:检查结论/诊断:升主动脉增宽,左房增大\n2025-02-09,床边(急诊)网络心电图+心电事件记录【心电图】:检查结论/诊断:窦性心律正常范围心电图\n2025-02-10,MR脑平扫(体检筛查)【磁共振】:检查结论/诊断:双侧大脑半球散在白质高信号(Fazekas1级)\n2025-02-11,12导心电图(常规)+心电事件记录【心电图】:检查结论/诊断:窦性心动过速。ST- T改变,顺钟向转位\n2025-02-13,X线摄影- 胸部(心脏)侧位,X线摄影- 胸部(心脏)正位【放射科】:检查所见:双肺纹理增强,右肺絮片状模糊影。气管及纵隔居中。主动脉迁曲钙化,心影大小、形态未见明显异常。双膈面光滑,双膈角清晰。检查结论/诊断:1右肺炎性病变。2支气管炎。3主动脉迁曲钙化。",
+            "病理检查结果": "2025-02-14,BI25-04372_常规病房:\n\n检查所见:肉眼所见:\n\n① 肺组织大小 (10.3cm×4.5cm×2.5cm) ,一侧肺组织金属丝缝合,未见支气管,距金属丝缝合缘 (0.8cm) 紧邻一侧肺被膜下见 (1.3cm×1cm×0.7cm) 灰白间褐结节,质中,结节表面被膜尚光滑,临床已切开,其余肺组织未见结节及质硬区;\n\n② 结节样物,直径 (0.8cm) 一堆;\n\n③ 结节样物 (1cm×0.8cm×0.5cm) 一块;\n\n④ 结节样物直径 (0.7cm) 一块。\n\n(② - ④ 送检组织全部取材)【共取材8个组织块】\n\n镜下所见:\n\n检查结论/诊断:\n\n肿瘤部位:右肺上叶;周围型。\n\n组织学类型:浸润性腺癌(非黏液型)。\n\n瘤灶大小: (1.3cm×1cm×0.7cm) 。\n\n生长模式:乳头状 (95%) ,微乳头状 (5%) 。\n\n组织学分化:中。\n\n胸膜侵犯:(一); 胸膜侵犯分级:PLO。\n\n气腔播散:(一)。\n\n脉管侵犯:(一)。\n\n神经侵犯:(一)。\n\n肺金属丝缝合缘:(一)。\n\n其它形态特征:其余肺组织未检出特殊。\n\n淋巴结转移情况:(一); (0 / 5) (阳性淋巴结数/淋巴结总数)。\n\n具体淋巴结分组情况:(①4组)淋巴结(2枚)、(②7组)淋巴结(1枚)及(③11组)淋巴结(2枚)\n\n切片上未见癌转移。\n\n病理分期: pT1b。\n\n免疫组化结果: TTF-1 (+), ALK-D5F3 (- )。\n\n特殊染色: 弹力纤维染色示癌组织未突破肺被膜外弹力纤维层。",
+            "手术＆操作治疗": [
+                {
+                    "手术＆操作日期": "2025-02-10",
+                    "手术＆操作名称": "胸腔镜下肺段切除术(右肺上叶S3段)+胸腔镜纵隔淋巴结清扫术+胸腔镜下胸腔粘连松解术",
+                    "手术＆操作等级": "四级",
+                    "手术＆操作部位": "右肺上叶S3段"
+                }
+            ],
+            "出院诊断": [
+                "右肺上叶腺癌TMN分期:(pT1bNOMO IA2期)",
+                "高血压",
+                "肺炎",
+                "心电图异常",
+                "心肌酶谱异常",
+                "支气管炎",
+                "急性疼痛",
+                "肺功能检查的异常结果"
+            ],
+            "治疗经过": "善相关检查,于2025-02-10行胸腔镜下肺段切除术,术后给予治疗,,未见明显手术并发症,今拟出院。"
+        },
+        "content_type": "text"
+    },
+    {
+        "title": "检验检查记录",
+        "content": [
+            {
+                "报告标题": "检验检查记录",
+                "采样日期": "2025-02-07 07:34:00",
+                "报告日期": "2025-02-07 10:40:00",
+                "报告内容": "| NO 项目 | 结果 | 参考范围 单位 |\n|---------|------|--------------|\n| 1 D -二聚体 | 0.29 | &lt;0.5 mg/L FEU |\n| 2 FDP | 4.0 | &lt;5 ug/ml |\n| 3 ATIII | 102.0 | 80-120 % |\n| 4 PT | 13.8 | 11.0-14.2 sec |\n| 5 PTA | 90 | 80-126 % |\n| 6 INR | 1.12 | 0.80-1.20 |\n| 7 APTT | 34.9 | 28.0-43.5 sec |\n| 8 FIB | 2.51 | 2.0-4.0 g/l |\n| 9 TT | 17.8 | 14.0-21.0 sec |"
+            },
+            {
+                "报告标题": "检验检查记录",
+                "采样日期": "2025-02-07 07:34:00",
+                "报告日期": "2025-02-07 10:14:00",
+                "报告内容": "| NO 项目 | 结果 | 参考范围 单位 |\n|---------|------|--------------|\n| 1 ABO血型 | AB | 型 |\n| 2 Rh(D)血型 | 阳性 | 型 |\n| 3 血型单特异性抗体检测 | 阴性 |  |"
+            },
+            {
+                "报告标题": "检验检查记录",
+                "采样日期": "2025-02-07 07:34:00",
+                "报告日期": "2025-02-07 09:09:00",
+                "报告内容": "| NO 项目 | 结果 | 参考范围 单位 |\n|---------|------|--------------|\n| 1 白细胞 | 8.00 | 3.5-9.5 10⁹/L |\n| 2 红细胞 | 4.80 | 3.8-5.1 10¹²/L |\n| 3 血红蛋白 | 132 | 115-150 g/L |\n| 4 红细胞压积 | 40.2 | 35-45 % |\n| 5 MCV | 83.7 | 82-100 fL |\n| 6 MCH | 27.5 | 27-34 pg |\n| 7 MCHC | 329 | 316-354 g/L |\n| 8 血小板 | 310 | 125-350 10⁹/L |\n| 9 中性粒细胞% | 62.29 | 40-75 % |\n| 10 淋巴细胞% | 32.4 | 20-50 % |\n| 11 单核细胞% | 3.71 | 3-10 % |\n| 12 嗜酸性细胞% | 1.40 | 0.4-8 % |\n| 13 嗜碱性细胞% | 0.24 | 0-1 % |\n| 14 中性粒细胞 | 4.98 | 1.8-6.3 10⁹/L |\n| 15 淋巴细胞 | 2.59 | 1.1-3.2 10⁹/L |\n| 16 单核细胞 | 0.30 | 0.1-0.6 10⁹/L |\n| 17 嗜酸性细胞 | 0.11 | 0.02- 10⁹/L |\n| 18 嗜碱性细胞 | 0.02 | &lt;0.06 10⁹/L |"
+            },
+            {
+                "报告标题": "检验检查记录",
+                "采样日期": "2025-02-07 07:34:00",
+                "报告日期": "2025-02-07 10:40:00",
+                "报告内容": "| NO 项目 | 结果 | 参考范围 单位 |\n|---------|------|--------------|\n| 1 丙氨酸氨基转移酶 | 24 | 8-40 U/L |\n| 2 天门冬氨酸氨基转移酶 | 24 | 8-40 U/L |\n| 3 碱性磷酸酶 | 59 | 40-150 U/L |\n| 4 5 ' 核苷酸酶 | 3 | 0-10 U/L |\n| 5 γ-谷氨酰转移酶 | 17 | 7-32 U/L |\n| 6 亮氨酰氨基肽酶 | 27 | 12-37 U/L |\n| 7 总蛋白 | 78.7 | 64-83 g/L |\n| 8 白蛋白 | 45.7 | 35-55 g/L |\n| 9 球蛋白 | 33.0 | ↑ 20-30 g/L |\n| 10 白球比例 | 1.4 | ↓ 1.5-2.5 |\n| 11 前白蛋白 | 0.301 | 0.20-0.40 g/L |\n| 12 总胆汁酸 | 4.9 | 0-10.0 μmol/L |\n| 13 肌酐（酶法） | 79.1 | 44.0-106.0 μmol/L |\n| 14 尿素 | 3.35 | 2.9-8.2 mmol/L |\n| 15 尿酸 | 284.2 | 155-357 μmol/L |\n| 16 胱抑素C | 1.13 | 0.54-1.15 mg/L |\n| 17 钠 | 145.4 | ↑ 136-145 mmol/L |\n| 18 钾 | 4.24 | 3.5-5.2 mmol/L |\n| 19 氯 | 103.2 | 96-108 mmol/L |\n| 20 钙 | 2.36 | 2.03-2.54 mmol/L |\n| 21 总二氧化碳 | 28.3 | 21.0-30.0 mmol/L |\n| 22 阴离子隙 | 14 | 8-16 mmol/L |\n| 23 渗透压 | 308.1 | 280-310 mOsm/L |\n| 24 肾小球滤过率 | 67.79 | ↓ 90-120 ml/min/(1. |\n| 25 同型半胱氨酸 | 9.1 | 15-20 μmol/L |"
+            },
+            {
+                "报告标题": "检验检查记录",
+                "采样日期": "2025-02-07 07:34:00",
+                "报告日期": "2025-02-07 10:40:00",
+                "报告内容": "| NO 项目 | 结果 | 参考范围 单位 |\n|---------|------|--------------|\n| 1 D -二聚体 | 0.29 | &lt;0.5 mg/L FEU |\n| 2 FDP | 4.0 | &lt;5 ug/ml |\n| 3 ATIII | 102.0 | 80-120 % |\n| 4 PT | 13.8 | 11.0-14.2 sec |\n| 5 PTA | 90 | 80-126 % |\n| 6 INR | 1.12 | 0.80-1.20 |\n| 7 APTT | 34.9 | 28.0-43.5 sec |\n| 8 FIB | 2.51 | 2.0-4.0 g/l |\n| 9 TT | 17.8 | 14.0-21.0 sec |"
+            }
+        ],
+        "content_type": "group_html_text"
+    },
+    {
+        "title": "临时医嘱单",
+        "content": {
+            "医嘱内容": "<table border=\"1\" style=\"border-collapse: collapse; width: 100%;\">  <thead> <tr>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">日期</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">时间</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">医嘱</th>    </tr> </thead>  <tbody>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">动脉采血(1次) once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血气分析(1次) once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">降钙素原-1 【血清】【免疫室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">DIC全套7项-1 【血浆】【急诊快检】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">大生化34项+心肌酶谱-【血清】【生化室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">乙丙艾梅8项(发光法【血清】【免疫室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血型+单特异性抗体-1 【全血】【输血科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血栓四项(TAT/PIC/t-PAIC/TM) 【血浆】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">痰细菌培养鉴定及药敏(一般细菌+嗜血杆菌) 【痰液】【微生物室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血常规分析-1 【全血】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">肝胆脾胰超声检查(不含门静脉)【超声医学科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">下肢动脉+深静脉超声检查(双侧)【超声医学科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">心脏超声检查(含心功能+室壁运动分析+TD1)【超声医学科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">颈部血管:颈动脉+颈内静脉超声检查(双侧)【超声医学科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">床边(急诊)网络心电图+心电事件记录【心电图】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">肺通气(不含MVV)+弥散【肺功能室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">16:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">MR脑平扫(体检筛查)【磁共振】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-08</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:08</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">拟于2025年02月10日10时01分进行胸腔镜下肺病损切除术手术 st 手术部位:右前胸,...,</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-08</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:13</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">备少白细胞红细胞(申请单号:990001228146B)血量:2U st【备血医嘱】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-08</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:13</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">红细胞配血(申请单号:990001228146B) st【配血医嘱】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:51</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">-静脉采血</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:51</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]明日手术(全排斥) st右侧胸腔镜探查术</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:51</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]术区备皮 st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:51</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]禁食水 st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:51</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]术前备血 st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:51</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">一次性导尿(1次) st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:51</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(悦灵胶)猪源纤维蛋白粘合剂【1.5ml】1.5ml 1盒外用 once领药术中用</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:51</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]术前营养支持(冬泽速浆800ml,术前10~12h, po, 儿童+成人) once-特殊疾病营养治疗(基础配方6号)</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:51</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]术前营养支持(冬泽速浆400ml,麻醉前2~3h, po, 儿童+成人) once-特殊疾病营养治疗(基础配方6号)</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(上海百特)0.9%氯化钠注射液【0.9%+100ml】100ml 1袋 静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(力制同)美索巴莫注射液【10ml:1g】1g 1支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(上海百特)0.9%氯化钠注射液【0.9%+100ml】100ml 1袋 静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(力制同)美索巴莫注射液【10ml:1g】1g 1支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(悦灵胶)猪源纤维蛋白粘合剂【1.5ml】1.5ml 1盒外用 once 术中用【自备药】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(上海百特)0.9%氯化钠注射液【0.9%+100ml】100ml 1袋 静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(巴利康)注射用头孢唑林钠(国)【0.5g】1g 2瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(上海百特)0.9%氯化钠注射液【0.9%+100ml】100ml 1袋 静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(巴利康)注射用头孢唑林钠(国)【0.5g】1g 2瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(静泽欣)氨溴特罗口服溶液【100ml:150mg/100ug】100ml 1 2瓶口服 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(同杜叮)双氯芬酸钠栓(II)【50mg】50mg 1盒塞肛 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">5%葡萄糖注射液【5%+250ml】250ml 1袋静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(阿圣诺奇)注射用二羟丙茶碱【0.5g】00.5g 1支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">0.9%氯化钠注射液(青岛华仁)【0.9%+250ml】250ml 1袋 静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(奥司亭)硫酸特布他林注射液【1ml:0.5mg】00.25mg 00.5支静滴 once 缓滴</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">疼痛综合评定(1次) once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">跌倒风险筛查与测评(1次) once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">深静脉血栓风险筛查与测评(1次) once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">压疮风险评估(1次) once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">DIC全套7项-1 【血浆】【急诊快检】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">大生化34项+心肌酶谱-【血清】【生化室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血常规+CRP-1 【全血】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">降钙素原-1 【血清】【免疫室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血栓四项(TAT/PIC/t-PAIC/TM) 【血浆】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(上海百特)0.9%氯化钠注射液【0.9%*100ml】100ml 1袋静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(瑞齐泰)注射用盐酸托烷司琼【2mg】2mg 1瓶静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(上海百特)0.9%氯化钠注射液【0.9%*100ml】100ml 1袋静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:21</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">盐酸溴己新注射液【2ml:4mg】4mg 1支静滴 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-10</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:18</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">病理检查【2-1、住院常规申请单】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:37</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">内/危急加收20%+术后镇痛++特殊方法气管插管术/危急加收20%+支气管内麻醉:每增加1小时加收++支气管内麻醉:每增加1小时加收危急加收</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:37</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">【补录术中诊疗】-持续有创性血压监测 st补录手术医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-11</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:41</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]静脉留置针穿刺术 once-静脉注射-一次性使用精密过滤输液器-预冲式冲管注射器-一次性使用精密过滤输液器-一次性使用静脉留置针</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-12</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">DIC全套7项-1 【血浆】【急诊快检】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-12</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">大生化34项+心肌酶谱-【血清】【生化室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-12</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血常规+CRP-1 【全血】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-12</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血栓四项(TAT/PIC/t-PAIC/TM) 【血浆】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-12</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">20:38</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]静脉留置针穿刺术 once--一次性使用静脉留置针</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-13</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">20:49</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]静脉留置针穿刺术 once--一次性使用静脉留置针-静脉注射-预冲式冲管注射器</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-14</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:23</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(恒扬)艾瑞昔布片【0.1g*10#】00.1g1盒口服餐后 oncee一次一片,一天一次</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-14</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:42</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">中换药(1次/部位) once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-15</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:26</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]静脉留置针穿刺术 once--一次性使用静脉留置针</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-15</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:14</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(急) 血常规分析-1 【全血】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-15</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:20</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]今日出院 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-15</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:20</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">中换药(1次/部位) once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-15</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:22</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(正来)潞党参口服液【10ml*6】10ml5盒口服 once一次一支,一天两次</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-15</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:22</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">苏黄止咳胶囊【0.45g*24#】1.35g 1盒口服 once一次三粒,一天三次</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-15</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:22</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(恒扬)艾瑞昔布片【0.1g*10#】00.1g 1盒口服 once 疼痛时吃一粒</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-15</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">10:22</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">康莱特软胶囊【0.45g*72#】2.7g 5瓶口服 once一次六粒,一天四次(早中晚+睡前</td>    </tr>  </tbody></table>"
+        },
+        "content_type": "html_text"
+    },
+    {
+        "title": "手术记录",
+        "content": {
+            "日期时间": "2025-02-10",
+            "手术名称": "胸管下右体肺及心肝新上新新上",
+            "术后诊断": "右上肺结节"
+        },
+        "content_type": "text"
+    }
+]
+

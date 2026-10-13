@@ -1,0 +1,168 @@
+[
+    {
+        "title": "人工编码结果",
+        "content": {
+            "主要诊断结果": {
+                "主要诊断编码": "C50.300",
+                "主要诊断名称": "乳房下内象限恶性肿瘤"
+            },
+            "病理诊断": {
+                "病理诊断": "M85000/3",
+                "病理诊断描述": ""
+            },
+            "手术操作": {
+                "手术日期": "",
+                "手术编码": "85.2300x001",
+                "手术名称": "乳腺局部扩大切除术",
+                "手术级别": "",
+                "医生手术描述": ""
+            },
+            "其他诊断结果": [
+                {
+                    "其他诊断编码": "K71.901",
+                    "其他诊断名称": "药物性肝损害"
+                },
+                {
+                    "其他诊断编码": "R74.000x001",
+                    "其他诊断名称": "转氨酶升高"
+                },
+                {
+                    "其他诊断编码": "E78.500",
+                    "其他诊断名称": "高脂血症"
+                }
+            ]
+        }
+    },
+    {
+        "title": "AI编码依据",
+        "content": {
+            "编码理由": ""
+        }
+    },
+    {
+        "title": "AI编码结果",
+        "content": {
+            "主要诊断结果": {
+                "主要诊断名称": "",
+                "主要诊断编码": "",
+                "AI编码一致性": "不一致"
+            },
+            "人工主要诊断名称": "乳房下外象限恶性肿瘤",
+            "人工主要诊断编码": "C50.500"
+        }
+    },
+    {
+        "title": "入院记录",
+        "content": {
+            "科别": "甲状腺乳腺外科",
+            "出生日期": "1979-06-16",
+            "年龄": "45岁",
+            "性别": "女",
+            "病案号": "3744613",
+            "入院日期": "2025-02-05",
+            "主诉": "左乳腺癌新辅化疗4次后，拟行手术治疗",
+            "现病史": "患者4月余前于武汉市中心医院行乳房彩超检查，提示：左乳内下象限8点钟方向可见一不规则低回声区，大小约2.38*1.46*1.99cm，距乳头约5cm，边界尚清，边缘毛糙，呈结节状、分叶状，内部回声不均匀，BI-RADS4b类；左乳下象限6点钟方向可见一不规则低回声区，大小约1.89*1.43cm，距乳头约1cm，边界尚清，边缘毛糙，呈结节状、分叶状，内部回声不均匀，BI-RADS 4b类；双侧腋下未见明显异常淋巴结。后于武汉市中心医院行穿刺检查提示：左乳癌浸润性癌；我院病理会诊（穿刺标本，左侧乳腺8点钟方向）浸润性导管癌（组织学2级），ER（＋，80%，中-强），PR（＋，30%，弱），HER-2（1+，加贴外对照），KI67（LI:30%）。（穿刺标本，左侧乳腺6点方向）浸润性导管癌（组织学2级），ER（＋，80%，中-强），PR（＋，60%，中），HER-2（0，加贴外对照），KI67（LI:25%）。经与复沟通交代病情，已以TC方案新辅助化疗4次，现术治疗，遂门诊以'左乳癌新辅化疗后'收治入院。",
+            "既往史": "平时健康状况：良好，疾病史：呼吸系统症状：无，循环系统症状：无，消化系统症状：无，泌尿系统症状：无，血液系统症状：无，内分泌代谢症状：无，神经系统症状：无，生殖系统症状：无，运动系统症状：无，传染病史：无，预防接种史：按国家计划进行接种。其他：无。",
+            "手术外伤史": "手术：无，外伤：无",
+            "辅助检查": "乳房彩超检查：左乳内下象限8点钟方向可见一不规则低回声区，大小约2.38*1.46*1.99cm，距乳头约5cm，边界尚清，边缘毛糙，呈结节状、分叶状，内部回声不均匀，BI-RADS4b类；左乳下象限6点钟方向可见一不规则低回声区，大小约1.89*1.43cm，距乳头约1cm，边界尚清，边缘毛糙，呈结节状、分叶状，内部回声不均匀，BI-RADS 4b类；双侧腋下未见明显异常淋巴结。穿刺检查：左乳癌浸润性癌；我院病理会诊（穿刺标本，左侧乳腺8点钟方向）浸润性导管癌（组织学2级），ER（＋，80%，中-强），PR（＋，30%，弱），HER-2（1+，加贴外对照），KI67（LI:30%）；（穿刺标本，左侧乳腺6点方向）浸润性导管癌（组织学2级），ER（＋，80%，中-强），PR（＋，60%，中），HER-2（0，加贴外对照），KI67（LI:25%）"
+        },
+        "content_type": "text"
+    },
+    {
+        "title": "出院记录",
+        "content": {
+            "病案号": "3744613",
+            "入院日期": "2025-02-05 08:57:00",
+            "出院日期": "2025-02-09 08:09:00",
+            "检验及特殊检查结果": "血常规、血生化、凝血功能、心电图等各项检查（详见报告）",
+            "病理检查结果": "2025-02-11，F125-00873_快速：\n\n检查结论/诊断：（术中快速标本常规病理报告）\n\n（左乳癌治疗后）\n\n（左侧）乳腺多灶性浸润性导管癌（组织学分级：均为2级）。\n\n- 癌灶A见少许中级别导管原位癌成分（<5%），癌灶B见高级别导管原位癌成分（约15%）；\n\n- 切片上均未检出明确脉管内癌栓；\n\n- 均未检出神经侵犯；\n\n- 周边乳腺组织未见特殊；\n\n- （选择性切缘离断取材）（左乳癌保乳）上切缘、内切缘、下切缘、外切缘、乳头后方切缘、基底切缘及表面皮肤切片上未见癌累及，外切缘局灶导管上皮普通型增生。\n\n备注：1. 癌灶大小：A：1cm×0.8cm×0.8cm；B：0.7cm×0.6cm×0.6cm；\n\n2. 组织学分级评分：\n\n癌灶A：腺管形成；3分；核异型性：2分；核分裂计数：1分；总分：6分。\n\n癌灶B：腺管形成；3分；核异型性：3分；核分裂计数：1分；总分：7分。\n\n3. 癌灶A镜下局部见癌组织残留，肿瘤周边间质明显纤维化伴局灶淋巴细胞聚集及局灶黏液湖形成，根据新辅助治疗病理MP评估系统，符合新辅助治疗后反应G3；\n\n癌灶B镜下见部分癌组织残留，肿瘤周边间质部分区域纤维化伴局灶淋巴细胞聚集及局灶含铁血黄素沉积，根据新辅助治疗病理MP评估系统，符合新辅助治疗后反应G2。\n\n\n免疫组化染色示浸润性癌：\n\n癌灶A: ER(+, 90%, 强), PR(+, 5%, 中), HER2(0), CK5/6(-), Ki67(LI: 约5%);\n\n癌灶B: ER(+, 90%, 强), PR(+, 50%, 弱-中), HER2(2+), CK5/6(-), Ki67(LI: 约5%)。\n\n(另有标本病理编号: BI25-03819, CI24-10424, CI24-10423) 2025-02-10, BI25-03819_常规病房: \n\n检查所见: 肉眼所见: \n\n脂肪组织11cm×10cm×3cm一堆, 其内触及淋巴结直径0.2cm-1.5cm×1cm×0.5cm共38枚。【共取材14个组织块】 \n\n镜下所见: \n\n检查结论/诊断: (左乳癌治疗后) \n\n(左腋窝) 淋巴结(37枚) 切片上未见癌转移。\n\n(另有手术标本病理编号FI25-00873) 2025-02-06, FI25-00873_快速: \n\n检查结论/诊断: \n\n(左乳癌保乳上切缘、内切缘、下切缘、外切缘及乳头后方切缘) 冷冻切片上未见癌累及, 外切缘局灶导管上皮增生。",
+            "治疗经过": "相关检查，予以上述手术治疗，过程顺利，术后予以抗感染等对症支持治疗，现，予以办理。",
+            "出院诊断": [
+                "乳房恶性肿瘤",
+                "药物性肝损害",
+                "转氨酶升高",
+                "高脂血症"
+            ]
+        },
+        "content_type": "text"
+    },
+    {
+        "title": "检验检查记录",
+        "content": [
+            {
+                "报告标题": "术中快速病理检查报告单",
+                "采样日期": "2025-02-06",
+                "报告日期": "2025-02-06",
+                "报告内容": "| 项目 | 内容 |\n|------|------|\n| 姓名 | 无 |\n| 性别 | 无 |\n| 年龄 | 无 |\n| 标本名称 | 左乳癌保乳切缘 |\n| 临床诊断 | 乳房恶性肿瘤 |\n| 术中快速病理诊断 | (左乳癌保乳上切缘、内切缘、下切缘、外切缘及乳头后方切缘)冷冻切片上未见癌累及, 外切缘局灶导管上皮增生。"
+            },
+            {
+                "报告标题": "病理检查报告单",
+                "采样日期": "2025-02-06",
+                "报告日期": "2025-02-07 09:19",
+                "报告内容": "| 项目 | 内容 |\n|------|------|\n| 姓名 | 无 |\n| 性别 | 女 |\n| 年龄 | 45岁 |\n| 标本名称 | 左腋窝淋巴结 |\n| 临床诊断 | 乳房恶性肿瘤 |\n| 肉眼所见 | 脂肪组织11cmx10cmx3cm一堆，其内触及淋巴结直径0.2cm-1.5cmx1cmx0.5cm共38枚。【共取材14个组织块】 |\n| 镜下所见 | 无 |\n| 病理诊断 | （左乳癌治疗后）（左腋窝）淋巴结（37枚）切片上未见癌转移。（另有手术标本病理编号FI25-00873）"
+            },
+            {
+                "报告标题": "术中快速标本常规病理检查报告单",
+                "采样日期": "2025-02-06",
+                "报告日期": "2025-02-11 10:22",
+                "报告内容": "| 项目 | 内容 |\n|------|------|\n| 姓名 | 无 |\n| 住院号 | 3744613 |\n| 性别 | 无 |\n| 年龄 | 无 |\n| 标本名称 | 左乳癌保乳切缘 |\n| 临床诊断 | 乳房恶性肿瘤 |\n| 肉眼所见 | 部分乳腺组织23cm×10cm×5cm, 上附梭形皮肤6.5cm×3cm, 切面见1cm×0.8cm×0.8cm灰白质硬结节A, 距A6cm见0.7cm×0.6cm×0.6cm灰白质硬结节B, 临床系线标记切缘 (1上2内3下4外5乳头后方)。【共取材15个组织块】 |\n| 镜下所见 | 无"
+            },
+            {
+                "报告标题": "术中快速标本常规病理检查报告单",
+                "采样日期": "2025-02-06",
+                "报告日期": "2025-02-06",
+                "报告内容": "| 项目 | 内容 |\n|------|------|\n| 姓名 | 无 |\n| 住院号 | 3744613 |\n| 标本名称 | 无 |\n| 临床诊断 | 无 |\n| 报告内容 | 无"
+            },
+            {
+                "报告标题": "大生化检验报告",
+                "采样日期": "2025-02-05",
+                "报告日期": "2025-02-05",
+                "报告内容": "| NO 项目 | 结果 | 参考范围 单位 |\n|---------|------|--------------|\n| 1 丙氨酸氨基转移酶 | 48 | 5-40 U/L |\n| 2 甘油三酯 | 1.90 | ↑ 1.7 mmol/L |\n| 3 胆固醇 | 5.10 | ↑ 3.6-5.2 mmol/L |\n| 4 高密度脂蛋白 | 1.05 | 0.9-1.55 mmol/L |\n| 5 低密度脂蛋白 | 3.0 | ↑ 2.07-3.1 mmol/L"
+            },
+            {
+                "报告标题": "X线检查报告单",
+                "采样日期": "2025-02-05",
+                "报告日期": "2025-02-05",
+                "报告内容": "| 项目 | 内容 |\n|------|------|\n| 检查编号 | UCR202502051457 |\n| 检查日期 | 2025-02-05 |\n| 检查部位 | 胸部（心脏）正位 |\n| 检查所见 | 双肺野清晰，未见明显实质性病变。气管及纵隔居中。心影大小、形态未见明显异常。双膈面光滑，双肋膈角清晰。 |\n| 意见 | 1．心肺膈X线检查未见明显异常。2．静脉港头端位于Th6椎体下缘水平。"
+            },
+            {
+                "报告标题": "数字乳腺摄影检查报告单",
+                "采样日期": "2025-02-05",
+                "报告日期": "2025-02-05",
+                "报告内容": "| 项目 | 内容 |\n|------|------|\n| 检查编号 | UCR202502051466 |\n| 检查日期 | 2025-02-05 |\n| 检查部位 | 数字乳腺摄影（双侧） |\n| 检查所见 | 适度挤压，双乳头尾位（CC位）、内外斜位（ML0位）成像。双侧乳腺腺体脂肪取代较少，天然对比稍差（乳腺腺体实质分型：ACR c型）。双侧乳腺腺体实质呈弥漫分布的类结节状、团片状致密影表现；左乳内下近皮下区、左乳下部中线区见肿块样等密度影，大小分别为14×9mm、9×7mm（CC位测得），边缘伴毛刺；左乳另见少许点状钙化灶。视野内双侧腋窝数枚淋巴结显示，其大小及结构尚可。 |\n| 意见 | 1、双侧乳腺增生性改变；2、左乳乳腺癌化疗4周期后：左乳内下近皮下区、左乳下部中线区肿块样等密度影，边缘伴毛刺，结合病史，考虑为乳腺恶性肿瘤性病变治疗后改变（BI-RADS 6），请结合临床，建议进一步MR或CEM检查（了解病灶区强化情况）。3、左乳另见少许良性钙化灶。"
+            }
+        ],
+        "content_type": "group_html_text"
+    },
+    {
+        "title": "临时医嘱单",
+        "content": {
+            "医嘱内容": "<table border=\"1\" style=\"border-collapse: collapse; width: 100%;\">  <thead> <tr>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">日期</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">时间</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">医嘱</th>    </tr> </thead>  <tbody>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">常规心电图检查：床边加收（1 次） once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">大生化34 项＋心肌酶谱- 【血清】【生化室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">乙丙艾梅8 项（发光法 【血清】【免疫室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">DIC 全套7 项-1 【血浆】【急诊快检】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">TEG 常规检测-1 【血浆】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血常规分析-1 【全血】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">血栓四项（TAT/PIC/t-PAIC/TM) 【血浆】【临检室】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">12 导心电图（常规）＋心电事件记录【心电图】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">乳腺超声检查【超声医学科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">心脏超声检查（含心功能＋室壁运动分析＋TDI ）【超声医学科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">浅表淋巴结超声检查（锁骨上）【超声医学科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">浅表淋巴结超声检查（腋窝）【超声医学科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">肝胆脾胰超声检查（不含门静脉）【超声医学科】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">X 线摄影-热敏胶片（10*12)*4【DR 】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">X 线摄影-数字乳腺摄影（双侧）【DR 】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">［H］明日手术（全排斥）st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H] 上尿管 st一次性导尿一次性使用无菌导尿包</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H] 备皮 st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H] 术前禁食8 小时，禁饮6 小时 st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">（卡纳琳）纳米炭混悬注射液【25mg:0.5ml】25mg 1 支局部注射 once 术中</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">（邦亭）注射用白眉蛇毒血凝酶【1KU】4KU 4 支静滴 once 术中</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">09:30</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">X 线摄影-胸部（心脏）正位【DR 】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">拟于2025 年02 月06 日08 时00 分 进行单侧乳腺改良根治术手术 st 手术部位：左侧,,,,-DC</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:48</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">病理检查【1 、术中快速申请单】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:48</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">病理检查【1 、术中快速申请单】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">［H ］术后医嘱 st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">［H ］心电监护 st-心电监测</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">［H ］指脉氧监测 st</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">［H ］持续吸氧 st-氧气吸入-YYX 型一次性使用吸氧管</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:29</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">［H ］禁食、禁饮6 小时后流质 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">日期</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">时间</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-06</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">19:05</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">病理检查【2-1、住院常规申请单】</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-07</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">15:52</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">淋巴结标记术+乳腺癌保乳手术+全身麻醉:2小时内+超高频电刀+仰卧位安置技术+全身麻醉:每增加1小时加收+麻醉中监测:三项内+麻醉中监测:三项以上 st 补录手术医嘱</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-08</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">(滨湖双鹤)0.9%氯化钠注射液(内封式)【0.9%+100ml】100ml 1瓶封管 once维护输液管道用</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-08</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">11:46</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">肝素钠注射液【2ml:12500单位】12500IU 1支封管 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:28</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">[H]今日出院 once</td>    </tr>    <tr>      <td style=\"padding: 6px; border: 1px solid #ddd;\">2025-02-09</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">08:28</td>      <td style=\"padding: 6px; border: 1px solid #ddd;\">特大换药(1次) once</td>    </tr>  </tbody></table>"
+        },
+        "content_type": "html_text"
+    },
+    {
+        "title": "长期医嘱单",
+        "content": {
+            "医嘱内容": "<table border=\"1\" style=\"border-collapse: collapse; width: 100%;\">  <thead> <tr>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">医嘱</th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\"></th>      <th style=\"padding: 8px; text-align: center; background-color: #f2f2f2;\">护士签名</th>    </tr> </thead>  <tbody>  </tbody></table>"
+        },
+        "content_type": "html_text"
+    },
+    {
+        "title": "手术记录",
+        "content": {
+            "手术记录": {
+                "日期时间": "2025-02-06 16:00:00",
+                "手术名称": "单侧保乳乳腺改良根治术［左侧］+腋下淋巴结根治性切除术［左侧］+纳米炭淋巴结示踪及负显影［左侧］",
+                "手术等级": "四级",
+                "手术入路": "左乳开放入路",
+                "手术部位": "左侧",
+                "术前诊断": "乳房恶性肿瘤",
+                "发现病理": "左乳内下腺体可及1.5*1cm质硬肿块，局部腺体水肿，左侧腋窝可探及2条蓝染淋巴管，及数枚肿大蓝染淋巴结，部分质硬",
+                "术后诊断": "左乳癌"
+            }
+        },
+        "content_type": "text"
+    }
+]
+
