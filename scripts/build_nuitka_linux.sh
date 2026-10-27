@@ -27,12 +27,16 @@ if [[ "${ID:-}" != "ubuntu" || "${VERSION_ID:-}" != "22.04" ]]; then
   exit 1
 fi
 
-PYTHON_BIN="${PYTHON_BIN:-python3.11}"
+PYTHON_VERSION="${PYTHON_VERSION:-3.11}"
+PYTHON_BIN="${PYTHON_BIN:-python${PYTHON_VERSION}}"
 VENV_DIR="${VENV_DIR:-.venv-build}"
 ENABLE_LTO="${ENABLE_LTO:-1}"
 SKIP_PIP_INSTALL="${SKIP_PIP_INSTALL:-0}"
 JOBS="${JOBS:-$(nproc)}"
-ENTRY="run.py"
+ENTRY="${ENTRY_POINT:-run.py}"
+if [[ -z "$ENTRY" || ! -f "$ENTRY" ]]; then
+  ENTRY="run.py"
+fi
 DIST_NAME="medcode-flow"
 OUT_DIR="$ROOT/build/nuitka"
 
@@ -45,10 +49,15 @@ run_root() {
 }
 
 if ! command -v "$PYTHON_BIN" >/dev/null 2>&1; then
-  echo "==> 安装 Python 3.11 和编译工具"
+  echo "==> 安装 ${PYTHON_BIN} 和编译工具"
   export DEBIAN_FRONTEND=noninteractive
   run_root apt-get update
-  run_root apt-get install -y python3.11 python3.11-venv python3.11-dev \
+  if [[ "$PYTHON_VERSION" != "3.11" ]]; then
+    run_root apt-get install -y software-properties-common ca-certificates gnupg
+    run_root add-apt-repository -y ppa:deadsnakes/ppa
+    run_root apt-get update
+  fi
+  run_root apt-get install -y "$PYTHON_BIN" "${PYTHON_BIN}-venv" "${PYTHON_BIN}-dev" \
     build-essential ccache patchelf ca-certificates
 fi
 
@@ -62,7 +71,7 @@ source "$VENV_DIR/bin/activate"
 
 if [[ "$SKIP_PIP_INSTALL" != "1" ]]; then
   python -m pip install --upgrade pip
-  pip install -r requirements.txt nuitka
+  pip install -r requirements.txt nuitka ordered-set zstandard
 fi
 
 LTO_ARGS=()

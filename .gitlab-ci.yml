@@ -1,27 +1,121 @@
-# 在 Ubuntu 22.04 镜像里用 Nuitka 打 Linux 包。
-# 镜像决定编译环境。GitLab 服务器本身是不是 22.04 不影响这一步。
-# 若 Runner 是 shell 执行器，会忽略 image，此时 Runner 宿主机必须是 Ubuntu 22.04，脚本会自行核对。
+# 对应原来的 GitHub Actions。
+# 推到 dev、打 v* 标签、或在网页上 Run pipeline，都会打包。
+# 网页上可以改这四个参数：Python 版本、入口脚本、打包工具、Windows 是否保留控制台。
+#
+# 现在这台 Runner 没有标签，只会领 Linux 任务。
+# Windows、macOS 默认不跑。手动运行时把 BUILD_WINDOWS 或 BUILD_MACOS 改成 true，
+# 并且 Runner 带有 windows 或 macos 标签，才会打那两个系统的包。
 
 stages:
   - build
+  - release
 
-nuitka-linux:
-  stage: build
-  image: ubuntu:22.04
-  timeout: 3h
-  variables:
-    ENABLE_LTO: "0"
-    JOBS: "2"
-    DEBIAN_FRONTEND: noninteractive
-    PIP_INDEX_URL: "https://pypi.tuna.tsinghua.edu.cn/simple"
+variables:
+  PYTHON_VERSION:
+    value: "3.11"
+    description: "Python 版本 (例如 3.11, 3.12)。Ubuntu 22.04 默认 3.11。"
+  ENTRY_POINT:
+    value: "run.py"
+    description: "入口脚本。文件不存在时自动检测 run.py、main.py、app.py。"
+  BUILDER:
+    value: "Nuitka"
+    options:
+      - "Nuitka"
+      - "PyInstaller"
+    description: "打包工具"
+  CONSOLE:
+    value: "yes"
+    options:
+      - "yes"
+      - "no"
+    description: "是否保留控制台窗口 (Windows)"
+  BUILD_WINDOWS:
+    value: "false"
+    options:
+      - "false"
+      - "true"
+    description: "是否打 Windows 包。需要带 windows 标签的 Runner。"
+  BUILD_MACOS:
+    value: "false"
+    options:
+      - "false"
+      - "true"
+    description: "是否打 macOS 包。需要带 macos 标签的 Runner。"
+  ENABLE_LTO: "0"
+  JOBS: "2"
+  DEBIAN_FRONTEND: noninteractive
+  PIP_INDEX_URL: "https://pypi.tuna.tsinghua.edu.cn/simple"
+
+workflow:
   rules:
-    - if: $CI_COMMIT_BRANCH == "dev"
-    - if: $CI_COMMIT_TAG
+    - if: $CI_COMMIT_TAG =~ /^v/
     - if: $CI_PIPELINE_SOURCE == "web"
+    - if: $CI_COMMIT_BRANCH == "dev"
+
+.build:
+  stage: build
+  timeout: 3h
+  interruptible: true
   script:
-    - bash scripts/build_nuitka_linux.sh
+    - bash scripts/ci_build.sh
+
+build-linux:
+  extends: .build
+  image: ubuntu:22.04
+  variables:
+    ARTIFACT_NAME: medcode-flow-linux
   artifacts:
     name: medcode-flow-linux
     paths:
-      - dist/medcode-flow-linux.zip
+      - dist/
     expire_in: 14 days
+
+build-windows:
+  extends: .build
+  tags:
+    - windows
+  variables:
+    ARTIFACT_NAME: medcode-flow-windows.exe
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^v/ && $BUILD_WINDOWS == "true"
+    - if: $CI_PIPELINE_SOURCE == "web" && $BUILD_WINDOWS == "true"
+    - if: $CI_COMMIT_BRANCH == "dev" && $BUILD_WINDOWS == "true"
+  artifacts:
+    name: medcode-flow-windows
+    paths:
+      - dist/
+    expire_in: 14 days
+
+build-macos:
+  extends: .build
+  tags:
+    - macos
+  variables:
+    ARTIFACT_NAME: medcode-flow-macos.app
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^v/ && $BUILD_MACOS == "true"
+    - if: $CI_PIPELINE_SOURCE == "web" && $BUILD_MACOS == "true"
+    - if: $CI_COMMIT_BRANCH == "dev" && $BUILD_MACOS == "true"
+  artifacts:
+    name: medcode-flow-macos
+    paths:
+      - dist/
+    expire_in: 14 days
+
+release:
+  stage: release
+  image: ubuntu:22.04
+  needs:
+    - job: build-linux
+      artifacts: true
+    - job: build-windows
+      artifacts: true
+      optional: true
+    - job: build-macos
+      artifacts: true
+      optional: true
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^v/
+  allow_failure: true
+  script:
+    - bash scripts/ci_release.sh
