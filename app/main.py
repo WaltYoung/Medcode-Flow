@@ -5,6 +5,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
 from app.api.v1 import api_router
+from app.api.v1_compat import router as v1_compat_router
 from app.core.config import get_settings
 from app.core.logging import setup_logging
 from app.runtime.bootstrap import discover_workflows
@@ -27,6 +28,7 @@ def create_app() -> FastAPI:
         lifespan=lifespan,
     )
     app.include_router(api_router, prefix="/api/v1")
+    app.include_router(v1_compat_router, prefix="/v1")
     return app
 
 

@@ -55,6 +55,10 @@ class Settings(BaseSettings):
 
     log_redact_input: bool = True
 
+    # Bearer Key 到 workflow_id，多项用逗号分隔：key=workflow_id
+    workflow_key_map: str = ""
+    workflow_log_path: str = ""
+
 
 @lru_cache
 def get_settings() -> Settings:

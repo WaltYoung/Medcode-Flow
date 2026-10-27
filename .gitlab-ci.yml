@@ -1,0 +1,28 @@
+# 在 Ubuntu 22.04 镜像里用 Nuitka 打 Linux 包。
+# 镜像决定编译环境。GitLab 服务器本身是不是 22.04 不影响这一步。
+# 若 Runner 是 shell 执行器，会忽略 image，此时 Runner 宿主机必须是 Ubuntu 22.04，脚本会自行核对。
+
+stages:
+  - build
+
+nuitka-linux:
+  stage: build
+  image: ubuntu:22.04
+  timeout: 3h
+  variables:
+    ENABLE_LTO: "0"
+    JOBS: "2"
+    DEBIAN_FRONTEND: noninteractive
+    PIP_INDEX_URL: "https://pypi.tuna.tsinghua.edu.cn/simple"
+  rules:
+    - if: $CI_COMMIT_TAG
+    - if: $CI_PIPELINE_SOURCE == "web"
+    - if: $CI_COMMIT_BRANCH == "master"
+      when: manual
+  script:
+    - bash scripts/build_nuitka_linux.sh
+  artifacts:
+    name: medcode-flow-linux
+    paths:
+      - dist/medcode-flow-linux.zip
+    expire_in: 14 days

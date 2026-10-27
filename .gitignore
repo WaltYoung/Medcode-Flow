@@ -2,6 +2,7 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .venv/
+.venv-build/
 venv/
 .env
 *.egg-info/
@@ -12,3 +13,4 @@ dist/
 build/
 .idea/
 .github/
+data/*.sqlite
