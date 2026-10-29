@@ -18,11 +18,11 @@ variables:
     value: "run.py"
     description: "入口脚本。文件不存在时自动检测 run.py、main.py、app.py。"
   BUILDER:
-    value: "Nuitka"
+    value: "PyInstaller"
     options:
-      - "Nuitka"
       - "PyInstaller"
-    description: "打包工具"
+      - "Nuitka"
+    description: "打包工具。默认 PyInstaller，几分钟且不吃内存。Nuitka 很慢，内存不够会失败。"
   CONSOLE:
     value: "yes"
     options:

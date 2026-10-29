@@ -10,6 +10,7 @@ from typing import Any
 
 from pydantic import BaseModel
 
+from app.core.llm import llm_configuration_error
 from app.runtime.node_titles import node_title
 from app.runtime.registry import WorkflowSpec
 from app.runtime.run_store import append_node, create_run, finish_run, get_run
@@ -85,6 +86,44 @@ def run_workflow(
         user_id=user_id,
         inputs=payload,
     )
+    missing_model = llm_configuration_error()
+    if missing_model:
+        append_node(
+            run_id=run_id,
+            node_id="model",
+            title="模型",
+            index_no=0,
+            status="failed",
+            inputs={},
+            outputs={},
+            elapsed_time=0,
+            error=missing_model,
+        )
+        finish_run(
+            run_id=run_id,
+            status="failed",
+            outputs={},
+            total_steps=0,
+            elapsed_time=0,
+            error=missing_model,
+        )
+        stored = get_run(run_id) or {}
+        return RunOutcome(
+            run_id=run_id,
+            task_id=task_id,
+            workflow_id=spec.workflow_id,
+            version=spec.version,
+            status="failed",
+            outputs={},
+            english_result={},
+            error=missing_model,
+            elapsed_time=0,
+            latency_ms=0,
+            total_steps=0,
+            created_at=created_at,
+            finished_at=stored.get("finished_at"),
+            tracing=stored.get("tracing") or [],
+        )
     base = {"workflow_run_id": run_id, "task_id": task_id}
     emit(
         "workflow_started",

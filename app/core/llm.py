@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 from typing import Any
 
 from langchain_core.language_models.chat_models import BaseChatModel
@@ -37,6 +38,27 @@ class MockChatModel(BaseChatModel):
         return ChatResult(generations=[ChatGeneration(message=AIMessage(content=content))])
 
 
+_MISSING_MODEL = "未配置模型，已停止。请先在大模型配置里填写并保存模型 Key。"
+
+
+def llm_configuration_error(settings: Settings | None = None) -> str | None:
+    """没有可用模型时返回原因。测试可设置 LLM_ALLOW_MOCK=1 继续使用占位模型。"""
+    settings = settings or get_settings()
+    provider = settings.llm_provider
+    if provider == "mock":
+        allow = os.getenv("LLM_ALLOW_MOCK", "").strip().lower()
+        if allow in {"1", "true", "yes"}:
+            return None
+        return _MISSING_MODEL
+    if provider == "dashscope" and not settings.dashscope_api_key.strip():
+        return _MISSING_MODEL
+    if provider == "openai_compatible" and not settings.openai_api_key.strip():
+        return _MISSING_MODEL
+    if provider == "hospital" and not settings.hospital_llm_api_key.strip():
+        return _MISSING_MODEL
+    return None
+
+
 class LLMFactory:
     """Unified factory: dashscope | openai_compatible | hospital | mock."""
 
@@ -59,6 +81,9 @@ class LLMFactory:
         timeout = self.settings.llm_timeout_seconds
 
         if provider == "mock":
+            missing = llm_configuration_error(self.settings)
+            if missing:
+                raise ValueError(missing)
             return MockChatModel(
                 model_name=model or self.settings.llm_model,
                 responses=mock_responses or {},
@@ -73,6 +98,7 @@ class LLMFactory:
                 api_key=self.settings.dashscope_api_key,
                 base_url=self.settings.dashscope_base_url,
                 timeout=timeout,
+                max_retries=1,
             )
 
         if provider == "openai_compatible":
@@ -84,6 +110,7 @@ class LLMFactory:
                 api_key=self.settings.openai_api_key,
                 base_url=self.settings.openai_base_url,
                 timeout=timeout,
+                max_retries=1,
             )
 
         if provider == "hospital":
@@ -103,6 +130,7 @@ class LLMFactory:
                 api_key="unused",
                 base_url=self.settings.hospital_llm_base_url.rstrip("/"),
                 timeout=timeout,
+                max_retries=1,
                 default_headers={
                     "X-API-KEY": self.settings.hospital_llm_api_key,
                 },

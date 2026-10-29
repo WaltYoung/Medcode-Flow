@@ -2,6 +2,7 @@ import json
 import os
 
 os.environ["LLM_PROVIDER"] = "mock"
+os.environ["LLM_ALLOW_MOCK"] = "1"
 os.environ["REDIS_URL"] = "memory://"
 os.environ["API_KEY"] = "test-key"
 os.environ["APP_ENV"] = "test"

@@ -7,7 +7,9 @@ from pydantic import BaseModel
 
 from app.core.security import require_api_key
 from app.runtime.executor import executor
+from app.runtime.graph_view import build_graph_view
 from app.runtime.registry import registry
+from app.runtime.run_store import get_run, list_runs
 from app.runtime.tasks import task_store
 
 router = APIRouter(
@@ -55,6 +57,31 @@ def list_workflows() -> list[WorkflowInfo]:
         )
         for spec in registry.list()
     ]
+
+
+@router.get("/{workflow_id}/graph")
+def get_workflow_graph(workflow_id: str) -> dict:
+    _ensure_registered(workflow_id)
+    return build_graph_view(workflow_id)
+
+
+@router.get("/{workflow_id}/runs")
+def list_workflow_runs(
+    workflow_id: str,
+    limit: int = Query(default=20, ge=1, le=100),
+    offset: int = Query(default=0, ge=0),
+) -> dict[str, Any]:
+    _ensure_registered(workflow_id)
+    return list_runs(workflow_id, limit=limit, offset=offset)
+
+
+@router.get("/{workflow_id}/runs/{run_id}")
+def get_workflow_run(workflow_id: str, run_id: str) -> dict[str, Any]:
+    _ensure_registered(workflow_id)
+    row = get_run(run_id)
+    if row is None or row.get("workflow_id") != workflow_id:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="执行记录不存在")
+    return row
 
 
 @router.post("/{workflow_id}/invoke")

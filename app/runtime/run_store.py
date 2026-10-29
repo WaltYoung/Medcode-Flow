@@ -67,6 +67,12 @@ def _conn() -> sqlite3.Connection:
             )
             """
         )
+        _CONN.execute(
+            """
+            CREATE INDEX IF NOT EXISTS idx_workflow_run_workflow_created
+            ON workflow_run (workflow_id, created_at)
+            """
+        )
         _CONN.commit()
     return _CONN
 
@@ -232,3 +238,41 @@ def get_run(run_id: str) -> dict[str, Any] | None:
         "tracing": tracing,
         "user": row["user_id"],
     }
+
+
+def _summary(row: sqlite3.Row) -> dict[str, Any]:
+    error = row["error"] or ""
+    if len(error) > 200:
+        error = error[:200] + "…"
+    return {
+        "workflow_run_id": row["id"],
+        "task_id": row["task_id"],
+        "workflow_id": row["workflow_id"],
+        "status": row["status"],
+        "user": row["user_id"] or "",
+        "error": error or None,
+        "total_steps": row["total_steps"] or 0,
+        "elapsed_time": row["elapsed_time"] or 0,
+        "created_at": row["created_at"],
+        "finished_at": row["finished_at"],
+    }
+
+
+def list_runs(workflow_id: str, *, limit: int = 20, offset: int = 0) -> dict[str, Any]:
+    with _LOCK:
+        total = _conn().execute(
+            "SELECT COUNT(*) FROM workflow_run WHERE workflow_id = ?",
+            (workflow_id,),
+        ).fetchone()[0]
+        rows = _conn().execute(
+            """
+            SELECT id, task_id, workflow_id, user_id, status, error,
+                   total_steps, elapsed_time, created_at, finished_at
+            FROM workflow_run
+            WHERE workflow_id = ?
+            ORDER BY created_at DESC, id DESC
+            LIMIT ? OFFSET ?
+            """,
+            (workflow_id, limit, offset),
+        ).fetchall()
+    return {"total": int(total), "items": [_summary(row) for row in rows]}

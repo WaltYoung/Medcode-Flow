@@ -23,6 +23,21 @@ def test_workflow_is_registered():
     assert spec.version == "8.0.0"
 
 
+def test_unconfigured_model_stops_without_placeholders(monkeypatch):
+    monkeypatch.delenv("LLM_ALLOW_MOCK", raising=False)
+    discover_workflows()
+    try:
+        executor.invoke(
+            "medical_record_extract",
+            {"raw_medical_record": sample_record_json()},
+        )
+    except RuntimeError as exc:
+        assert "未配置模型" in str(exc)
+        assert "[mock]" not in str(exc)
+        return
+    raise AssertionError("未配置模型时不应继续执行")
+
+
 def test_executor_invoke():
     discover_workflows()
     out = executor.invoke(
