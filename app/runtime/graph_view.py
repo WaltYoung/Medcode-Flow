@@ -97,9 +97,13 @@ def build_graph_view(workflow_id: str) -> dict:
         for edge in drawable.edges
         if edge.source and edge.target
     ]
-    model = settings.llm_model or ""
+    # 与真实调用一致：hospital 用 hospital_llm_model，其余用 llm_model
     if settings.llm_provider == "mock":
         model = ""
+    elif settings.llm_provider == "hospital":
+        model = (settings.hospital_llm_model or settings.llm_model or "").strip()
+    else:
+        model = (settings.llm_model or "").strip()
     return {
         "workflow_id": spec.workflow_id,
         "name": spec.name,

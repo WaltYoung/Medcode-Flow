@@ -42,6 +42,9 @@ def build_hospital_chat(
     """构造只带 X-API-KEY 的 ChatOpenAI（去掉 SDK 自动加的 Bearer）。"""
     key = api_key.strip()
     base = base_url.strip().rstrip("/")
+    for suffix in ("/chat/completions", "/completions"):
+        if base.lower().endswith(suffix):
+            base = base[: -len(suffix)].rstrip("/")
     sync_client = httpx.Client(
         timeout=timeout,
         event_hooks={"request": [_strip_authorization]},

@@ -35,10 +35,19 @@ def _resolve_provider(
     return "openai_compatible"
 
 
+def _normalize_base_url(base_url: str) -> str:
+    """SDK 会再拼 /chat/completions；这里去掉以免院内网关 404。"""
+    url = base_url.strip().rstrip("/")
+    for suffix in ("/chat/completions", "/completions"):
+        if url.lower().endswith(suffix):
+            url = url[: -len(suffix)].rstrip("/")
+    return url
+
+
 @router.put("/llm")
 async def apply_runtime_llm(body: RuntimeLlmIn) -> dict[str, str]:
     settings = get_settings()
-    base = body.base_url.strip().rstrip("/")
+    base = _normalize_base_url(body.base_url)
     model = body.model.strip()
     key = body.api_key.strip()
     provider = _resolve_provider(body.provider, base)
