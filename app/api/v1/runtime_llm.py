@@ -19,7 +19,7 @@ class RuntimeLlmIn(BaseModel):
     base_url: str = Field(..., max_length=300)
     model: str = Field(..., max_length=128)
     api_key: str = Field(..., min_length=1)
-    # hospital/custom：院内网关用 X-API-KEY；其余走 Bearer（openai_compatible）
+    # hospital / 院内 URL → X-API-KEY；custom+公网、qwen、deepseek → Bearer
     provider: str = Field(default="openai_compatible", max_length=32)
 
 
@@ -27,7 +27,8 @@ def _resolve_provider(
     raw: str, base_url: str = ""
 ) -> Literal["hospital", "openai_compatible"]:
     name = (raw or "").strip().lower()
-    if name in {"hospital", "custom", "x_api_key", "x-api-key"}:
+    # 显式院内；「自定义」本身不强制院内，避免外网自定义公网模型被改成 X-API-KEY
+    if name in {"hospital", "x_api_key", "x-api-key"}:
         return "hospital"
     if looks_like_hospital_gateway(base_url):
         return "hospital"
