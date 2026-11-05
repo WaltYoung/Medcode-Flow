@@ -50,6 +50,23 @@ def test_llm_factory_hospital_builds():
     assert headers.get("X-API-KEY") == "0fdc3ad71bfb5a97989a2efdf959d7e7"
 
 
+def test_openai_compatible_hospital_url_uses_x_api_key():
+    """旧推送把院内地址标成 openai_compatible 时，调用层仍必须走 X-API-KEY。"""
+    factory = LLMFactory(
+        Settings(
+            llm_provider="openai_compatible",
+            openai_api_key="0fdc3ad71bfb5a97989a2efdf959d7e7",
+            openai_base_url=(
+                "http://172.28.24.104:30020/endpoint/AFTYb_g8w89_28ZWS/v1"
+            ),
+            llm_model="Qwen3-32B",
+        )
+    )
+    model = factory.get()
+    headers = getattr(model, "default_headers", None) or {}
+    assert headers.get("X-API-KEY") == "0fdc3ad71bfb5a97989a2efdf959d7e7"
+
+
 def test_llm_factory_hospital_requires_key():
     factory = LLMFactory(
         Settings(

@@ -10,6 +10,7 @@ from langchain_openai import ChatOpenAI
 from pydantic import Field
 
 from app.core.config import Settings, get_settings
+from app.core.hospital_auth import build_hospital_chat, looks_like_hospital_gateway
 
 
 class MockChatModel(BaseChatModel):
@@ -65,6 +66,23 @@ class LLMFactory:
     def __init__(self, settings: Settings | None = None) -> None:
         self.settings = settings or get_settings()
 
+    def _hospital(
+        self,
+        *,
+        base_url: str,
+        api_key: str,
+        model: str,
+        temperature: float,
+        timeout: float,
+    ) -> ChatOpenAI:
+        return build_hospital_chat(
+            base_url=base_url,
+            api_key=api_key,
+            model=model,
+            temperature=temperature,
+            timeout=timeout,
+        )
+
     def get(
         self,
         *,
@@ -78,7 +96,7 @@ class LLMFactory:
             if temperature is None
             else temperature
         )
-        timeout = self.settings.llm_timeout_seconds
+        timeout = float(self.settings.llm_timeout_seconds)
 
         if provider == "mock":
             missing = llm_configuration_error(self.settings)
@@ -104,11 +122,22 @@ class LLMFactory:
         if provider == "openai_compatible":
             if not self.settings.openai_api_key:
                 raise ValueError("OPENAI_API_KEY is required for openai_compatible provider")
+            base = (self.settings.openai_base_url or "").rstrip("/")
+            key = self.settings.openai_api_key
+            # 页面误标 openai_compatible / 旧包推送：院内 URL 仍必须走 X-API-KEY
+            if looks_like_hospital_gateway(base, self.settings):
+                return self._hospital(
+                    base_url=base,
+                    api_key=key,
+                    model=model or self.settings.llm_model,
+                    temperature=temp,
+                    timeout=timeout,
+                )
             return ChatOpenAI(
                 model=model or self.settings.llm_model,
                 temperature=temp,
-                api_key=self.settings.openai_api_key,
-                base_url=self.settings.openai_base_url,
+                api_key=key,
+                base_url=base,
                 timeout=timeout,
                 max_retries=1,
             )
@@ -122,18 +151,13 @@ class LLMFactory:
                 raise ValueError(
                     "HOSPITAL_LLM_BASE_URL is required for hospital provider"
                 )
-            # 医院网关使用 X-API-KEY，而非 Authorization: Bearer
             model_name = model or self.settings.hospital_llm_model or self.settings.llm_model
-            return ChatOpenAI(
+            return self._hospital(
+                base_url=self.settings.hospital_llm_base_url,
+                api_key=self.settings.hospital_llm_api_key,
                 model=model_name,
                 temperature=temp,
-                api_key="unused",
-                base_url=self.settings.hospital_llm_base_url.rstrip("/"),
                 timeout=timeout,
-                max_retries=1,
-                default_headers={
-                    "X-API-KEY": self.settings.hospital_llm_api_key,
-                },
             )
 
         raise ValueError(f"Unsupported LLM provider: {provider}")
